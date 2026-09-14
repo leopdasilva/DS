@@ -8,7 +8,9 @@
 <body>
     <?php 
         $nome = "Leonardo";
-        echo "<h1>Olá , $nome!</h1>"
+        $idade = 27;
     ?>
+    <h1>Nome: <?= $nome ?> </h1>
+    <p>Idade: <?= $idade ?> </p>
 </body>
 </html>
