@@ -7,9 +7,8 @@
 </head>
 <body>
     <?php 
-        echo "<h1>Olá mundo no HTML!</h1>";
-        echo "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit quo soluta aspernatur, animi necessitatibus omnis quis assumenda ratione. Obcaecati doloremque numquam nesciunt! Inventore nobis sit totam labore, magni velit doloribus.</p>";
-        echo "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, nisi asperiores! Maxime, velit, cumque doloribus libero delectus similique, saepe dicta eius aspernatur qui inventore. Quibusdam placeat reiciendis quisquam voluptatem ullam!</p>";
+        $nome = "Leonardo";
+        echo "<h1>Olá , $nome!</h1>"
     ?>
 </body>
 </html>
