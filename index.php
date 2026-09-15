@@ -3,7 +3,7 @@
     $idade = 0;
     $resultado = "";
 
-    if ($_SERVER["REQUEST_METHOD" == "POST"]) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = $_POST["nome"];
         $idade = $_POST["idade"];
 
