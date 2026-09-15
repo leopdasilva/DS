@@ -1,6 +1,6 @@
 <?php 
     $nome = "";
-    $idade = "";
+    $idade = 0;
     $resultado = "";
 
     if ($_SERVER["REQUEST_METHOD" == "POST"]) {
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <form class="card" method="POST">
         <label for="nome">Nome:</label>
         <input type="text" id="idnome" name="Nome" placeholder="Digite o seu nome" required><br><br>
@@ -33,6 +34,8 @@
         <input type="number" id="ididade" name="Idade" placeholder="Digite a sua idade" required><br><br>
 
         <button type="submit" value="Enviar">Enviar</button><br><br>
+
+        <div></div>
     </form>
     
     <?php if($resultado != "") { ?>
