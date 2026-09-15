@@ -8,17 +8,21 @@
 </head>
 <body>
     <?php 
+        $nome = "";
+        $idade = "";
+        $resultado = "";
+
         if ($_SERVER["REQUEST_METHOD" == "POST"]) {
             $name = htmlspecialchars($_POST['Nome']);
             $idade = (int)htmlspecialchars($_POST['Idade']);
 
             if ($idade > 18) {
-                $maioridade = "maior de idade";
+                $resultado = "maior de idade";
             } else {
-                $maioridade = "menor de idade";
+                $resultado = "menor de idade";
             }
 
-            echo "Olá $nome!, você tem $idade anos, portanto, você é $maioridade.";
+            echo "Olá $nome!, você tem $idade anos, portanto, você é $resultado.";
         }
     ?>
 
@@ -29,7 +33,9 @@
         <label for="idade">Idade:</label>
         <input type="number" id="idade" name="Idade" placeholder="Digite a sua idade" required><br><br>
 
-        <button type="submit" value="Enviar">Enviar</button>
+        <button type="submit" value="Enviar">Enviar</button><br><br>
+
+        <div></div>
     </form>
     
 </body>
