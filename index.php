@@ -4,8 +4,8 @@
     $resultado = "";
 
     if ($_SERVER["REQUEST_METHOD" == "POST"]) {
-         $nome = $_POST["idnome"];
-        $idade = $_POST["ididade"];
+         $nome = $_POST["nome"];
+        $idade = $_POST["idade"];
 
         if ($idade > 18) {
             $resultado = "maior de idade";
@@ -28,10 +28,10 @@
 
     <form class="card" method="POST">
         <label for="nome">Nome:</label>
-        <input type="text" id="idnome" name="Nome" placeholder="Digite o seu nome" required><br><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
 
         <label for="idade">Idade:</label>
-        <input type="number" id="ididade" name="Idade" placeholder="Digite a sua idade" required><br><br>
+        <input type="number" id="idade" name="idade" placeholder="Digite a sua idade" required><br><br>
 
         <button type="submit" value="Enviar">Enviar</button><br><br>
 
