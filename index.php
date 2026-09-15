@@ -22,7 +22,7 @@
         }
     ?>
 
-    <form class="card" action="" method="post">
+    <form class="card" method="POST">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="Nome" placeholder="Nome" required><br><br>
 
