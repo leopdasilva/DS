@@ -24,10 +24,10 @@
 
     <form class="card" method="POST">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="Nome" placeholder="Nome" required><br><br>
+        <input type="text" id="nome" name="Nome" placeholder="Digite o seu nome" required><br><br>
 
         <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="Idade" placeholder="Idade" required><br><br>
+        <input type="number" id="idade" name="Idade" placeholder="Digite a sua idade" required><br><br>
 
         <button type="submit" value="Enviar">Enviar</button>
     </form>
