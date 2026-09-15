@@ -24,6 +24,7 @@
     <title>HTML & PHP</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
     <form class="card" method="POST">
@@ -34,8 +35,6 @@
         <input type="number" id="idade" name="idade" placeholder="Digite a sua idade" required><br><br>
 
         <button type="submit">Enviar</button><br><br>
-
-        <div></div>
     </form>
     
     <?php if($resultado != "") { ?>
