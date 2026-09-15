@@ -13,8 +13,6 @@
         $resultado = "";
 
         if ($_SERVER["REQUEST_METHOD" == "POST"]) {
-            $name = htmlspecialchars($_POST['Nome']);
-            $idade = (int)htmlspecialchars($_POST['Idade']);
 
             if ($idade > 18) {
                 $resultado = "maior de idade";
