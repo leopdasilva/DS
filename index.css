@@ -11,11 +11,11 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f4f6f9; 
+    background-image: url(https://images.pexels.com/photos/39103165/pexels-photo-39103165.jpeg);
 }
 
 .card {
     background-color: #ffffff;
-    background-image: url(https://images.pexels.com/photos/39103165/pexels-photo-39103165.jpeg);
     padding: 3.5rem;
     margin: 3.5rem;
     border-radius: 12px;
