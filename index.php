@@ -36,7 +36,7 @@
     </form>
     
     <?php if($resultado != "") { ?>
-    
+        <p>Seu nome é <?=$nome?>, você tem <?=$idade?> anos, portanto, você é <?=$resultado?>.</p>;
     <?php } ?>
 
 </body>
