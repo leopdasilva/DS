@@ -8,20 +8,29 @@
 </head>
 <body>
     <?php 
-        $nome = "Leonardo";
-        $idade = 27;
-        if ($idade > 18) {
-            $maioridade = "Sim 👍";
-        } else {
-            $maioridade = "Não 👎";
+        if ($_SERVER["REQUEST_METHOD" == "POST"]) {
+            $name = htmlspecialchars($_POST['Nome']);
+            $idade = (int)htmlspecialchars($_POST['Idade']);
+
+            if ($idade > 18) {
+                $maioridade = "maior de idade";
+            } else {
+                $maioridade = "menor de idade";
+            }
+
+            echo "Olá $nome!, você tem $idade anos, portanto, você é $maioridade.";
         }
     ?>
 
-    <div class="card">
-        <h1>Nome: <?= $nome ?> </h1>
-        <p>Idade: <?= $idade ?> </p>
-        <p>Maior de idade?: <?= $maioridade ?></p>
-    </div>
+    <form class="card" action="" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="Nome" placeholder="Nome" required><br><br>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="Idade" placeholder="Idade" required><br><br>
+
+        <button type="submit" value="Enviar">Enviar</button>
+    </form>
     
 </body>
 </html>
