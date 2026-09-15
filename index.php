@@ -39,7 +39,7 @@
     
     <?php if($resultado != "") { ?>
 
-        <p class="card">Seu nome é <strong>?= $nome ?></strong>, você tem <strong><?= $idade ?></strong> anos, portanto, você é <strong><?= $resultado ?></strong>.</p>
+        <p class="card">Seu nome é <strong><?= $nome ?></strong>, você tem <strong><?= $idade ?></strong> anos, portanto, você é <strong><?= $resultado ?></strong>.</p>
 
     <?php } ?>
 
