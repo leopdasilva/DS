@@ -11,6 +11,7 @@
     <ul>
         <li><a href="idade.php">Atividade 01 - Idade</a></li>
         <li><a href="notas.php">Atividade 02 - Notas</a></li>
+        <li><a href="notas-desafio.php">Atividade 02 - Notas (Desafio usando GET)</a></li>
     </ul>
 
 </body>
