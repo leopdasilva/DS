@@ -66,24 +66,27 @@
 
         <button type="submit">Enviar</button><br><br>
 
-        <?php if($situacao != "") { ?>
-            <p>Aluno: <?=$nome?></p>
-            <p>Idade: <?=$idade?></p><br><br>
-
-            <p>Nota 1: <?=$nota1?></p>
-            <p>Nota 2: <?=$nota2?></p>
-            <p>Nota 3: <?=$nota3?></p>
-            <p>Nota 4: <?=$nota4?></p>
-            <p>Nota 5: <?=$nota5?></p><br><br>
-
-            <p>Media final: <strong><?=$media?></strong></p><br><br>
-
-            <p>Situação: 
-                <span style="color: <?= ($situacao == 'Aprovado') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
-                    <?= $situacao ?>
-                </span>
-            </p>
-        <?php } ?>
     </form>
+
+    <a href="index.php">Voltar ao Index</a>
+
+    <?php if($situacao != "") { ?>
+        <p>Aluno: <?=$nome?></p>
+        <p>Idade: <?=$idade?></p><br><br>
+
+        <p>Nota 1: <?=$nota1?></p>
+        <p>Nota 2: <?=$nota2?></p>
+        <p>Nota 3: <?=$nota3?></p>
+        <p>Nota 4: <?=$nota4?></p>
+        <p>Nota 5: <?=$nota5?></p><br><br>
+
+        <p>Media final: <strong><?=$media?></strong></p><br><br>
+
+        <p>Situação: 
+            <span style="color: <?= ($situacao == 'Aprovado') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
+                <?= $situacao ?>
+            </span>
+        </p>
+    <?php } ?>
 </body>
 </html>

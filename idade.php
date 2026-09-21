@@ -38,6 +38,8 @@
 
         <button type="submit">Enviar</button><br><br>
     </form>
+
+    <a href="index.php">Voltar ao Index</a>
     
     <?php if($resultado != "") { ?>
 
