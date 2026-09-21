@@ -28,7 +28,7 @@
 <body>
 
     <form class="card" method="POST">
-        <h1>Sistema de cadastro e situação</h1>
+        <h1>Verificador de Idade</h1>
 
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
