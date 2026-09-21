@@ -72,22 +72,21 @@
     </form>
 
     <?php if($situacao != "") { ?>
-        <p>Aluno: <?=$nome?></p>
-        <p>Idade: <?=$idade?></p><br>
-
-        <p>Nota 1: <?=$nota1?></p>
-        <p>Nota 2: <?=$nota2?></p>
-        <p>Nota 3: <?=$nota3?></p>
-        <p>Nota 4: <?=$nota4?></p>
-        <p>Nota 5: <?=$nota5?></p><br>
-
-        <p>Media final: <strong><?=$media?></strong></p><br>
-
-        <p>Situação: 
-            <span style="color: <?= ($situacao == 'Aprovado') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
-                <?= $situacao ?>
-            </span>
-        </p>
+        <div class="card">
+            <p>Aluno: <?=$nome?></p>
+            <p>Idade: <?=$idade?></p><br>
+            <p>Nota 1: <?=$nota1?></p>
+            <p>Nota 2: <?=$nota2?></p>
+            <p>Nota 3: <?=$nota3?></p>
+            <p>Nota 4: <?=$nota4?></p>
+            <p>Nota 5: <?=$nota5?></p><br>
+            <p>Media final: <strong><?=$media?></strong></p><br>
+            <p>Situação:
+                <span style="color: <?= ($situacao == 'Aprovado') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
+                    <?= $situacao ?>
+                </span>
+            </p>
+        </div>
     <?php } ?>
 </body>
 </html>
