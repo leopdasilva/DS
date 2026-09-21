@@ -51,19 +51,19 @@
         <input type="number" id="idade" name="idade" placeholder="Digite a sua idade" required><br><br>
 
         <label for="idade">Nota 1:</label>
-        <input type="number" id="nota1" name="nota1" placeholder="Digite a primeira nota" required><br><br>
+        <input type="number" id="nota1" name="nota1" min=0 max=10 placeholder="Digite a primeira nota" required><br><br>
 
         <label for="idade">Nota 2:</label>
-        <input type="number" id="nota2" name="nota2" placeholder="Digite a segunda nota" required><br><br>
+        <input type="number" id="nota2" name="nota2" min=0 max=10 placeholder="Digite a segunda nota" required><br><br>
 
         <label for="idade">Nota 3:</label>
-        <input type="number" id="nota3" name="nota3" placeholder="Digite a terceira nota" required><br><br>
+        <input type="number" id="nota3" name="nota3" min=0 max=10 placeholder="Digite a terceira nota" required><br><br>
         
         <label for="idade">Nota 4:</label>
-        <input type="number" id="nota4" name="nota4" placeholder="Digite a quarta nota" required><br><br>
+        <input type="number" id="nota4" name="nota4" min=0 max=10 placeholder="Digite a quarta nota" required><br><br>
 
         <label for="idade">Nota 5:</label>
-        <input type="number" id="nota5" name="nota5" placeholder="Digite a quinta nota" required><br><br>
+        <input type="number" id="nota5" name="nota5" min=0 max=10 placeholder="Digite a quinta nota" required><br><br>
 
         <button type="submit">Enviar</button><br><br>
 
@@ -76,7 +76,7 @@
             <h1>Resultado</h1>
             <p><strong>Aluno:</strong> <?=$nome?></p>
             <p><strong>Idade:</strong> <?=$idade?></p><br>
-            
+
             <ul>
                 <li>
                     <p>Nota 1: <?=$nota1?></p>
