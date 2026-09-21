@@ -76,12 +76,24 @@
             <h1>Resultado</h1>
             <p><strong>Aluno:</strong> <?=$nome?></p>
             <p><strong>Idade:</strong> <?=$idade?></p><br>
-            <p>Nota 1: <?=$nota1?></p>
-            <p>Nota 2: <?=$nota2?></p>
-            <p>Nota 3: <?=$nota3?></p>
-            <p>Nota 4: <?=$nota4?></p>
-            <p>Nota 5: <?=$nota5?></p><br>
-            <p><strong>Media final:</strong> <strong><?=$media?></strong></p><br>
+            <ul>
+                <li>
+                    <p>Nota 1: <?=$nota1?></p>
+                </li>
+                <li>
+                    <p>Nota 2: <?=$nota2?></p>
+                </li>
+                <li>
+                    <p>Nota 3: <?=$nota3?></p>
+                </li>
+                <li>
+                    <p>Nota 4: <?=$nota4?></p>
+                </li>
+                <li>
+                    <p>Nota 5: <?=$nota5?></p>
+                </li>
+            </ul>
+            <p><strong>Media final:<?=$media?></strong></p><br>
             <p><strong>Situação:</strong>
                 <span style="color: <?= ($situacao == 'Aprovado') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
                     <?= $situacao ?>
