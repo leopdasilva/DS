@@ -16,12 +16,12 @@
         $nota4 = $_POST["nota4"];
         $nota5 = $_POST["nota5"];
 
-        //Calculo de média 
+        //Calculo de média
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
 
         if ($media >= 7) {
             $situacao = "Aprovado";
-        } else if ($media >= 5 & $media < 7) {
+        } else if ($media >= 5 && $media < 7) {
             $situacao = "Recuperação";
         } else {
             $situacao = "Reprovado";
@@ -36,6 +36,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas - HTML & PHP</title>
+    <link rel="stylesheet" href="notas.css">
 </head>
 
 <body>
@@ -72,15 +73,15 @@
 
     <?php if($situacao != "") { ?>
         <p>Aluno: <?=$nome?></p>
-        <p>Idade: <?=$idade?></p><br><br>
+        <p>Idade: <?=$idade?></p><br>
 
         <p>Nota 1: <?=$nota1?></p>
         <p>Nota 2: <?=$nota2?></p>
         <p>Nota 3: <?=$nota3?></p>
         <p>Nota 4: <?=$nota4?></p>
-        <p>Nota 5: <?=$nota5?></p><br><br>
+        <p>Nota 5: <?=$nota5?></p><br>
 
-        <p>Media final: <strong><?=$media?></strong></p><br><br>
+        <p>Media final: <strong><?=$media?></strong></p><br>
 
         <p>Situação: 
             <span style="color: <?= ($situacao == 'Aprovado') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
