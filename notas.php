@@ -67,9 +67,9 @@
 
         <button type="submit">Enviar</button><br><br>
 
-    </form>
+        <a href="index.php">Voltar ao Index</a>
 
-    <a href="index.php">Voltar ao Index</a>
+    </form>
 
     <?php if($situacao != "") { ?>
         <p>Aluno: <?=$nome?></p>
