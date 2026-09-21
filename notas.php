@@ -76,6 +76,7 @@
             <h1>Resultado</h1>
             <p><strong>Aluno:</strong> <?=$nome?></p>
             <p><strong>Idade:</strong> <?=$idade?></p><br>
+            
             <ul>
                 <li>
                     <p>Nota 1: <?=$nota1?></p>
@@ -92,7 +93,8 @@
                 <li>
                     <p>Nota 5: <?=$nota5?></p>
                 </li>
-            </ul>
+            </ul><br>
+
             <p><strong>Media final:<?=$media?></strong></p><br>
             <p><strong>Situação:</strong>
                 <span style="color: <?= ($situacao == 'Aprovado') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">

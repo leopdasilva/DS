@@ -52,5 +52,13 @@ body {
     transition: all 0.2s ease;
 }
 
+.card ul {
+    margin-left: auto;
+    width: max-content; 
+    list-style-position: inside; 
+    text-align: right; 
+}
+        
+
 
 
