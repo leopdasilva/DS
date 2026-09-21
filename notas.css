@@ -54,9 +54,7 @@ body {
 
 .card ul {
     margin-left: auto;
-    width: max-content; 
     list-style-position: inside; 
-    text-align: center; 
     
     padding-left: 15px;
     padding-right: 15px;
