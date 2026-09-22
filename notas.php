@@ -25,7 +25,7 @@
             $situacao = "Aprovado com exelência";
         } else if ($media >= 7 && $frequencia >= 75) {
             $situacao = "Aprovado";
-        } else if ($media >= 5 && $media < 7){
+        } else if ($media >= 5 && $media < 7 && $frequencia >= 75){
             $situacao = "Recuperação";
             $resto = 7 - $media;
         } else {

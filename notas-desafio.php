@@ -4,10 +4,11 @@
     $media = 0;
     $situacao = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //Nome e Idade
         $nome = $_GET["nome"];
         $idade = $_GET["idade"];
+        $frequencia = $_GET["frequencia"];
         $resto = 0;
 
         //Notas
@@ -20,11 +21,11 @@
         //Calculo de média
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
 
-        if ($media == 10) {
+        if ($media == 10 && $frequencia >= 75) {
             $situacao = "Aprovado com exelência";
-        } else if ($media >= 7) {
+        } else if ($media >= 7 && $frequencia >= 75) {
             $situacao = "Aprovado";
-        } else if ($media >= 5 && $media < 7){
+        } else if ($media >= 5 && $media < 7 && $frequencia >= 75){
             $situacao = "Recuperação";
             $resto = 7 - $media;
         } else {
@@ -40,7 +41,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas (Desafio) - HTML & PHP</title>
+    <title>Notas - HTML & PHP</title>
     <link rel="stylesheet" href="notas.css">
 </head>
 
@@ -73,6 +74,9 @@
         <label for="idade">Nota 5:</label>
         <input type="number" id="nota5" name="nota5" min=0 max=10 placeholder="Digite a quinta nota" required><br><br>
 
+        <label for="idade">Frequencia:</label>
+        <input type="number" id="frequencia" name="frequencia" min=0 max=100 placeholder="Digite a frequência (%)" required><br><br>
+
         <button type="submit">Enviar</button><br><br>
 
         <a href="index.php">Voltar ao Index</a>
@@ -103,14 +107,16 @@
                 </li>
             </ul><br>
 
-            <p><strong>Media final:<?=$media?></strong></p><br>
+            <p><strong>Frequência: <?=$frequencia?>%</strong></p><br>
+
+            <p><strong>Media final: <?=$media?></strong></p><br>
             <p><strong>Situação:</strong>
                 <span style="color: <?= ($situacao == 'Aprovado' || $situacao == 'Aprovado com exelência') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
                     <?= $situacao ?>
                 </span>
-            </p>
+            </p><br>
 
-            <?php if ($situacao == "Recuperação" || $situacao == "Reprovado") { ?>
+            <?php if (($situacao == "Recuperação" || $situacao == "Reprovado") && $frequencia >= 75) { ?>
                 <p>
                     Faltaram <strong><?= $resto ?></strong> pontos para atingir a média 7.
                 </p>
