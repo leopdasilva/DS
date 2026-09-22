@@ -107,14 +107,14 @@
                 </li>
             </ul><br>
 
-            <p><strong>Frequência:<?=$frequencia?>%</strong></p><br>
+            <p><strong>Frequência: <?=$frequencia?>%</strong></p><br>
 
-            <p><strong>Media final:<?=$media?></strong></p><br>
+            <p><strong>Media final: <?=$media?></strong></p><br>
             <p><strong>Situação:</strong>
                 <span style="color: <?= ($situacao == 'Aprovado' || $situacao == 'Aprovado com exelência') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
                     <?= $situacao ?>
                 </span>
-            </p>
+            </p><br>
 
             <?php if ($situacao == "Recuperação" || $situacao == "Reprovado") { ?>
                 <p>
