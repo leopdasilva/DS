@@ -3,6 +3,7 @@
     $idade = 0;
     $media = 0;
     $situacao = "";
+    $frequencia = 0;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //Nome e Idade

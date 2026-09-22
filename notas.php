@@ -105,9 +105,9 @@
                 </li>
             </ul><br>
 
-            <p><strong>Frequência: <?=$frequencia?>%</strong></p><br>
+            <p><strong>Frequência: </strong><?=$frequencia?>%</p><br>
 
-            <p><strong>Media final: <?=$media?></strong></p><br>
+            <p><strong>Media final: </strong><?=$media?></p><br>
             <p><strong>Situação:</strong>
                 <span style="color: <?= ($situacao == 'Aprovado' || $situacao == 'Aprovado com exelência') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
                     <?= $situacao ?>
@@ -116,7 +116,7 @@
 
             <?php if (($situacao == "Recuperação" || $situacao == "Reprovado") && $frequencia >= 75) { ?>
                 <p>
-                    Faltaram <strong><?= $resto ?></strong> pontos para atingir a média 7.
+                    Faltaram <strong><?= $resto ?></strong> ponto(s) para atingir a média 7.
                 </p>
             <?php } ?>
         </div>
