@@ -8,6 +8,8 @@
         //Nome e Idade
         $nome = $_POST["nome"];
         $idade = $_POST["idade"];
+        $frequencia = $_POST["frequencia"];
+        $resto = 0;
 
         //Notas
         $nota1 = $_POST["nota1"];
@@ -19,12 +21,16 @@
         //Calculo de média
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
 
-        if ($media >= 7) {
+        if ($media = 10 && $frequencia >= 75) {
+            $situacao = "Aprovado com exelência";
+        } else if ($media >= 7 && $frequencia >= 75) {
             $situacao = "Aprovado";
-        } else if ($media >= 5 && $media < 7) {
+        } else if ($media >= 5 && $media < 7){
             $situacao = "Recuperação";
+            $resto = 7 - $media;
         } else {
             $situacao = "Reprovado";
+            $resto = 7 - $media;
         }
     }
 
@@ -48,7 +54,7 @@
         <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
 
         <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="idade" placeholder="Digite a sua idade" required><br><br>
+        <input type="number" id="idade" name="idade" min=1 placeholder="Digite a sua idade" required><br><br>
 
         <label for="idade">Nota 1:</label>
         <input type="number" id="nota1" name="nota1" min=0 max=10 placeholder="Digite a primeira nota" required><br><br>
@@ -64,6 +70,12 @@
 
         <label for="idade">Nota 5:</label>
         <input type="number" id="nota5" name="nota5" min=0 max=10 placeholder="Digite a quinta nota" required><br><br>
+
+        <label for="idade">Nota 5:</label>
+        <input type="number" id="nota5" name="nota5" min=0 max=10 placeholder="Digite a quinta nota" required><br><br>
+
+        <label for="idade">Frequencia:</label>
+        <input type="number" id="frequencia" name="frequencia" min=0 max=100 placeholder="Digite a frequência (%)" required><br><br>
 
         <button type="submit">Enviar</button><br><br>
 
@@ -97,11 +109,18 @@
 
             <p><strong>Media final:<?=$media?></strong></p><br>
             <p><strong>Situação:</strong>
-                <span style="color: <?= ($situacao == 'Aprovado') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
+                <span style="color: <?= ($situacao == 'Aprovado' and $situacao == 'Aprovado com exelência') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
                     <?= $situacao ?>
                 </span>
             </p>
+
+            <?php if ($situacao == "Recuperação" || $situacao == "Reprovado") { ?>
+                <p>
+                    Faltaram <strong><?= $resto ?></strong> pontos para atingir a média 7.
+                </p>
+            <?php } ?>
         </div>
     <?php } ?>
+
 </body>
 </html>
