@@ -72,9 +72,6 @@
         <label for="idade">Nota 5:</label>
         <input type="number" id="nota5" name="nota5" min=0 max=10 placeholder="Digite a quinta nota" required><br><br>
 
-        <label for="idade">Nota 5:</label>
-        <input type="number" id="nota5" name="nota5" min=0 max=10 placeholder="Digite a quinta nota" required><br><br>
-
         <label for="frequencia">Frequencia:</label>
         <input type="number" id="frequencia" name="frequencia" min=0 max=100 placeholder="Digite a frequência (%)" required><br><br>
 
