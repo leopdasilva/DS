@@ -116,7 +116,7 @@
                 </span>
             </p><br>
 
-            <?php if ($situacao == "Recuperação" || $situacao == "Reprovado") { ?>
+            <?php if (($situacao == "Recuperação" || $situacao == "Reprovado") && $frequencia >= 75) { ?>
                 <p>
                     Faltaram <strong><?= $resto ?></strong> pontos para atingir a média 7.
                 </p>
