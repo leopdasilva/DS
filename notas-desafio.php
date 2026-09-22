@@ -105,7 +105,7 @@
 
             <p><strong>Media final:<?=$media?></strong></p><br>
             <p><strong>Situação:</strong>
-                <span style="color: <?= ($situacao == 'Aprovado' and $situacao == 'Aprovado com exelência') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
+                <span style="color: <?= ($situacao == 'Aprovado' || $situacao == 'Aprovado com exelência') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
                     <?= $situacao ?>
                 </span>
             </p>
