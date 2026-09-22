@@ -20,7 +20,7 @@
         //Calculo de média
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
 
-        if ($media = 10) {
+        if ($media == 10) {
             $situacao = "Aprovado com exelência";
         } else if ($media >= 7) {
             $situacao = "Aprovado";
