@@ -34,7 +34,10 @@
 
         <a href="javascript:void(0)" onclick="alert('Usuário: leonardo25\nSenha: bananada')">Usuário e senha</a>
 
+        <button type="submit">Enviar</button><br><br>
 
+        <a href="index.php">Voltar ao Index</a>
+        
         <?php if($mensagem != "") { ?>
             <div>
                 <p><?= $mensagem ?></p>
