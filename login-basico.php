@@ -21,9 +21,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login básico - PHP</title>
+    <link rel="stylesheet" href="login-basico.css">
 </head>
 <body>
-    <form method="POST">
+    <form method="POST" class="card">
         <h1>Login</h1>
 
         <label for="nome">Usuário:</label>
@@ -34,7 +35,7 @@
 
         <button type="submit">Login</button><br><br>
         
-        <a href="javascript:void(0)" onclick="alert('Usuário: leonardo25\nSenha: bananada')">Usuário e senha</a>
+        <a href="javascript:void(0)" onclick="alert('Usuário: leonardo25\nSenha: bananada')">Usuário e senha</a><br><br>
 
         <a href="index.php">Voltar ao Index</a>
         
