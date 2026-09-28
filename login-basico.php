@@ -32,10 +32,10 @@
         <label for="idade">Senha:</label>
         <input type="password" id="senha" name="senha" min=8 placeholder="Digite a sua senha" required><br><br>
 
+        <button type="submit">Login</button><br><br>
+        
         <a href="javascript:void(0)" onclick="alert('Usuário: leonardo25\nSenha: bananada')">Usuário e senha</a>
-
-        <button type="submit">Enviar</button><br><br>
-
+        
         <a href="index.php">Voltar ao Index</a>
         
         <?php if($mensagem != "") { ?>
