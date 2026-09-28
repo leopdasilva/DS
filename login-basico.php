@@ -1,0 +1,46 @@
+<?php
+    $usuario = "leonardo25";
+    $senha = "bananada";
+    $mensagem = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $usuario = $_POST["nome"];
+        $senha = $_POST["idade"];
+
+        if ($usuario == "leonardo25" && $senha == "bananada") {
+            $mensagem = "Login realizado com sucesso!";
+        } else {
+            $mensagem = "Usuário e/ou senha incorretos";
+        }
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login básico - PHP</title>
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+
+        <label for="nome">Usuário:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Digite o seu usuário" required><br><br>
+
+        <label for="idade">Senha:</label>
+        <input type="password" id="senha" name="senha" min=8 placeholder="Digite a sua senha" required><br><br>
+
+        <a href="javascript:void(0)" onclick="alert('Usuário: leonardo25\nSenha: bananada')">Usuário e senha</a>
+
+
+        <?php if($mensagem != "") { ?>
+            <div>
+                <p><?= $mensagem ?></p>
+            </div>
+        <?php } ?>
+    </div>
+
+</body>
+</html>
