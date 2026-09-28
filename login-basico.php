@@ -23,7 +23,7 @@
     <title>Login básico - PHP</title>
 </head>
 <body>
-    <div>
+    <form>
         <h1>Login</h1>
 
         <label for="nome">Usuário:</label>
@@ -35,7 +35,7 @@
         <button type="submit">Login</button><br><br>
         
         <a href="javascript:void(0)" onclick="alert('Usuário: leonardo25\nSenha: bananada')">Usuário e senha</a>
-        
+
         <a href="index.php">Voltar ao Index</a>
         
         <?php if($mensagem != "") { ?>
@@ -43,7 +43,7 @@
                 <p><?= $mensagem ?></p>
             </div>
         <?php } ?>
-    </div>
+    </form>
 
 </body>
 </html>
