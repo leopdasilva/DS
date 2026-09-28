@@ -5,7 +5,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $usuario = $_POST["nome"];
-        $senha = $_POST["idade"];
+        $senha = $_POST["senha"];
 
         if ($usuario == "leonardo25" && $senha == "bananada") {
             $mensagem = "Login realizado com sucesso!";
