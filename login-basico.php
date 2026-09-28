@@ -23,7 +23,7 @@
     <title>Login básico - PHP</title>
 </head>
 <body>
-    <form>
+    <form method="POST">
         <h1>Login</h1>
 
         <label for="nome">Usuário:</label>
