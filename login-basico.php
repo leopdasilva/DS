@@ -4,7 +4,7 @@
     $mensagem = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $usuario = $_POST["nome"];
+        $usuario = $_POST["usuario"];
         $senha = $_POST["senha"];
 
         if ($usuario == "leonardo25" && $senha == "bananada") {
