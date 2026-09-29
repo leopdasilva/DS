@@ -28,6 +28,7 @@
         <li><a href="notas.php">Atividade 02 - Notas</a></li>
         <li><a href="notas-desafio.php">Atividade 02 - Notas (Desafio usando GET)</a></li>
         <li><a href="login-basico.php">Atividade 03 - Login básico</a></li>
+        <li><a href="jogos.php">Atividade 04 - Cadastro de jogos</a></li>
     </ul>
 
 </body>
