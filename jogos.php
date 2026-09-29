@@ -2,10 +2,9 @@
     $nome = "";
     $genero = "";
     $nota = 0;
+    $resultado = "";
 
     require "conexao.php";
-
-    echo "<br>Meu sistema está conectado!";
 
     $sql = "CREATE TABLE IF NOT EXISTS lista_jogos (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -15,13 +14,19 @@
     )";
 
     $pdo -> exec($sql);
-
-    echo "<br>Tabela criada com sucesso!";
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = $_POST["nome"];
         $genero = $_POST["genero"];
         $nota = $_POST["nota"];
+
+        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota)";
+        
+        if ($pdo->exec($sql_cadastro)) {
+            $resultado = "Jogo cadastrado!";
+        } else {
+            $resultado = "Erro! Jogo não cadastrado!";
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -50,7 +55,9 @@
 
         <?php if($resultado != "") { ?>
 
-            <p class="msg_res">Jogo cadastrado!</p>
+            <span style="color: <?= ($resultado == 'Jogo cadastrado!') ? 'green' : 'red' ?>; font-weight: bold;">
+                    <?= $situacao ?>
+            </span>
 
         <?php } ?>
 
