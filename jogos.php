@@ -4,7 +4,6 @@
     $nota = 0;
     $ano = 0;
     $resultado = "";
-    $msg_conexao = "";
 
     require "conexao.php";
 
@@ -22,9 +21,9 @@
         $nome = $_POST["nome"];
         $genero = $_POST["genero"];
         $nota = $_POST["nota"];
-        $ano = $_POST["ano"];
+        $ano = $_POST["nota"];
 
-        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota, ano) VALUES ('$nome', '$genero', $nota, $ano)";
+        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota, $ano)";
         
         if ($pdo->exec($sql_cadastro)) {
             $resultado = "Jogo cadastrado!";
@@ -44,12 +43,6 @@
 <body>
     <form method="POST" class="card">
         <h1>Cadastro de jogos</h1>
-
-        <?php if($msg_conexao != "") { ?>
-            <div class="status-conexao <?= (strpos($msg_conexao, 'Erro') !== false) ? 'erro' : 'sucesso' ?>">
-                <?= $msg_conexao ?>
-            </div>
-        <?php } ?>
 
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo" required><br><br>
