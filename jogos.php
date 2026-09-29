@@ -32,7 +32,7 @@
     <title>Cadastro de jogos - PHP</title>
 </head>
 <body>
-    <form action="POST" class="card">
+    <form method="POST" class="card">
         <h1>Verificador de Idade</h1>
 
         <label for="nome">Nome:</label>
