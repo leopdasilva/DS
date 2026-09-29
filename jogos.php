@@ -17,7 +17,7 @@
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
         genero VARCHAR (50) NOT NULL,
-        nota INT NOT NULL
+        nota INT NOT NULL,
         ano INT NOT NULL
     )";
 
@@ -27,9 +27,9 @@
         $nome = $_POST["nome"];
         $genero = $_POST["genero"];
         $nota = $_POST["nota"];
-        $ano = $_POST["nota"];
+        $ano = $_POST["ano"];
 
-        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota, $ano)";
+        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota, ano) VALUES ('$nome', '$genero', $nota, $ano)";
         
         if ($pdo->exec($sql_cadastro)) {
             $resultado = "Jogo cadastrado!";
