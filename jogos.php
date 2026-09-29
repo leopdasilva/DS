@@ -6,12 +6,7 @@
     $resultado = "";
     $msg_conexao = "";
 
-    try {
-        require "conexao.php";
-        $msg_conexao = "Conectado ao banco com sucesso!";
-    } catch (PDOException $e) {
-        $msg_conexao = "Erro ao conectar ao banco!";
-    }
+    require "conexao.php";
 
     $sql = "CREATE TABLE IF NOT EXISTS lista_jogos (
         id INT AUTO_INCREMENT PRIMARY KEY,
