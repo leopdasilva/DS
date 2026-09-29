@@ -51,8 +51,6 @@
 
         <button type="submit">Enviar</button><br><br>
 
-        <a href="index.php">Voltar ao Index</a>
-
         <?php if($resultado != "") { ?>
 
             <span style="color: <?= ($resultado == 'Jogo cadastrado!') ? 'green' : 'red' ?>; font-weight: bold;">
@@ -60,6 +58,8 @@
             </span>
 
         <?php } ?>
+
+        <a href="index.php">Voltar ao Index</a><br><br>
 
     </form>
 </body>
