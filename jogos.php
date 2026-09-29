@@ -2,15 +2,23 @@
     $nome = "";
     $genero = "";
     $nota = 0;
+    $ano = 0;
     $resultado = "";
+    $msg_conexao = "";
 
-    require "conexao.php";
+    try {
+        require "conexao.php";
+        $msg_conexao = "Conectado ao banco com sucesso!";
+    } catch (PDOException $e) {
+        $msg_conexao = "Erro ao conectar ao banco!";
+    }
 
     $sql = "CREATE TABLE IF NOT EXISTS lista_jogos (
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
         genero VARCHAR (50) NOT NULL,
         nota INT NOT NULL
+        ano INT NOT NULL
     )";
 
     $pdo -> exec($sql);
@@ -19,8 +27,9 @@
         $nome = $_POST["nome"];
         $genero = $_POST["genero"];
         $nota = $_POST["nota"];
+        $ano = $_POST["nota"];
 
-        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota)";
+        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota, $ano)";
         
         if ($pdo->exec($sql_cadastro)) {
             $resultado = "Jogo cadastrado!";
@@ -41,6 +50,12 @@
     <form method="POST" class="card">
         <h1>Cadastro de jogos</h1>
 
+        <?php if($msg_conexao != "") { ?>
+            <div class="status-conexao <?= (strpos($msg_conexao, 'Erro') !== false) ? 'erro' : 'sucesso' ?>">
+                <?= $msg_conexao ?>
+            </div>
+        <?php } ?>
+
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo" required><br><br>
 
@@ -50,17 +65,20 @@
         <label for="nota">Nota:</label>
         <input type="number" id="nota" name="nota" min=0 max=5 placeholder="Digite a nota do jogo (0 a 5)" required><br><br>
 
+        <label for="ano">Ano:</label>
+        <input type="number" id="ano" name="ano" min=1980 max=2026 placeholder="Digite o ano de lançamento do jogo" required><br><br>
+
         <button type="submit">Enviar</button><br><br>
 
         <?php if($resultado != "") { ?>
-
-            <span style="color: <?= ($resultado == 'Jogo cadastrado!') ? 'green' : 'red' ?>; font-weight: bold;">
-                    <?= $resultado ?><br><br>
-            </span>
-
+            <div class="resultado-container">
+                <span class="<?= ($resultado == 'Jogo cadastrado!') ? 'msg-sucesso' : 'msg-erro' ?>">
+                    <?= $resultado ?>
+                </span>
+            </div>
         <?php } ?>
 
-        <a href="index.php">Voltar ao Index</a><br><br>
+        <a href="index.php" class="link-voltar">Voltar ao Index</a>
 
     </form>
 </body>

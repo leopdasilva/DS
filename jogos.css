@@ -20,7 +20,7 @@ body {
 .card {
     background: #1e222b; 
     border: 1px solid #2e3440; 
-    padding: 40px 30px;
+    padding: 35px 30px;
     border-radius: 12px;
     width: 100%;
     max-width: 420px;
@@ -32,8 +32,32 @@ h1 {
     font-size: 22px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 15px;
     letter-spacing: -0.5px;
+}
+
+
+.status-conexao {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 100%;
+}
+
+.status-conexao.sucesso {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-conexao.erro {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
 label {
@@ -58,24 +82,25 @@ input {
 
 input:focus {
     outline: none;
-    border-color: #6366f1;
+    border-color: #6366f1; 
     background: #111318;
 }
 
 input::placeholder {
-    color: #4b5563;
+    color: #4b5563; 
 }
 
 button[type="submit"] {
     width: 100%;
     padding: 14px;
     background: #4f46e5; 
+    border: none;
     border-radius: 8px;
     color: #ffffff;
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 8px;
+    margin-top: 5px;
     transition: background 0.2s ease;
 }
 
@@ -83,30 +108,37 @@ button[type="submit"]:hover {
     background: #4338ca; 
 }
 
-button[type="submit"]:active {
-    background: #3730a3;
-}
-
 .resultado-container {
     text-align: center;
-    margin-top: 18px;
-    padding: 10px;
-    background: #111318;
-    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.msg-sucesso {
+    color: #10b981; 
+}
+
+.msg-erro {
+    color: #ef4444; 
 }
 
 .link-voltar {
     display: block;
     text-align: center;
-    color: #9ca3af;
+    color: #9ca3af; 
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     margin-top: 20px;
-    transition: color 0.2s;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
 }
 
 .link-voltar:hover {
-    color: #f3f4f6; 
-    text-decoration: underline;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05); 
+    text-decoration: none;
 }
