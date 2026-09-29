@@ -39,7 +39,7 @@
 </head>
 <body>
     <form method="POST" class="card">
-        <h1>Verificador de Idade</h1>
+        <h1>Cadastro de jogos</h1>
 
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo" required><br><br>
