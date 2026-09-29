@@ -19,25 +19,44 @@ body {
     background-size: cover;
     
     text-align: center; 
-}
-
-body > br + text, 
-body {
+    
     font-weight: 500;
+    line-height: 1.6;
 }
 
-body > br {
+body > br:first-of-type {
+    display: none;
+}
+
+body > br:nth-of-type(2) {
     display: block;
-    margin-bottom: 5px;
-    content: "";
+    content: "Status do Sistema";
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7f8c8d;
+    font-weight: bold;
+    margin-bottom: 10px;
+   
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 20px 20px 0px 20px;
+    border-radius: 12px 12px 0 0; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+body > br:max-of-type {
+    margin-bottom: 20px;
 }
 
 h1 {
     font-size: 2rem;
     color: #2c3e50;
     background-color: #ffffff;
-    border-radius: 12px;
-    margin-top: 15px; 
+    border-radius: 0 0 12px 12px; 
+    margin-top: -20px; 
+    
     margin-bottom: 25px;
     text-align: center;
     font-weight: 600;
@@ -45,6 +64,13 @@ h1 {
     width: 100%;
     max-width: 400px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+    border-top: 1px solid #f1f2f6; 
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
 }
 
 ul {
