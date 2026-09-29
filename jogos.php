@@ -56,7 +56,7 @@
         <?php if($resultado != "") { ?>
 
             <span style="color: <?= ($resultado == 'Jogo cadastrado!') ? 'green' : 'red' ?>; font-weight: bold;">
-                    <?= $situacao ?>
+                    <?= $resultado ?>
             </span>
 
         <?php } ?>
