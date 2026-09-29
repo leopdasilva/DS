@@ -12,7 +12,7 @@
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
         genero VARCHAR (50) NOT NULL,
-        nota INT NOT NULL,
+        nota INT NOT NULL
         ano INT NOT NULL
     )";
 
@@ -66,14 +66,14 @@
         <button type="submit">Enviar</button><br><br>
 
         <?php if($resultado != "") { ?>
-            <div class="resultado-container">
-                <span class="<?= ($resultado == 'Jogo cadastrado!') ? 'msg-sucesso' : 'msg-erro' ?>">
-                    <?= $resultado ?>
-                </span>
-            </div>
+
+            <span style="color: <?= ($resultado == 'Jogo cadastrado!') ? 'green' : 'red' ?>; font-weight: bold;">
+                    <?= $resultado ?><br><br>
+            </span>
+
         <?php } ?>
 
-        <a href="index.php" class="link-voltar">Voltar ao Index</a>
+        <a href="index.php">Voltar ao Index</a><br><br>
 
     </form>
 </body>
