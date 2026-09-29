@@ -21,9 +21,9 @@
         $nome = $_POST["nome"];
         $genero = $_POST["genero"];
         $nota = $_POST["nota"];
-        $ano = $_POST["nota"];
+        $ano = $_POST["ano"];
 
-        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota, $ano)";
+        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota, ano) VALUES ('$nome', '$genero', $nota, $ano)";
         
         if ($pdo->exec($sql_cadastro)) {
             $resultado = "Jogo cadastrado!";
