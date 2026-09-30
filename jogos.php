@@ -31,6 +31,16 @@
             $resultado = "Erro! Jogo não cadastrado!";
         }
     }
+
+    // Buscar os jogos registrados no banco de dados
+    // exec() = executa algo quando você NÃO precisa receber registros de volta
+    // query() = executa uma consulta quando você QUER receber dados de volta
+
+    $buscar = "SELECT * FROM lista_jogos";
+
+    $stmt = $pdo -> query($buscar);
+
+    $jogos = $stmt -> fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -66,8 +76,31 @@
 
         <?php } ?>
 
+
         <a href="index.php">Voltar ao Index</a><br><br>
 
     </form>
+
+    <h2>Jogos cadastrados</h2>
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Gênero</th>
+                <th>Nota</th>
+            </tr>
+        
+            <?php foreach($jogos as $jogo) {?>
+                <tr>
+                    <td><?= $jogo["id"]?></td>
+                    <td><?= $jogo["nome"]?></td>
+                    <td><?= $jogo["genero"]?></td>
+                    <td><?= $jogo["nota"]?></td>
+                    <td><?= $jogo["ano"]?></td>
+                </tr>
+
+            <?php } ?>
+        </table>
 </body>
 </html>
