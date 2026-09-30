@@ -24,6 +24,7 @@
         $genero = $_POST["genero"];
         $nota = $_POST["nota"];
         $ano = $_POST["ano"];
+        $senha = $_POST["senha"];
 
         if ($senha == 'seubanana') {
             $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota, ano) VALUES ('$nome', '$genero', $nota, $ano)";
