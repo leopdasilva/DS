@@ -75,7 +75,7 @@
         <input type="number" id="ano" name="ano" min=1980 max=2026 placeholder="Digite o ano de lançamento do jogo" required><br><br>
 
         <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" placeholder="Digite o ano de lançamento do jogo" required><br><br>
+        <input type="password" id="senha" name="senha" placeholder="Digite a senha para preencher finalizar o cadastro" required><br><br>
 
         <button type="submit">Enviar</button><br><br>
 
