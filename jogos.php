@@ -83,12 +83,14 @@
 
     <h2>Jogos cadastrados</h2>
 
+    <div class="table-container">
         <table>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
                 <th>Gênero</th>
                 <th>Nota</th>
+                <th>Ano</th>
             </tr>
         
             <?php foreach($jogos as $jogo) {?>
@@ -99,8 +101,8 @@
                     <td><?= $jogo["nota"]?></td>
                     <td><?= $jogo["ano"]?></td>
                 </tr>
-
             <?php } ?>
         </table>
+    </div>
 </body>
 </html>
