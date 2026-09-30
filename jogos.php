@@ -5,6 +5,8 @@
     $ano = 0;
     $resultado = "";
 
+    $senha = "seubanana";
+
     require "conexao.php";
 
     $sql = "CREATE TABLE IF NOT EXISTS lista_jogos (
@@ -23,13 +25,18 @@
         $nota = $_POST["nota"];
         $ano = $_POST["ano"];
 
-        $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota, ano) VALUES ('$nome', '$genero', $nota, $ano)";
-        
-        if ($pdo->exec($sql_cadastro)) {
-            $resultado = "Jogo cadastrado!";
+        if ($senha == 'seubanana') {
+            $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota, ano) VALUES ('$nome', '$genero', $nota, $ano)";
+            if ($pdo->exec($sql_cadastro)) {
+                $resultado = "Jogo cadastrado!";
+            } else {
+                $resultado = "Erro! Jogo não cadastrado!";
+            }
         } else {
-            $resultado = "Erro! Jogo não cadastrado!";
+            $resultado = "Senha inválida!";
         }
+        
+        
     }
 
     // Buscar os jogos registrados no banco de dados
@@ -66,13 +73,17 @@
         <label for="ano">Ano:</label>
         <input type="number" id="ano" name="ano" min=1980 max=2026 placeholder="Digite o ano de lançamento do jogo" required><br><br>
 
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite o ano de lançamento do jogo" required><br><br>
+
         <button type="submit">Enviar</button><br><br>
 
         <?php if($resultado != "") { ?>
 
             <span style="color: <?= ($resultado == 'Jogo cadastrado!') ? 'green' : 'red' ?>; font-weight: bold;">
-                    <?= $resultado ?><br><br>
+                <?= $resultado ?><br><br>
             </span>
+
 
         <?php } ?>
 
