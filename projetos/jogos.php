@@ -7,7 +7,7 @@
 
     $senha = "ladraodesenha";
 
-    require "conexao.php";
+    require __DIR__ . "/../conexao.php";
 
     $sql = "CREATE TABLE IF NOT EXISTS lista_jogos (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -56,7 +56,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de jogos - PHP</title>
-    <link rel="stylesheet" href="style/jogos.css">
+    <link rel="stylesheet" href="../style/jogos.css">
 </head>
 <body>
     <form method="POST" class="card">

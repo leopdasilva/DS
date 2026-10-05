@@ -5,19 +5,19 @@
     $situacao = "";
     $frequencia = 0;
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
         //Nome e Idade
-        $nome = $_POST["nome"];
-        $idade = $_POST["idade"];
-        $frequencia = $_POST["frequencia"];
+        $nome = $_GET["nome"];
+        $idade = $_GET["idade"];
+        $frequencia = $_GET["frequencia"];
         $resto = 0;
 
         //Notas
-        $nota1 = $_POST["nota1"];
-        $nota2 = $_POST["nota2"];
-        $nota3 = $_POST["nota3"];
-        $nota4 = $_POST["nota4"];
-        $nota5 = $_POST["nota5"];
+        $nota1 = $_GET["nota1"];
+        $nota2 = $_GET["nota2"];
+        $nota3 = $_GET["nota3"];
+        $nota4 = $_GET["nota4"];
+        $nota5 = $_GET["nota5"];
 
         //Calculo de média
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
@@ -43,12 +43,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas - HTML & PHP</title>
-    <link rel="stylesheet" href="style/notas.css">
+    <link rel="stylesheet" href="../style/notas.css">
 </head>
 
 <body>
 
-    <form class="card" method="POST">
+    <form class="card" method="GET">
         <h1>Sistema de cadastro e situação</h1>
 
         <label for="nome">Nome:</label>
@@ -72,7 +72,7 @@
         <label for="idade">Nota 5:</label>
         <input type="number" id="nota5" name="nota5" min=0 max=10 placeholder="Digite a quinta nota" required><br><br>
 
-        <label for="frequencia">Frequencia:</label>
+        <label for="idade">Frequencia:</label>
         <input type="number" id="frequencia" name="frequencia" min=0 max=100 placeholder="Digite a frequência (%)" required><br><br>
 
         <button type="submit">Enviar</button><br><br>
@@ -105,9 +105,9 @@
                 </li>
             </ul><br>
 
-            <p><strong>Frequência: </strong><?=$frequencia?>%</p><br>
+            <p><strong>Frequência: <?=$frequencia?>%</strong></p><br>
 
-            <p><strong>Media final: </strong><?=$media?></p><br>
+            <p><strong>Media final: <?=$media?></strong></p><br>
             <p><strong>Situação:</strong>
                 <span style="color: <?= ($situacao == 'Aprovado' || $situacao == 'Aprovado com exelência') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
                     <?= $situacao ?>
