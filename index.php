@@ -111,9 +111,9 @@
             </div>
         </section>
         <!-- ==========================  
-            PROJETOS
+            PROJETOS - CURSO
         ========================== -->
-        <section id="projetos" class="secao">
+        <section id="projetos-curso" class="secao">
             <h2 class="titulo-secao">Meus projetos</h2>
             <p class="subtitulo-secao">
                 Alguns projetso desenvolvidos durante o curso.
@@ -237,6 +237,97 @@
             <div class="projeto-card">
                 <div class="projeto-numero">
                     07
+                </div>
+                <h3>Cadastro de jogos em PHP</h3>
+                <p>
+                    Aplicação CRUD em PHP nativo utilizando a extensão PDO para integração, persistência e leitura de 
+                    dados em um banco de dados MySQL. O projeto realiza a criação automatizada de tabelas estruturais 
+                    (Data Definition Language), gerencia o fluxo de cadastro seguro via autenticação por token estático 
+                    no backend e consome dados do servidor de forma síncrona para renderizar listagens dinâmicas em 
+                    tabelas HTML.
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                </div>
+                <a href="projetos/jogos.php" class="link-projeto">Ver projeto →</a>
+            </div>
+        </section>
+        <!-- ==========================  
+            PROJETOS - PHP
+        ========================== -->
+        <section id="projetos-php" class="secao">
+            <h2 class="titulo-secao">Meus projetos</h2>
+            <p class="subtitulo-secao">
+                Alguns projetso desenvolvidos durante o curso.
+            </p>
+            <!-- PROJETO 1 -->
+            <div class="projeto-card">
+                <div class="projeto-numero">
+                    01
+                </div>
+                <h3>Vereficar idade em PHP</h3>
+                <p>
+                    Aplicação web responsiva desenvolvida em PHP estruturado e HTML5 para 
+                    validação dinâmica de dados e controle de fluxo. O projeto processa 
+                    requisições de formulários via método POST de forma nativa, realizando a 
+                    captura, tratamento de variáveis e renderização condicional na 
+                    mesma interface para determinar a maioridade do usuário com base nas 
+                    regras de negócio implementadas.
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                </div>
+                <a href="projetos/idade.php" class="link-projeto">Ver projeto →</a>
+            </div>
+            <!-- PROJETO 2 -->
+            <div class="projeto-card">
+                <div class="projeto-numero">
+                    02
+                </div>
+                <h3>Vereficar notas em PHP</h3>
+                <p>
+                    Sistema de gestão acadêmica em PHP nativo e HTML5 que processa e 
+                    valida o desempenho de estudantes via formulário POST. A aplicação calcula médias 
+                    ponderadas complexas cruzando notas e frequência, aplicando uma lógica de negócio 
+                    backend para determinar o status escolar e renderizar o resultado de forma condicional 
+                    e reativa na interface.
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                </div>
+                <a href="projetos/notas.php" class="link-projeto">Ver projeto →</a>
+            </div>
+            <!-- PROJETO 3 -->
+            <div class="projeto-card">
+                <div class="projeto-numero">
+                    03
+                </div>
+                <h3>Login básico em PHP</h3>
+                <p>
+                    Mecanismo básico de autenticação desenvolvido em PHP nativo e HTML5 
+                    para simular o fluxo de login de um usuário. O script processa credenciais 
+                    estáticas de forma síncrona via requisições POST, validando os dados no backend 
+                    para exibir mensagens de feedback dinâmicas na interface e incluindo um helper 
+                    em JavaScript para exibição de credenciais de teste.
+                </p>
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="projetos/login-basico.php" class="link-projeto">Ver projeto →</a>
+            </div>
+            <!-- PROJETO 4 -->
+            <div class="projeto-card">
+                <div class="projeto-numero">
+                    04
                 </div>
                 <h3>Cadastro de jogos em PHP</h3>
                 <p>
