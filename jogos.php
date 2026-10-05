@@ -5,7 +5,7 @@
     $ano = 0;
     $resultado = "";
 
-    $senha = "seubanana";
+    $senha = "ladraodesenha";
 
     require "conexao.php";
 
@@ -26,7 +26,7 @@
         $ano = $_POST["ano"];
         $senha = $_POST["senha"];
 
-        if ($senha == 'seubanana') {
+        if ($senha == 'ladraodesenha') {
             $sql_cadastro = "INSERT INTO lista_jogos (nome, genero, nota, ano) VALUES ('$nome', '$genero', $nota, $ano)";
             if ($pdo->exec($sql_cadastro)) {
                 $resultado = "Jogo cadastrado!";
