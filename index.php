@@ -1,18 +1,3 @@
-<?php
-    require "conexao.php";
-
-    echo "<br>Meu sistema está conectado!";
-
-    $sql = "CREATE TABLE IF NOT EXISTS teste (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        nome VARCHAR(100),
-        idade INT
-    )";
-
-    $pdo -> exec($sql);
-
-    echo "<br>Tabela criada com sucesso!";
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,14 +7,59 @@
     <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-    <h1>Lista de Atividades</h1>
-    <ul>
-        <li><a href="projetos/idade.php">Atividade 01 - Idade</a></li>
-        <li><a href="projetos/notas.php">Atividade 02 - Notas</a></li>
-        <li><a href="projetos/notas-desafio.php">Atividade 02 - Notas (Desafio usando GET)</a></li>
-        <li><a href="projetos/login-basico.php">Atividade 03 - Login básico</a></li>
-        <li><a href="projetos/jogos.php">Atividade 04 - Cadastro de jogos</a></li>
-    </ul>
+    <header>
+        <!-- ==========================  
+            MENU DE NAVEGAÇÃO
+        ========================== -->
+        <nav class="navbar">
+            <h2 class="logo">Meu portifólio</h2>
+
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- ==========================  
+            MENU DE NAVEGAÇÃO
+        ========================== -->
+        <section id="inicio" class="inicio">
+            <div class="incio-conteudo">
+                <p class="incio-conteudo">
+                    <p class="saudacao">Olá! Eu sou </p>
+
+                    <h1>Leonardo P. da Silva</h1>
+
+                    <h2>Desenvolvedor em fornação</h2>
+
+                    <p>
+                        Estudante de Desenvolvimento de Sistemas,
+                        Formado em Gestão de Tecnologia da Informação.
+                    </p>
+
+                    <a href="#projetos" class="botao">
+                        Ver meus projetos
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ==========================  
+            MENU DE NAVEGAÇÃO
+        ========================== -->
+        <section id="sobre" class="secao">
+            
+        </section>
+
+    </main>
+
+  
 
 </body>
 </html>
