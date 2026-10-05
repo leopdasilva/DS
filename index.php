@@ -24,11 +24,11 @@
 <body>
     <h1>Lista de Atividades</h1>
     <ul>
-        <li><a href="idade.php">Atividade 01 - Idade</a></li>
-        <li><a href="notas.php">Atividade 02 - Notas</a></li>
-        <li><a href="notas-desafio.php">Atividade 02 - Notas (Desafio usando GET)</a></li>
-        <li><a href="login-basico.php">Atividade 03 - Login básico</a></li>
-        <li><a href="jogos.php">Atividade 04 - Cadastro de jogos</a></li>
+        <li><a href="projetos/idade.php">Atividade 01 - Idade</a></li>
+        <li><a href="projetos/notas.php">Atividade 02 - Notas</a></li>
+        <li><a href="projetos/notas-desafio.php">Atividade 02 - Notas (Desafio usando GET)</a></li>
+        <li><a href="projetos/login-basico.php">Atividade 03 - Login básico</a></li>
+        <li><a href="projetos/jogos.php">Atividade 04 - Cadastro de jogos</a></li>
     </ul>
 
 </body>
