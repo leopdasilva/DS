@@ -36,7 +36,7 @@
 
                     <h1>Leonardo P. da Silva</h1>
 
-                    <h2>Desenvolvedor em fornação</h2>
+                    <h2>Desenvolvedor em formação</h2>
 
                     <p>
                         Estudante de Desenvolvimento de Sistemas,
