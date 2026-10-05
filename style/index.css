@@ -36,3 +36,30 @@ header {
 
     padding: 20px;
 }
+
+.logo {
+    color: white;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+}
+
+.menu a {
+    color: #dddddd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #60a5fa;
+}
+
+/* ==============================================
+    INÍCIO 
+============================================== */
+
+
