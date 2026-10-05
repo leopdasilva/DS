@@ -89,7 +89,7 @@
         <?php } ?>
 
 
-        <a href="index.php">Voltar ao Index</a><br><br>
+        <a href="../index.php">Voltar ao Index</a><br><br>
 
     </form>
 

@@ -77,7 +77,7 @@
 
         <button type="submit">Enviar</button><br><br>
 
-        <a href="index.php">Voltar ao Index</a>
+        <a href="../index.php">Voltar ao Index</a>
 
     </form>
 
