@@ -304,9 +304,10 @@
 
             carrosseis.forEach((carrossel) => {
                 carrossel.addEventListener('wheel', function(evt) {
+                    // Se houver movimento vertical, converte para horizontal
                     if (evt.deltaY !== 0) {
                         evt.preventDefault();
-                        this.scrollLeft += evt.deltaY * 1.2;
+                        carrossel.scrollLeft += evt.deltaY;
                     }
                 }, { passive: false });
             });
