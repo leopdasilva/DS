@@ -1,4 +1,16 @@
-/* CONFIGURÇÕES GERAIS  */
+/* ==============================================
+    CONFIGURAÇÕES GERAIS E PALETA DE CORES
+============================================== */
+
+:root {
+    --cor-principal: #6366f1;       /* Indigo moderno */
+    --cor-principal-hover: #4f46e5; /* Indigo escuro para hover */
+    --cor-fundo: #fafafa;           /* Fundo geral limpo */
+    --cor-texto: #1e293b;           /* Texto principal em tom ardósia */
+    --cor-card: #ffffff;            /* Fundo dos cards e caixas */
+    --cor-borda: #e2e8f0;           /* Cor para contornos/linhas subtis */
+    --cor-destaque-bg: #0f172a;     /* Fundo escuro para secções de destaque (Início, Footer) */
+}
 
 * {
     margin: 0;
@@ -12,8 +24,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-    color: #222222;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     line-height: 1.6;
     transition: all 0.3s ease-in-out;
 }
@@ -21,7 +33,7 @@ body {
 /* MENU */
 
 header {
-    background-color: #000000;
+    background-color: var(--cor-destaque-bg);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -50,13 +62,13 @@ header {
 }
 
 .menu a {
-    color: #dddddd;
+    color: #cbd5e1;
     text-decoration: none;
     font-weight: bold;
 }
 
 .menu a:hover {
-    color: #60a5fa;
+    color: var(--cor-principal);
 }
 
 /* ==============================================
@@ -67,7 +79,7 @@ header {
     min-height: 85vh;
     display: flex;
     align-items: center;
-    background-color: #111827;
+    background-color: var(--cor-destaque-bg);
     color: white;
 }
 
@@ -78,7 +90,7 @@ header {
 }
 
 .saudacao {
-    color: #60a5fa;
+    color: var(--cor-principal);
     font-size: 20px;
     margin-bottom: 5px;
 }
@@ -90,7 +102,7 @@ header {
 
 .inicio h2 {
     font-size: 30px;
-    color: #aaaaaa;
+    color: #94a3b8;
     margin-bottom: 20px;
 }
 
@@ -104,7 +116,7 @@ header {
     margin-top: 30px;
     padding: 12px 25px;
 
-    background-color: #2563eb;
+    background-color: var(--cor-principal);
     color: white;
 
     text-decoration: none;
@@ -115,7 +127,7 @@ header {
 }
 
 .botao:hover {
-    background-color: #1d4ed8;
+    background-color: var(--cor-principal-hover);
 }
 
 /* ==============================================
@@ -136,7 +148,7 @@ header {
 
 .subtitulo-secao {
     text-align: center;
-    color: #666666;
+    color: #64748b;
     margin-bottom: 40px;
 }
 
@@ -156,8 +168,9 @@ header {
     height: 200px;
     min-width: 200px;
     border-radius: 50%;
-    background-color: #2563eb;
+    background-color: var(--cor-principal);
     color: white;
+    background-image: url(../imagens/silva-perfil.png);
 
     display: flex;
     justify-content: center;
@@ -182,7 +195,7 @@ header {
 
 .secao-destaque {
     max-width: 100%;
-    background-color: #e5e7eb;
+    background-color: #f1f5f9;
 }
 
 .secao-destaque > * {
@@ -203,15 +216,17 @@ header {
 }
 
 .habilidade {
-    background-color: white;
+    background-color: var(--cor-card);
     padding: 15px 25px;
-    border-radius:  8px;
+    border-radius: 8px;
     font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--cor-borda);
 }
 
 .habilidade:hover {
     transform: translateY(-3px);
+    border-color: var(--cor-principal);
 }
 
 
@@ -221,12 +236,10 @@ header {
 
 .projetos-container {
     display: flex; 
-    
+    gap: 30px;
     overflow-x: auto; 
     scroll-behavior: smooth;
-
     scroll-snap-type: x mandatory; 
-    
     padding: 20px 10px; 
     margin: 0 -10px; 
 }
@@ -250,13 +263,14 @@ header {
 }
 
 .projeto-card {
-    background-color: white;
+    background-color: var(--cor-card);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--cor-borda);
     transition: 0.3s;
 
-    flex: 0 0 calc(33.333% - 17px);
+    flex: 0 0 calc(33.333% - 20px);
     flex-shrink: 0; 
     scroll-snap-align: start; 
     box-sizing: border-box;
@@ -264,13 +278,14 @@ header {
 
 .projeto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+    border-color: var(--cor-principal);
 }
 
 .projeto-numero {
     font-size: 35px;
     font-weight: bold;
-    color: #2563eb;
+    color: var(--cor-principal);
     margin-bottom: 15px;
 }
 
@@ -280,7 +295,7 @@ header {
 }
 
 .projeto-card p {
-    color: #555555;
+    color: #475569;
     margin-bottom: 20px;
 }
 
@@ -295,8 +310,8 @@ header {
 }
 
 .tecnologias span {
-    background-color: #dbeafe;
-    color: #1d4ed8;
+    background-color: #e0e7ff;
+    color: #4338ca;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 13px;
@@ -306,13 +321,14 @@ header {
 /* LINK DO PROJETO */
 
 .link-projeto {
-    color: #2563eb;
+    color: var(--cor-principal);
     text-decoration: none;
     font-weight: bold;
 }
 
 .link-projeto:hover {
     text-decoration: underline;
+    color: var(--cor-principal-hover);
 }
 
 
@@ -328,16 +344,17 @@ header {
 }
 
 .contato-item {
-    background-color: white;
+    background-color: var(--cor-card);
     width: 280px;
     padding: 25px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--cor-borda);
 }
 
 .contato-item h3 {
-    color: #2563eb;
+    color: var(--cor-principal);
     margin-bottom: 5px;
 }
 
@@ -347,7 +364,7 @@ header {
     margin-top: 30px;
     padding: 12px 25px;
 
-    background-color: #2563eb;
+    background-color: var(--cor-principal);
     color: white;
 
     text-decoration: none;
@@ -358,7 +375,7 @@ header {
 }
 
 .contato-item a:hover {
-    background-color: #1d4ed8;
+    background-color: var(--cor-principal-hover);
 }
 
 
@@ -367,13 +384,14 @@ header {
 ============================================== */
 
 footer {
-    background-color: #111827;
-    color: #cccccc;
+    background-color: var(--cor-destaque-bg);
+    color: #cbd5e1;
     text-align: center;
     padding: 30px;
 }
 
 footer a {
+    color: var(--cor-principal);
     text-decoration: none;
 }
 

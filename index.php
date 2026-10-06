@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML & PHP - DS</title>
+    <title>Portifólio LPS</title>
     <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
@@ -55,7 +55,7 @@
         <section id="sobre" class="secao">
             <div class="sobre_conteudo">
                 <div class="foto">
-                    JS
+                    
                 </div>
                 <div class="sobre-texto">
                     <h3>Quem sou eu?</h3>
@@ -285,7 +285,7 @@
                 </div>
                 <div class="contato-item">
                     <h3>LinkedIn</h3>
-                    <a href=""></a>
+                    <a href="https://www.linkedin.com/in/leonardo-pereira-da-silva-b911a6174/">linkedin.com/in/leonardo-pereira-da-silva</a>
                 </div>
             </div>
         </section>
