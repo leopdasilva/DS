@@ -183,3 +183,32 @@ header {
     max-width: 100%;
     background-color: #e5e7eb;
 }
+
+.secao-destaque > * {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==============================================
+    HABILIDADES
+============================================== */
+
+.lista-habilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.habilidade {
+    background-color: white;
+    padding: 15px 25px;
+    border-radius:  8px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.habilidade:hover {
+    transform: translateY(-3px);
+}
