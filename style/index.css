@@ -15,6 +15,7 @@ body {
     background-color: #f5f5f5;
     color: #222222;
     line-height: 1.6;
+    transition: all 0.3s ease-in-out;
 }
 
 /* MENU */
@@ -355,6 +356,116 @@ footer a:hover {
     RESPONSIVIDADE 
 ============================================== */
 
+/* Tablets e Celulares Grandes */
 @media (max-width: 800px) {
+    /* MENU */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 
+    .menu {
+        gap: 15px;
+        padding-left: 0;
+    }
+
+    /* INÍCIO */
+    .inicio {
+        min-height: 70vh;
+        padding: 40px 0;
+    }
+
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .inicio h2 {
+        font-size: 22px;
+    }
+
+    /* SEÇÕES GERAIS */
+    .secao {
+        padding: 50px 20px;
+    }
+
+    .titulo-secao {
+        font-size: 28px;
+    }
+
+    /* SOBRE MIM */
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .foto {
+        width: 150px;
+        height: 150px;
+        min-width: 150px;
+        font-size: 45px;
+    }
+
+    /* PROJETOS (De 3 colunas para 1 coluna) */
+    .projetos-conteiner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* CONTATO */
+    .contato-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-item {
+        width: 100%;
+        max-width: 340px;
+    }
+}
+
+/* Celulares Pequenos (Até 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px 10px;
+    }
+
+    .menu {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .inicio h1 {
+        font-size: 32px; 
+    }
+
+    .inicio h2 {
+        font-size: 18px;
+    }
+
+    .inicio-conteudo > p {
+        font-size: 14px;
+    }
+
+    .titulo-secao {
+        font-size: 24px;
+    }
+
+    .subtitulo-secao {
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+
+    .projeto-card {
+        padding: 20px; /
+    }
+
+    .contato-item {
+        max-width: 100%; 
+    }
+    
+    .contato-item a {
+        width: 100%; 
+    }
 }
