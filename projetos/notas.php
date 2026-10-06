@@ -37,90 +37,126 @@
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas - HTML & PHP</title>
-    <link rel="stylesheet" href="../style/notas.css">
+    <title>Notas | PHP</title>
+    <link rel="stylesheet" href="style/layout.css">
 </head>
-
 <body>
+     <!-- CABEÇALHO -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Meu portifólio</h2>
 
-    <form class="card" method="POST">
-        <h1>Sistema de cadastro e situação</h1>
+            <ul class="menu">
+                <li><a href="../index.php">Inicio</a></li>
+                <li><a href="../index.php#projetos-php">Atividades</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
+    <!-- CONTEÚDO DA ATIVIDADE -->
+    <main class="pagina-projeto">
+        <!-- CABEÇALHO DA ATIVIDADE -->
+        <section class="cabecalho-projeto">
+            <p class="projeto-tipo">
+                atividade
+            </p>
+            <h1>Sistema de cadastro e situação de notas</h1>
+            <p>Atividade desenvolvida durantes as aulas de desenvolvimento de sistemas</p>
+        </section>
 
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="idade" min=1 placeholder="Digite a sua idade" required><br><br>
+        <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
+        <section class="conteudo-projeto">
+            <form class="card" method="POST">
 
-        <label for="idade">Nota 1:</label>
-        <input type="number" id="nota1" name="nota1" min=0 max=10 placeholder="Digite a primeira nota" required><br><br>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
 
-        <label for="idade">Nota 2:</label>
-        <input type="number" id="nota2" name="nota2" min=0 max=10 placeholder="Digite a segunda nota" required><br><br>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min=1 placeholder="Digite a sua idade" required><br><br>
 
-        <label for="idade">Nota 3:</label>
-        <input type="number" id="nota3" name="nota3" min=0 max=10 placeholder="Digite a terceira nota" required><br><br>
-        
-        <label for="idade">Nota 4:</label>
-        <input type="number" id="nota4" name="nota4" min=0 max=10 placeholder="Digite a quarta nota" required><br><br>
+                <label for="idade">Nota 1:</label>
+                <input type="number" id="nota1" name="nota1" min=0 max=10 placeholder="Digite a primeira nota" required><br><br>
 
-        <label for="idade">Nota 5:</label>
-        <input type="number" id="nota5" name="nota5" min=0 max=10 placeholder="Digite a quinta nota" required><br><br>
+                <label for="idade">Nota 2:</label>
+                <input type="number" id="nota2" name="nota2" min=0 max=10 placeholder="Digite a segunda nota" required><br><br>
 
-        <label for="frequencia">Frequencia:</label>
-        <input type="number" id="frequencia" name="frequencia" min=0 max=100 placeholder="Digite a frequência (%)" required><br><br>
+                <label for="idade">Nota 3:</label>
+                <input type="number" id="nota3" name="nota3" min=0 max=10 placeholder="Digite a terceira nota" required><br><br>
+                
+                <label for="idade">Nota 4:</label>
+                <input type="number" id="nota4" name="nota4" min=0 max=10 placeholder="Digite a quarta nota" required><br><br>
 
-        <button type="submit">Enviar</button><br><br>
+                <label for="idade">Nota 5:</label>
+                <input type="number" id="nota5" name="nota5" min=0 max=10 placeholder="Digite a quinta nota" required><br><br>
 
-        <a href="../index.php">Voltar ao Index</a>
+                <label for="frequencia">Frequencia:</label>
+                <input type="number" id="frequencia" name="frequencia" min=0 max=100 placeholder="Digite a frequência (%)" required><br><br>
 
-    </form>
+                <button type="submit">Enviar</button><br><br>
+            </form>
 
-    <?php if($situacao != "") { ?>
-        <div class="card">
-            <h1>Resultado</h1>
-            <p><strong>Aluno:</strong> <?=$nome?></p>
-            <p><strong>Idade:</strong> <?=$idade?></p><br>
+            <?php if($situacao != "") { ?>
+                <div class="card">
+                    <h1>Resultado</h1>
+                    <p><strong>Aluno:</strong> <?=$nome?></p>
+                    <p><strong>Idade:</strong> <?=$idade?></p><br>
 
-            <ul>
-                <li>
-                    <p>Nota 1: <?=$nota1?></p>
-                </li>
-                <li>
-                    <p>Nota 2: <?=$nota2?></p>
-                </li>
-                <li>
-                    <p>Nota 3: <?=$nota3?></p>
-                </li>
-                <li>
-                    <p>Nota 4: <?=$nota4?></p>
-                </li>
-                <li>
-                    <p>Nota 5: <?=$nota5?></p>
-                </li>
-            </ul><br>
+                    <ul>
+                        <li>
+                            <p>Nota 1: <?=$nota1?></p>
+                        </li>
+                        <li>
+                            <p>Nota 2: <?=$nota2?></p>
+                        </li>
+                        <li>
+                            <p>Nota 3: <?=$nota3?></p>
+                        </li>
+                        <li>
+                            <p>Nota 4: <?=$nota4?></p>
+                        </li>
+                        <li>
+                            <p>Nota 5: <?=$nota5?></p>
+                        </li>
+                    </ul><br>
 
-            <p><strong>Frequência: </strong><?=$frequencia?>%</p><br>
+                    <p><strong>Frequência: </strong><?=$frequencia?>%</p><br>
 
-            <p><strong>Media final: </strong><?=$media?></p><br>
-            <p><strong>Situação:</strong>
-                <span style="color: <?= ($situacao == 'Aprovado' || $situacao == 'Aprovado com exelência') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
-                    <?= $situacao ?>
-                </span>
-            </p><br>
+                    <p><strong>Media final: </strong><?=$media?></p><br>
+                    <p><strong>Situação:</strong>
+                        <span style="color: <?= ($situacao == 'Aprovado' || $situacao == 'Aprovado com exelência') ? 'green' : (($situacao == 'Recuperação') ? 'orange' : 'red') ?>; font-weight: bold;">
+                            <?= $situacao ?>
+                        </span>
+                    </p><br>
 
-            <?php if (($situacao == "Recuperação" || $situacao == "Reprovado") && $frequencia >= 75) { ?>
-                <p>
-                    Faltaram <strong><?= $resto ?></strong> ponto(s) para atingir a média 7.
-                </p>
+                    <?php if (($situacao == "Recuperação" || $situacao == "Reprovado") && $frequencia >= 75) { ?>
+                        <p>
+                            Faltaram <strong><?= $resto ?></strong> ponto(s) para atingir a média 7.
+                        </p>
+                    <?php } ?>
+                </div>
             <?php } ?>
-        </div>
-    <?php } ?>
 
+        </section>
+
+        <!-- FIM DA ATIVIDADE -->
+        <div class="voltar-projetos">
+            <a href="../index.php#projetos-php"> ← Voltar para atividades</a>
+        </div>
+    </main>
+
+    <!-- RODAPÈ -->
+    <footer>
+        <p>
+            Desenvolvido por <a href="https://leonardo315.devlook.xyz">Leonardo P. da Silva </a> • 2026
+        </p>
+    </footer>
+
+    
 </body>
 </html>
