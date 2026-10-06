@@ -14,6 +14,12 @@
         <nav class="navbar">
             <h2 class="logo">Meu portifólio</h2>
 
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -298,18 +304,19 @@
     </main>
 
     <script>
-        //Evento JavaScript para usar o scroll do mouse em cima dos cards em carrosel
-        document.addEventListener("DOMContentLoaded", function() {
-            const carrosseis = document.querySelectorAll('.projetos-container');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
 
-            carrosseis.forEach((carrossel) => {
-                carrossel.addEventListener('wheel', function(evt) {
-                    // Se houver movimento vertical, converte para horizontal
-                    if (evt.deltaY !== 0) {
-                        evt.preventDefault();
-                        carrossel.scrollLeft += evt.deltaY;
-                    }
-                }, { passive: false });
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('ativo');
+            menu.classList.toggle('ativo');
+        });
+
+        // Fecha o menu automaticamente quando o utilizador clica num link da lista
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('ativo');
+                menu.classList.remove('ativo');
             });
         });
     </script>
