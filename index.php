@@ -296,5 +296,17 @@
         </footer>
 
     </main>
+
+    <script>
+        //Evento JavaScript para usar o scroll do mouse em cima dos cards em carrosel
+        const carrossel = document.querySelector('.projetos-container');
+
+        if (carrossel) {
+            carrossel.addEventListener('wheel', (evt) => {
+                evt.preventDefault();
+                carrossel.scrollLeft += evt.deltaY;
+            });
+        }
+    </script>
 </body>
 </html>
