@@ -243,3 +243,13 @@ header {
     color: #2563eb;
     margin-bottom: 15px;
 }
+
+.projeto-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.projeto-card p {
+    color: #555555;
+    margin-bottom: 20px;
+}
