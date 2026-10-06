@@ -46,15 +46,13 @@
             <p class="projeto-tipo">
                 atividade
             </p>
-            <h1>Nome da atividade</h1>
+            <h1>Vereficador de idade</h1>
             <p>Atividade desenvolvida durantes as aulas de desenvolvimento de sistemas</p>
         </section>
 
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
             <form class="card" method="POST">
-                <h1>Verificador de Idade</h1>
-
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
 
@@ -62,8 +60,6 @@
                 <input type="number" id="idade" name="idade" placeholder="Digite a sua idade" required><br><br>
 
                 <button type="submit">Enviar</button><br><br>
-
-                <a href="../index.php">Voltar ao Index</a>
             </form>
             
             <?php if($resultado != "") { ?>

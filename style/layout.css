@@ -109,6 +109,72 @@ header {
 }
 
 /* ===========================================
+   ESTILIZAÇÃO DO FORMULÁRIO E RESULTADOS
+=========================================== */
+
+.conteudo-projeto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+
+/* FORMS */
+.conteudo-projeto label {
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: -5px;
+}
+
+.conteudo-projeto input[type="text"],
+.conteudo-projeto input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f9fafb;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.conteudo-projeto input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.conteudo-projeto button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.conteudo-projeto button[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+/* Caixa de resultado estilizada */
+.conteudo-projeto p.card {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #eff6ff;
+    border-left: 5px solid #2563eb;
+    border-radius: 6px;
+    color: #1e3a8a;
+    font-size: 16px;
+    max-width: 500px;
+}
+
+/* ===========================================
     VOLTAR PARA PROJETOS
 =========================================== */ 
 
