@@ -216,13 +216,42 @@ header {
 
 
 /* ==============================================
-    PROJETOS - 
+    PROJETOS (FORMATO CARROSSEL)
 ============================================== */
 
 .projetos-conteiner {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex; /* Mudado de grid para flex para alinhar em linha */
     gap: 25px;
+    
+    /* Ativa a rolagem horizontal */
+    overflow-x: auto; 
+    scroll-behavior: smooth;
+    
+    /* Faz o carrossel parar certinho em cada card ao arrastar */
+    scroll-snap-type: x mandatory; 
+    
+    /* Espaçamento interno para a sombra do hover não sumir nas bordas */
+    padding: 20px 10px; 
+    margin: 0 -10px; 
+}
+
+/* Customização da barra de rolagem (opcional, deixa mais discreta) */
+.projetos-conteiner::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projetos-conteiner::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.projetos-conteiner::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.projetos-conteiner::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
 }
 
 .projeto-card {
@@ -231,6 +260,10 @@ header {
     border-radius: 10px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
     transition: 0.3s;
+
+    flex: 0 0 calc(33.333% - 17px); 
+    scroll-snap-align: start; 
+    box-sizing: border-box;
 }
 
 .projeto-card:hover {
@@ -285,6 +318,7 @@ header {
 .link-projeto:hover {
     text-decoration: underline;
 }
+
 
 /* ==============================================
     CONTATO 
@@ -407,10 +441,13 @@ footer a:hover {
         font-size: 45px;
     }
 
-    /* PROJETOS (De 3 colunas para 1 coluna) */
     .projetos-conteiner {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .projeto-card {
+        flex: 0 0 calc(50% - 13px); 
     }
 
     /* CONTATO */
@@ -458,7 +495,7 @@ footer a:hover {
     }
 
     .projeto-card {
-        padding: 20px; /
+        flex: 0 0 85%; 
     }
 
     .contato-item {
