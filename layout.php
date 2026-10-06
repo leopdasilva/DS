@@ -19,11 +19,42 @@
             <h2 class="logo">Meu portifólio</h2>
 
             <ul class="menu">
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="index.php#projetos-php">Atividades</a></li>
+                <li><a href="../index.php">Inicio</a></li>
+                <li><a href="../index.php#projetos-php">Atividades</a></li>
             </ul>
         </nav>
-
     </header>
+
+    <!-- CONTEÚDO DA ATIVIDADE -->
+    <main class="pagina-projeto">
+        <!-- CABEÇALHO DA ATIVIDADE -->
+        <section class="cabecalho-projeto">
+            <p class="projeto-tipo">
+                projeto
+            </p>
+            <h1>Cadastro de Jogos</h1>
+            <p>Atividade desenvolvida durantes as aulas de desenvolvimento de sistemas</p>
+        </section>
+
+        <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
+        <section class="conteudo-projeto">
+
+
+        </section>
+        
+        <!-- FIM DA ATIVIDADE -->
+        <div class="voltar-projetos">
+            <a href="../index.php#projetos-php"> ← Voltar para projetos</a>
+        </div>
+    </main>
+
+    <!-- RODAPÈ -->
+    <footer>
+        <p>
+            Desenvolvido por <a href="https://leonardo315.devlook.xyz">Leonardo P. da Silva </a> • 2026
+        </p>
+    </footer>
+
+    
 </body>
 </html>

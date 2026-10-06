@@ -261,7 +261,8 @@ header {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
     transition: 0.3s;
 
-    flex: 0 0 calc(33.333% - 17px); 
+    flex: 0 0 calc(33.333% - 17px);
+    flex-shrink: 0; 
     scroll-snap-align: start; 
     box-sizing: border-box;
 }
@@ -442,7 +443,6 @@ footer a:hover {
     }
 
     .projetos-conteiner {
-        grid-template-columns: 1fr;
         gap: 20px;
     }
 

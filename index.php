@@ -118,57 +118,59 @@
                 Alguns projetso desenvolvidos durante o curso.
             </p>
             <!-- PROJETO 1 -->
-            <div class="projeto-card">
-                <div class="projeto-numero">
-                    01
+            <div class="projetos-container">
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        01
+                    </div>
+                    <h3>Banco de Dados estilo anos 60 (C e Pyhton)</h3>
+                    <p>
+                        Sistema híbrido que recria o conceito de gerenciamento de dados de baixo nível
+                        inspirado nos primórdios da computação. O projeto une a alta performance e o
+                        controle de memória da Linguagem C com uma interface gráfica integrada em Python (Tkinter),
+                        simulando a identidade visual clássica dos sistemas legados.
+                    </p>
+                    <div class="tecnologias">
+                        <span>Python</span>
+                        <span>Linguagem C</span>
+                    </div>
+                    <a href="https://github.com/leopdasilva/Banco-de-Dados-anos-60" class="link-projeto">Ver projeto →</a>
                 </div>
-                <h3>Banco de Dados estilo anos 60 (C e Pyhton)</h3>
-                <p>
-                    Sistema híbrido que recria o conceito de gerenciamento de dados de baixo nível
-                    inspirado nos primórdios da computação. O projeto une a alta performance e o 
-                    controle de memória da Linguagem C com uma interface gráfica integrada em Python (Tkinter), 
-                    simulando a identidade visual clássica dos sistemas legados. 
-                </p>
-                <div class="tecnologias">
-                    <span>Python</span>
-                    <span>Linguagem C</span>
+                <!-- PROJETO 2 -->
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        02
+                    </div>
+                    <h3>Cluster em Banco de Dados - Mongo DB Compass</h3>
+                    <p>
+                        Cluster local de banco de dados NoSQL projetado para simular alta disponibilidade e resiliência em sistemas distribuídos.
+                        O projeto utiliza o MongoDB 8.0 estruturado em Replica Set (nós Principal, Reserva e Árbitro), validando o mecanismo de failover
+                        automatizado em tempo real por meio de uma aplicação cliente em Python que intercepta quedas de hardware com zero perda de dados.
+                    </p>
+                    <div class="tecnologias">
+                        <span>Mongo DB Compass versão 8.0</span>
+                    </div>
+                    <a href="https://github.com/leopdasilva/projeto_cluster" class="link-projeto">Ver projeto →</a>
                 </div>
-                <a href="https://github.com/leopdasilva/Banco-de-Dados-anos-60" class="link-projeto">Ver projeto →</a>
-            </div>
-            <!-- PROJETO 2 -->
-            <div class="projeto-card">
-                <div class="projeto-numero">
-                    02
+                <!-- PROJETO 3 -->
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        03
+                    </div>
+                    <h3>Sensor de velocidade</h3>
+                    <p>
+                        Ecossistema de Internet das Coisas (IoT) voltado para telemetria automotiva e monitoramento de velocidade
+                        em tempo real. O projeto integra um firmware em C/C++ (ESP32-S3) que captura pulsos magnéticos via interrupções de hardware,
+                        uma API em Node.js (Express) com MySQL para a ingestão e persistência dos dados de rede, e um dashboard web responsivo que
+                        atualiza dinamicamente indicadores digitais por meio de consumo assíncrono.
+                    </p>
+                    <div class="tecnologias">
+                        <span>ESP32</span>
+                        <span>Front-End (HTML, CSS, JavaScript)</span>
+                        <span>Backe-end: Node.js, Express, REST API (JSON / HTTP)</span>
+                    </div>
+                    <a href="https://github.com/leopdasilva/Sensor_Velocidade#sistema-inteligente-de-velocidade" class="link-projeto">Ver projeto →</a>
                 </div>
-                <h3>Cluster em Banco de Dados - Mongo DB Compass</h3>
-                <p>
-                    Cluster local de banco de dados NoSQL projetado para simular alta disponibilidade e resiliência em sistemas distribuídos.
-                    O projeto utiliza o MongoDB 8.0 estruturado em Replica Set (nós Principal, Reserva e Árbitro), validando o mecanismo de failover 
-                    automatizado em tempo real por meio de uma aplicação cliente em Python que intercepta quedas de hardware com zero perda de dados.
-                </p>
-                <div class="tecnologias">
-                    <span>Mongo DB Compass versão 8.0</span>
-                </div>
-                <a href="https://github.com/leopdasilva/projeto_cluster" class="link-projeto">Ver projeto →</a>
-            </div>
-            <!-- PROJETO 3 -->
-            <div class="projeto-card">
-                <div class="projeto-numero">
-                    03
-                </div>
-                <h3>Sensor de velocidade</h3>
-                <p>
-                    Ecossistema de Internet das Coisas (IoT) voltado para telemetria automotiva e monitoramento de velocidade 
-                    em tempo real. O projeto integra um firmware em C/C++ (ESP32-S3) que captura pulsos magnéticos via interrupções de hardware, 
-                    uma API em Node.js (Express) com MySQL para a ingestão e persistência dos dados de rede, e um dashboard web responsivo que 
-                    atualiza dinamicamente indicadores digitais por meio de consumo assíncrono.
-                </p>
-                <div class="tecnologias">
-                    <span>ESP32</span>
-                    <span>Front-End (HTML, CSS, JavaScript)</span>
-                    <span>Backe-end: Node.js, Express, REST API (JSON / HTTP)</span>
-                </div>
-                <a href="https://github.com/leopdasilva/Sensor_Velocidade#sistema-inteligente-de-velocidade" class="link-projeto">Ver projeto →</a>
             </div>
         </section>
         <!-- ==========================  
@@ -180,86 +182,88 @@
                 Algumas atividades desenvolvidas durante as aulas de PHP.
             </p>
             <!-- PROJETO 1 -->
-            <div class="projeto-card">
-                <div class="projeto-numero">
-                    01
+            <div class="projetos-container">
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        01
+                    </div>
+                    <h3>Vereficar idade em PHP</h3>
+                    <p>
+                        Aplicação web responsiva desenvolvida em PHP estruturado e HTML5 para
+                        validação dinâmica de dados e controle de fluxo. O projeto processa
+                        requisições de formulários via método POST de forma nativa, realizando a
+                        captura, tratamento de variáveis e renderização condicional na
+                        mesma interface para determinar a maioridade do usuário com base nas
+                        regras de negócio implementadas.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="projetos/idade.php" class="link-projeto">Ver projeto →</a>
                 </div>
-                <h3>Vereficar idade em PHP</h3>
-                <p>
-                    Aplicação web responsiva desenvolvida em PHP estruturado e HTML5 para 
-                    validação dinâmica de dados e controle de fluxo. O projeto processa 
-                    requisições de formulários via método POST de forma nativa, realizando a 
-                    captura, tratamento de variáveis e renderização condicional na 
-                    mesma interface para determinar a maioridade do usuário com base nas 
-                    regras de negócio implementadas.
-                </p>
-                <div class="tecnologias">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
+                <!-- PROJETO 2 -->
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        02
+                    </div>
+                    <h3>Vereficar notas em PHP</h3>
+                    <p>
+                        Sistema de gestão acadêmica em PHP nativo e HTML5 que processa e
+                        valida o desempenho de estudantes via formulário POST. A aplicação calcula médias
+                        ponderadas complexas cruzando notas e frequência, aplicando uma lógica de negócio
+                        backend para determinar o status escolar e renderizar o resultado de forma condicional
+                        e reativa na interface.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="projetos/notas.php" class="link-projeto">Ver projeto →</a>
                 </div>
-                <a href="projetos/idade.php" class="link-projeto">Ver projeto →</a>
-            </div>
-            <!-- PROJETO 2 -->
-            <div class="projeto-card">
-                <div class="projeto-numero">
-                    02
+                <!-- PROJETO 3 -->
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        03
+                    </div>
+                    <h3>Login básico em PHP</h3>
+                    <p>
+                        Mecanismo básico de autenticação desenvolvido em PHP nativo e HTML5
+                        para simular o fluxo de login de um usuário. O script processa credenciais
+                        estáticas de forma síncrona via requisições POST, validando os dados no backend
+                        para exibir mensagens de feedback dinâmicas na interface e incluindo um helper
+                        em JavaScript para exibição de credenciais de teste.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="projetos/login-basico.php" class="link-projeto">Ver projeto →</a>
                 </div>
-                <h3>Vereficar notas em PHP</h3>
-                <p>
-                    Sistema de gestão acadêmica em PHP nativo e HTML5 que processa e 
-                    valida o desempenho de estudantes via formulário POST. A aplicação calcula médias 
-                    ponderadas complexas cruzando notas e frequência, aplicando uma lógica de negócio 
-                    backend para determinar o status escolar e renderizar o resultado de forma condicional 
-                    e reativa na interface.
-                </p>
-                <div class="tecnologias">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
+                <!-- PROJETO 4 -->
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        04
+                    </div>
+                    <h3>Cadastro de jogos em PHP</h3>
+                    <p>
+                        Aplicação CRUD em PHP nativo utilizando a extensão PDO para integração, persistência e leitura de
+                        dados em um banco de dados MySQL. O projeto realiza a criação automatizada de tabelas estruturais
+                        (Data Definition Language), gerencia o fluxo de cadastro seguro via autenticação por token estático
+                        no backend e consome dados do servidor de forma síncrona para renderizar listagens dinâmicas em
+                        tabelas HTML.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="projetos/jogos.php" class="link-projeto">Ver projeto →</a>
                 </div>
-                <a href="projetos/notas.php" class="link-projeto">Ver projeto →</a>
-            </div>
-            <!-- PROJETO 3 -->
-            <div class="projeto-card">
-                <div class="projeto-numero">
-                    03
-                </div>
-                <h3>Login básico em PHP</h3>
-                <p>
-                    Mecanismo básico de autenticação desenvolvido em PHP nativo e HTML5 
-                    para simular o fluxo de login de um usuário. O script processa credenciais 
-                    estáticas de forma síncrona via requisições POST, validando os dados no backend 
-                    para exibir mensagens de feedback dinâmicas na interface e incluindo um helper 
-                    em JavaScript para exibição de credenciais de teste.
-                </p>
-                <div class="tecnologias">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
-                    <span>JavaScript</span>
-                </div>
-                <a href="projetos/login-basico.php" class="link-projeto">Ver projeto →</a>
-            </div>
-            <!-- PROJETO 4 -->
-            <div class="projeto-card">
-                <div class="projeto-numero">
-                    04
-                </div>
-                <h3>Cadastro de jogos em PHP</h3>
-                <p>
-                    Aplicação CRUD em PHP nativo utilizando a extensão PDO para integração, persistência e leitura de 
-                    dados em um banco de dados MySQL. O projeto realiza a criação automatizada de tabelas estruturais 
-                    (Data Definition Language), gerencia o fluxo de cadastro seguro via autenticação por token estático 
-                    no backend e consome dados do servidor de forma síncrona para renderizar listagens dinâmicas em 
-                    tabelas HTML.
-                </p>
-                <div class="tecnologias">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
-                </div>
-                <a href="projetos/jogos.php" class="link-projeto">Ver projeto →</a>
             </div>
         </section>
          <!-- ==========================  
