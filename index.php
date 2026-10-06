@@ -30,23 +30,21 @@
             MENU DE NAVEGAÇÃO
         ========================== -->
         <section id="inicio" class="inicio">
-            <div class="incio-conteudo">
-                <p class="incio-conteudo">
-                    <p class="saudacao">Olá! Eu sou </p>
+            <div class="incio-conteudo"> 
+                <p class="saudacao">Olá! Eu sou </p>
 
-                    <h1>Leonardo P. da Silva</h1>
+                <h1>Leonardo P. da Silva</h1>
 
-                    <h2>Desenvolvedor em formação</h2>
+                <h2>Desenvolvedor em formação</h2>
 
-                    <p>
-                        Estudante de Desenvolvimento de Sistemas,
-                        Formado em Gestão de Tecnologia da Informação.
-                    </p>
-
-                    <a href="#projetos" class="botao">
-                        Ver meus projetos
-                    </a>
+                <p>
+                    Estudante de Desenvolvimento de Sistemas,
+                    Formado em Gestão de Tecnologia da Informação.
                 </p>
+
+                <a href="#projetos" class="botao">
+                    Ver meus projetos
+                </a>    
             </div>
         </section>
 
