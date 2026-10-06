@@ -191,6 +191,9 @@ header {
     background-color: var(--cor-principal);
     color: white;
     background-image: url(../imagens/silva-perfil.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     display: flex;
     justify-content: center;
