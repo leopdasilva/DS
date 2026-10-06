@@ -115,7 +115,7 @@
         <section id="projetos-curso" class="secao">
             <h2 class="titulo-secao">Meus projetos</h2>
             <p class="subtitulo-secao">
-                Alguns projetso desenvolvidos durante o curso.
+                Alguns projetos desenvolvidos durante o curso.
             </p>
             <!-- PROJETO 1 -->
             <div class="projetos-container">
@@ -299,7 +299,7 @@
 
     <script>
         //Evento JavaScript para usar o scroll do mouse em cima dos cards em carrosel
-        const carrossel = document.querySelector('.projetos-container');
+        const carrossel = document.querySelector('#projetos-php');
 
         if (carrossel) {
             carrossel.addEventListener('wheel', (evt) => {
