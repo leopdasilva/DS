@@ -218,7 +218,7 @@ header {
     PROJETOS - 
 ============================================== */
 
-.projetos-container {
+.secao {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -288,3 +288,24 @@ header {
 /* ==============================================
     CONTATO 
 ============================================== */
+
+.contato-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contato-item {
+    background-color: white;
+    width: 280px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+.contato-item h3 {
+    color: #2563eb;
+    margin-bottom: 5px;
+}

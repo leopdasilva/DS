@@ -18,7 +18,8 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#projetos-curso">Projetos</a></li>
+                <li><a href="#projetos-php">Atividades</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -111,7 +112,7 @@
         <!-- ==========================  
             PROJETOS - CURSO
         ========================== -->
-        <section id="projetos-container" class="secao">
+        <section id="projetos-curso" class="secao">
             <h2 class="titulo-secao">Meus projetos</h2>
             <p class="subtitulo-secao">
                 Alguns projetso desenvolvidos durante o curso.
@@ -173,7 +174,7 @@
         <!-- ==========================  
             PROJETOS - PHP
         ========================== -->
-        <section id="projetos-container" class="secao">
+        <section id="projetos-php" class="secao">
             <h2 class="titulo-secao">Minhas atividades</h2>
             <p class="subtitulo-secao">
                 Algumas atividades desenvolvidas durante as aulas de PHP.
