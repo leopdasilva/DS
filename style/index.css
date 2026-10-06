@@ -219,38 +219,33 @@ header {
     PROJETOS (FORMATO CARROSSEL)
 ============================================== */
 
-.projetos-conteiner {
-    display: flex; /* Mudado de grid para flex para alinhar em linha */
-    gap: 25px;
+.projetos-container {
+    display: flex; 
     
-    /* Ativa a rolagem horizontal */
     overflow-x: auto; 
     scroll-behavior: smooth;
-    
-    /* Faz o carrossel parar certinho em cada card ao arrastar */
+
     scroll-snap-type: x mandatory; 
     
-    /* Espaçamento interno para a sombra do hover não sumir nas bordas */
     padding: 20px 10px; 
     margin: 0 -10px; 
 }
 
-/* Customização da barra de rolagem (opcional, deixa mais discreta) */
-.projetos-conteiner::-webkit-scrollbar {
+.projetos-container::-webkit-scrollbar {
     height: 8px;
 }
 
-.projetos-conteiner::-webkit-scrollbar-track {
+.projetos-container::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
 }
 
-.projetos-conteiner::-webkit-scrollbar-thumb {
+.projetos-container::-webkit-scrollbar-thumb {
     background: #cbd5e1;
     border-radius: 10px;
 }
 
-.projetos-conteiner::-webkit-scrollbar-thumb:hover {
+.projetos-container::-webkit-scrollbar-thumb:hover {
     background: #94a3b8;
 }
 
@@ -442,7 +437,7 @@ footer a:hover {
         font-size: 45px;
     }
 
-    .projetos-conteiner {
+    .projetos-container {
         gap: 20px;
     }
 

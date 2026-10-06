@@ -43,7 +43,7 @@
                     Formado em Gestão de Tecnologia da Informação.
                 </p>
 
-                <a href="#projetos" class="botao">
+                <a href="#projetos-curso" class="botao">
                     Ver meus projetos
                 </a>    
             </div>
