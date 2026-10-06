@@ -30,7 +30,7 @@
             MENU DE NAVEGAÇÃO
         ========================== -->
         <section id="inicio" class="inicio">
-            <div class="incio-conteudo"> 
+            <div class="inicio-conteudo"> 
                 <p class="saudacao">Olá! Eu sou </p>
 
                 <h1>Leonardo P. da Silva</h1>
