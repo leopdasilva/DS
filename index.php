@@ -299,14 +299,18 @@
 
     <script>
         //Evento JavaScript para usar o scroll do mouse em cima dos cards em carrosel
-        const carrossel = document.querySelector('#projetos-php');
+        document.addEventListener("DOMContentLoaded", function() {
+            const carrosseis = document.querySelectorAll('.projetos-container');
 
-        if (carrossel) {
-            carrossel.addEventListener('wheel', (evt) => {
-                evt.preventDefault();
-                carrossel.scrollLeft += evt.deltaY;
+            carrosseis.forEach((carrossel) => {
+                carrossel.addEventListener('wheel', function(evt) {
+                    if (evt.deltaY !== 0) {
+                        evt.preventDefault();
+                        this.scrollLeft += evt.deltaY * 1.2;
+                    }
+                }, { passive: false });
             });
-        }
+        });
     </script>
 </body>
 </html>
