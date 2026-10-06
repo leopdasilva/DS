@@ -30,9 +30,9 @@
         <!-- CABEÇALHO DA ATIVIDADE -->
         <section class="cabecalho-projeto">
             <p class="projeto-tipo">
-                projeto
+                atividade
             </p>
-            <h1>Cadastro de Jogos</h1>
+            <h1>Nome da atividade</h1>
             <p>Atividade desenvolvida durantes as aulas de desenvolvimento de sistemas</p>
         </section>
 
@@ -41,10 +41,10 @@
 
 
         </section>
-        
+
         <!-- FIM DA ATIVIDADE -->
         <div class="voltar-projetos">
-            <a href="../index.php#projetos-php"> ← Voltar para projetos</a>
+            <a href="../index.php#projetos-php"> ← Voltar para atividades</a>
         </div>
     </main>
 
