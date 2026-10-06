@@ -93,4 +93,31 @@ header {
     margin-bottom: 20px;
 }
 
+.inicio-conteudo > p {
+    max-width: 600px;
+}
+
+.botao {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 12px 25px;
+
+    background-color: #2563eb;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #1d4ed8;
+}
+
+
+
+
 
