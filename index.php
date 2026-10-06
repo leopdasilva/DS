@@ -111,7 +111,7 @@
         <!-- ==========================  
             PROJETOS - CURSO
         ========================== -->
-        <section id="projetos" class="secao">
+        <section id="projetos-container" class="secao">
             <h2 class="titulo-secao">Meus projetos</h2>
             <p class="subtitulo-secao">
                 Alguns projetso desenvolvidos durante o curso.
@@ -173,10 +173,10 @@
         <!-- ==========================  
             PROJETOS - PHP
         ========================== -->
-        <section id="projetos" class="secao">
-            <h2 class="titulo-secao">Meus projetos</h2>
+        <section id="projetos-container" class="secao">
+            <h2 class="titulo-secao">Minhas atividades</h2>
             <p class="subtitulo-secao">
-                Alguns projetso desenvolvidos durante as aulas de PHP.
+                Algumas atividades desenvolvidas durante as aulas de PHP.
             </p>
             <!-- PROJETO 1 -->
             <div class="projeto-card">
