@@ -1,0 +1,137 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/* MENU / CABEÇALHO - Mesmo estilo utilizado no index.php*/
+
+header {
+    background-color: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+}
+
+.menu {
+    display: menu;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: #dddddd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #60a5fa;
+}
+
+/* PÁGINA DO PROJETO */ 
+
+.pagina-projeto {
+    min-height: calc(100vh - 150px);
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px 80px;
+}
+
+/* CABEÇALHO DO PROJETO */ 
+
+.cabecalho-projeto {
+    margin-bottom: 40px;
+}
+
+.projeto-tipo {
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.cabecalho-projeto h1 {
+    font-size: 40px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.cabecalho-projeto >p:not(.projeto-tipo) {
+    color: #666666;
+    font-size: 18px;
+    max-width: 700px;
+}
+
+
+
+/* ===========================================
+    AREA DA ATIVIDADE
+
+    Aqui ficará o conteúdo específico 
+    desenvolvidos nas atividades
+=========================================== */ 
+
+.conteudo-projeto {
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+    margin-bottom: 30px;
+}
+
+/* ===========================================
+    VOLTAR PARA PROJETOS
+=========================================== */ 
+
+.voltar-projetos {
+    margin-top: 30px;
+}
+
+.voltar-projetos a{
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar-projetos a:hover {
+    text-decoration: underline;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #111827;
+    color: #cccccc;
+    text-align: center;
+    padding: 30px;
+}
+   
