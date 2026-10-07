@@ -44,13 +44,13 @@
 <body>
     <form method="POST">
         <label>Nome: </label>
-        <input type="text" name="nome">
+        <input type="text" name="nome" id="nome">
 
         <label>Idade: </label>
-        <input type="number" name="idade">
+        <input type="number" name="idade" id="idade">
 
         <label>Curso: </label>
-        <input type="text" name="curso">
+        <input type="text" name="curso" id="curso">
 
         <button type="submit">Enviar</button>
     </form>
