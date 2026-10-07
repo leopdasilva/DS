@@ -57,7 +57,7 @@
         <button type="submit">Enviar</button>
     </form>
 
-    <h2>ALUNOS cadastrados</h2>
+    <h2>ALUNOS CADASTRADOS</h2>
     <?php foreach($alunos as $aluno) { ?>
         <h3><?= $aluno["nome"] ?></h3>
         <p>Idade: <?= $aluno["idade"] ?></p>
