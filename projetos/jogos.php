@@ -86,8 +86,6 @@
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
             <form method="POST" class="card">
-                <h1>Cadastro de jogos</h1>
-
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo" required><br><br>
 
