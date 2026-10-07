@@ -62,7 +62,15 @@
         }
 
         if ($acao === "deletar") {
-           
+            $nome = $_POST["nome"];
+
+            // PERCORRER TODOS OS ALUNOS
+            foreach ($alunos as $posicao => $aluno) {
+                if ($aluno["nome"] === $nome) {
+                    // DELETAR O ALUNO DO ARRAY
+                    unset($aluno[$posicao]);
+                }
+            }
 
             $jsonAtualizado = json_encode($alunos,
                 JSON_PRETTY_PRINT |
