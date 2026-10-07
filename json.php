@@ -59,9 +59,9 @@
 
     <h2>ALUNOS cadastrados</h2>
     <?php foreach($alunos as $aluno) { ?>
-        <h3><?= $aluno["idade"] ?></h3>
+        <h3><?= $aluno["nome"] ?></h3>
         <p>Idade: <?= $aluno["idade"] ?></p>
-        <p>Curso: <?= $aluno["idade"] ?></p>
+        <p>Curso: <?= $aluno["curso"] ?></p>
     <?php } ?>
     
 </body>
