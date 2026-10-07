@@ -12,7 +12,7 @@
     // 3.  TRANSFORMAR EM ARRAY PHP
     $alunos = json_decode($json, true);
 
-    if ($_SERVER["REQUEST_METHOD" == "POST"]) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // 4. CRIAR UM ALUNO
         $novoAluno = [
             "nome" => $_POST["nome"],
