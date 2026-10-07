@@ -173,7 +173,7 @@
                     <div class="tecnologias">
                         <span>ESP32</span>
                         <span>Front-End (HTML, CSS, JavaScript)</span>
-                        <span>Backe-end: Node.js, Express, REST API (JSON / HTTP)</span>
+                        <span>Back-end: Node.js, Express, REST API (JSON / HTTP)</span>
                     </div>
                     <a href="https://github.com/leopdasilva/Sensor_Velocidade#sistema-inteligente-de-velocidade" class="link-projeto">Ver projeto →</a>
                 </div>
