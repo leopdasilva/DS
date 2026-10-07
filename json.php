@@ -60,6 +60,19 @@
             echo "<script>alert('DADOS ATUALIZADOS EM dados.json');</script>";    
             
         }
+
+        if ($acao === "deletar") {
+           
+
+            $jsonAtualizado = json_encode($alunos,
+                JSON_PRETTY_PRINT |
+                JSON_UNESCAPED_UNICODE    
+            );
+
+            file_put_contents($caminho, $jsonAtualizado);
+            echo "<script>alert('DADOS APAGADOS EM dados.json');</script>";    
+            
+        }
     }
 
 
@@ -94,6 +107,7 @@
         
     
     <form method="POST">
+        <h2>Atualizar Cadastro</h2>
         <label>Nome: </label>
         <input type="text" name="nome" id="nome">
 
@@ -105,6 +119,15 @@
 
         <button type="submit" name="acao" value="atualizar">Atualizar</button>
     </form>
+    
+    <form method="POST">
+        <h2>Deletar Cadastro</h2>
+        <label>Nome: </label>
+        <input type="text" name="nome" id="nome">
+
+        <button type="submit" name="acao" value="deletar">Deletar</button>
+    </form>
+
 
 </body>
 </html>
