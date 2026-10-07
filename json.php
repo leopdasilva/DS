@@ -72,12 +72,8 @@
                 }
             }
 
-            $jsonAtualizado = json_encode($alunos,
-                JSON_PRETTY_PRINT |
-                JSON_UNESCAPED_UNICODE    
-            );
-
-            file_put_contents($caminho, $jsonAtualizado);
+            $alunos = array_values($alunos);
+            
             echo "<script>alert('DADOS APAGADOS EM dados.json');</script>";    
             
         }
