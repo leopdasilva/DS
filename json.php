@@ -13,25 +13,53 @@
     $alunos = json_decode($json, true);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // 4. CRIAR UM ALUNO
-        $novoAluno = [
-            "nome" => $_POST["nome"],
-            "idade" => $_POST["idade"],
-            "curso" => $_POST["curso"]
-        ];
+        $acao = $_POST["acao"];
 
-        // 5. ADICIONAR O ALUNO ARRAY
-        $alunos[] = $novoAluno;
+        if ($acao === "cadastrar") {
+            // 4. CRIAR UM ALUNO
+            $novoAluno = [
+                "nome" => $_POST["nome"],
+                "idade" => $_POST["idade"],
+                "curso" => $_POST["curso"]
+            ];
 
-        // 6. TRANSFORMAR ARRAY PHP EM JSON
-        $jsonAtualizado = json_encode($alunos,
-            JSON_PRETTY_PRINT |
-            JSON_UNESCAPED_UNICODE    
-        );
+            // 5. ADICIONAR O ALUNO ARRAY
+            $alunos[] = $novoAluno;
 
-        // 7. SALVAR NO ARQUIVO
-        file_put_contents($caminho, $jsonAtualizado);
-        echo "DADOS REGISTRADOS EM dados.json";
+            // 6. TRANSFORMAR ARRAY PHP EM JSON
+            $jsonAtualizado = json_encode($alunos,
+                JSON_PRETTY_PRINT |
+                JSON_UNESCAPED_UNICODE    
+            );
+
+            // 7. SALVAR NO ARQUIVO
+            file_put_contents($caminho, $jsonAtualizado);
+            echo "<script>alert('DADOS REGISTRADOS EM dados.json');</script>";
+        }
+
+        if ($acao === "atualizar") {
+            // PEGAR OS DADOS DO FORMULÁRIO
+            $nome = $_POST["nome"];
+            $novaIdade = $_POST["idade"];
+            $novoCurso = $_POST["curso"];
+
+            // PERCORRER TODOS OS ALUNOS
+            foreach ($alunos as $posicao => $aluno) {
+                if ($aluno["nome"] == $nome) {
+                    $alunos[$posicao]["idade"] = $novaIdade;
+                    $alunos[$posicao]["curso"] = $novoCurso;
+                }
+            }
+
+            $jsonAtualizado = json_encode($alunos,
+                JSON_PRETTY_PRINT |
+                JSON_UNESCAPED_UNICODE    
+            );
+
+            file_put_contents($caminho, $jsonAtualizado);
+            echo "<script>alert('DADOS ATUALIZADOS EM dados.json');</script>";    
+            
+        }
     }
 
 
@@ -54,15 +82,29 @@
         <label>Curso: </label>
         <input type="text" name="curso" id="curso">
 
-        <button type="submit">Enviar</button>
+        <button type="submit" name="acao" value="cadastrar">Enviar</button>
     </form>
-
+    
     <h2>ALUNOS CADASTRADOS</h2>
     <?php foreach($alunos as $aluno) { ?>
         <h3><?= $aluno["nome"] ?></h3>
         <p>Idade: <?= $aluno["idade"] ?></p>
         <p>Curso: <?= $aluno["curso"] ?></p>
-    <?php } ?>
+        <?php } ?>
+        
     
+    <form method="POST">
+        <label>Nome: </label>
+        <input type="text" name="nome" id="nome">
+
+        <label>Idade: </label>
+        <input type="number" name="idade" id="idade">
+
+        <label>Curso: </label>
+        <input type="text" name="curso" id="curso">
+
+        <button type="submit" name="acao" value="atualizar">Atualizar</button>
+    </form>
+
 </body>
 </html>
