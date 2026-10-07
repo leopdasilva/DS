@@ -25,60 +25,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idade | PHP</title>
     <link rel="stylesheet" href="../style/layout.css">
-    <style>
-        /* ===========================================
-            ESTILIZAÇÃO DO FORMULÁRIO DE NOTAS
-        =========================================== */
-
-        .conteudo-projeto form {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 600px;
-        }
-
-        .conteudo-projeto label {
-            font-weight: bold;
-            color: #374151;
-            font-size: 14px;
-        }
-
-        .conteudo-projeto input[type="text"],
-        .conteudo-projeto input[type="number"] {
-            width: 100%;
-            padding: 10px 14px;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            font-size: 15px;
-            background-color: #f9fafb;
-            transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
-        }
-
-        .conteudo-projeto input:focus {
-            outline: none;
-            border-color: #2563eb;
-            background-color: #ffffff;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        .conteudo-projeto button[type="submit"] {
-            background-color: #2563eb;
-            color: white;
-            font-weight: bold;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            margin-top: 10px;
-        }
-
-        .conteudo-projeto button[type="submit"]:hover {
-            background-color: #1d4ed8;
-        }
-
-    </style>
 </head>
 <body>
      <!-- CABEÇALHO -->
