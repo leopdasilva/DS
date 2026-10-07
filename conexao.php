@@ -19,10 +19,11 @@ try {
         PDO::ERRMODE_EXCEPTION 
     );
 
-    echo "Conetado com sucesso!";
+    echo "<script>alert('Conectado com sucesso!');</script>";
 
 } catch (PDOException $erro) {
 
-    echo "Eroo ao conectar: ".$erro->getMessage();
+    $mensagemErro = addslashes($erro->getMessage());
+    echo "<script>alert('Erro ao conectar: " . $mensagemErro . "');</script>";
 
 }
