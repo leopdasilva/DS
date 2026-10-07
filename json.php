@@ -33,6 +33,8 @@
         file_put_contents($caminho, $jsonAtualizado);
         echo "DADOS REGISTRADOS EM dados.json";
     }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -55,5 +57,12 @@
         <button type="submit">Enviar</button>
     </form>
 
+    <h2>ALUNOS cadastrados</h2>
+    <?php foreach($alunos as $aluno) { ?>
+        <h3><?= $aluno["idade"] ?></h3>
+        <p>Idade: <?= $aluno["idade"] ?></p>
+        <p>Curso: <?= $aluno["idade"] ?></p>
+    <?php } ?>
+    
 </body>
 </html>
