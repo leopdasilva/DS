@@ -1,0 +1,19 @@
+[
+    {
+        "nome": "Leonardo",
+        "idade": 27,
+        "curso": "Gestão de T.I." ,
+        "notas": {
+            "portugues": {
+                "prova 1": 10,
+                "prova 2": 6,
+                "prova 3": 7
+            },
+            "matematica": {
+                "prova 1": 8,
+                "prova 2": 7,
+                "prova 3": 9
+            }
+        }
+    }
+]
