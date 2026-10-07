@@ -42,7 +42,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post">
+    <form method="POST">
         <label>Nome: </label>
         <input type="text" name="nome">
 
@@ -54,7 +54,6 @@
 
         <button type="submit">Enviar</button>
     </form>
-
 
 </body>
 </html>
