@@ -139,7 +139,7 @@ header {
 
 .conteudo-projeto input[type="text"],
 .conteudo-projeto input[type="number"],
-.conteudo-projeto input[type="password"]
+.conteudo-projeto input[type="password"],
 .conteudo-projeto select {
     width: 100%;
     padding: 10px 14px;
@@ -147,14 +147,17 @@ header {
     border-radius: 6px;
     font-size: 15px;
     background-color: #f9fafb;
+    color: #1f2937; 
     transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    box-sizing: border-box; 
 }
 
-.conteudo-projeto input:focus {
-    outline: none;
-    border-color: #2563eb;
+.conteudo-projeto select:focus,
+.conteudo-projeto input[type="text"]:focus {
+    border-color: #3b82f6; 
     background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); 
 }
 
 .conteudo-projeto button[type="submit"] {
