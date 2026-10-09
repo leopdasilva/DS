@@ -270,6 +270,27 @@
                     </div>
                     <a href="projetos/jogos.php" class="link-projeto">Ver atividade →</a>
                 </div>
+                <!-- PROJETO 5 -->
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        05
+                    </div>
+                    <h3>Help Desk em PHP</h3>
+                    <p>
+                        Aplicação CRUD em PHP nativo utilizando persistência e leitura de dados estruturados em arquivos JSON.
+                        O projeto gerencia o fluxo de controle de chamados técnicos de Help Desk por meio de um ecossistema 
+                        modular de funções backend, validando regras de negócios e estados de atendimento (Aberto, Em Andamento e Resolvido). 
+                        A ferramenta computa e renderiza relatórios quantitativos de indicadores operacionais em tempo real e consome os dados 
+                        de forma síncrona para atualizar listagens dinâmicas na interface HTML.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>JSON</span>
+                    </div>
+                    <a href="projetos/helpdesk.php" class="link-projeto">Ver atividade →</a>
+                </div>
             </div>
         </section>
          <!-- ==========================  
