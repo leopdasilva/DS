@@ -53,8 +53,6 @@ function excluirChamado($id) {
 // Conta a quantidade de chamados e quantos existem em cada status
 function gerarRelatorioChamados() {
     $chamados = lerChamados();
-    
-    // Extrai apenas a coluna de status e conta as repetições automaticamente
     $contagem = array_count_values(array_column($chamados, 'status'));
 
     return [
