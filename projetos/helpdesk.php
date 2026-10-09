@@ -139,10 +139,11 @@
 
         <!-- Relatório de chamadas -->
         <section class="painel-relatorio">
-            <div>Total: <strong><?php echo $relatorio["total"]; ?></strong></div>
-            <div>Abertos: <strong><?php echo $relatorio["abertos"]; ?></strong></div>
-            <div>Em andamento: <strong><?php echo $relatorio["em_andamento"]; ?></strong></div>
-            <div>Resolvidos: <strong><?php echo $relatorio["resolvidos"]; ?></strong></div>
+            <h2>Relatório de chamadas</h2>
+            <p>Total: <strong><?php echo $relatorio["total"]; ?></strong></p>
+            <p>Abertos: <strong><?php echo $relatorio["abertos"]; ?></strong></p>
+            <p>Em andamento: <strong><?php echo $relatorio["em_andamento"]; ?></strong></p>
+            <p>Resolvidos: <strong><?php echo $relatorio["resolvidos"]; ?></strong></p>
         </section>
 
         <!-- FIM DA ATIVIDADE -->
