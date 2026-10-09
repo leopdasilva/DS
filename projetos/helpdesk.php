@@ -90,7 +90,7 @@
                 <div class="caixa-campo-radio">
                     <span class="titulo-grupo">Prioridade:</span>
                     <div class="opcao-radio">
-                        <input type="radio" id="alta" name="prioridade" value="Alta">
+                        <input type="radio" id="alta" name="prioridade" value="Alta" checked>
                         <label for="alta">Alta</label>
                     </div>
                     <div class="opcao-radio">
@@ -98,7 +98,7 @@
                         <label for="media">Média</label>
                     </div>
                     <div class="opcao-radio">
-                        <input type="radio" id="baixa" name="prioridade" value="Baixa" checked>
+                        <input type="radio" id="baixa" name="prioridade" value="Baixa">
                         <label for="baixa">Baixa</label>
                     </div>
                 </div>
