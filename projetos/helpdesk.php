@@ -114,7 +114,7 @@
             
             <?php foreach ($listaChamados as $id => $chamado): ?>
                 <div class="card-chamado">
-                    <p>#<?php echo $id; ?> [<?php echo $chamado["status"]; ?>] - <?php echo htmlspecialchars($chamado["nome"]); ?>: <?php echo htmlspecialchars($chamado["descricao"]); ?></p>
+                    <p>#<?php echo $id; ?> <strong>[<?php echo $chamado["status"]; ?>]</strong> - <?php echo htmlspecialchars($chamado["nome"]); ?>: <?php echo htmlspecialchars($chamado["descricao"]); ?></p>
 
                     <div class="acoes">
                         <!-- Atualizar Status -->
