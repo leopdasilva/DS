@@ -91,14 +91,18 @@ header {
     max-width: 700px;
 }
 
-
-
 /* ===========================================
-    AREA DA ATIVIDADE
 
-    Aqui ficará o conteúdo específico 
-    desenvolvidos nas atividades
+    ÁREA DA ATIVIDADE 
+
 =========================================== */ 
+
+.pagina-projeto {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
 .conteudo-projeto {
     background-color: white;
@@ -106,35 +110,23 @@ header {
     border-radius: 10px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
     margin-bottom: 30px;
+    box-sizing: border-box;
 }
 
-/* ===========================================
-   ESTILIZAÇÃO DO FORMULÁRIO E RESULTADOS
-=========================================== */
-
-.conteudo-projeto form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-}
-
-
-/* FORMS */
-
-/* ESTILIZAÇÃO DO FORMULÁRIO DE NOTAS */
+/* ESTILIZAÇÃO DO FORMULÁRIO (CREATE) */
 
 .conteudo-projeto form {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-width: 600px;
+    max-width: 100%;
 }
 
 .conteudo-projeto label {
     font-weight: bold;
     color: #374151;
     font-size: 14px;
+    margin-bottom: -4px;
 }
 
 .conteudo-projeto input[type="text"],
@@ -171,117 +163,27 @@ header {
     cursor: pointer;
     transition: background-color 0.2s;
     margin-top: 10px;
+    width: 100%;
 }
 
 .conteudo-projeto button[type="submit"]:hover {
     background-color: #1d4ed8;
 }
 
-/* ESTILIZAÇÃO DO CARD DE RESULTADO */
-
-.conteudo-projeto div.card {
-    margin-top: 30px;
-    padding: 25px;
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-left: 5px solid #2563eb;
-    border-radius: 8px;
-    color: #1e293b;
-    max-width: 600px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.conteudo-projeto div.card h1 {
-    font-size: 22px;
-    color: #111827;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 8px;
-}
-
-.conteudo-projeto div.card ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 8px;
-    margin: 10px 0;
-    padding: 0;
-}
-
-.conteudo-projeto div.card ul li {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    padding: 8px 12px;
-    border-radius: 6px;
-    text-align: center;
-    font-size: 14px;
-}
-
-.conteudo-projeto div.card p {
-    margin-bottom: 8px;
-}
-
-/* ESTILIZAÇÃO DE TABELAS (LAYOUT MODERNO) */
-
-.conteudo-projeto .table-container {
-    width: 100%;
-    overflow-x: auto; 
-    margin-top: 15px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-}
-
-.conteudo-projeto table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    font-size: 15px;
-    text-align: left;
-}
-
-.conteudo-projeto th {
-    background-color: #111827; 
-    color: #ffffff;
-    font-weight: bold;
-    padding: 14px 16px;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-}
-
-.conteudo-projeto td {
-    padding: 12px 16px;
-    border-bottom: 1px solid #e2e8f0;
-    color: #374151;
-}
-
-.conteudo-projeto tr:nth-child(even) {
-    background-color: #f9fafb;
-}
-
-.conteudo-projeto tr:hover {
-    background-color: #f1f5f9;
-    transition: background-color 0.2s ease;
-}
-
-.conteudo-projeto tr:last-child td {
-    border-bottom: none;
-}
-
-/* ESTILIZAÇÃO DE CAMPO DE RADIO */
+/*  ESTILIZAÇÃO DE CAMPO DE RADIO (PRIORIDADE) */
 
 .caixa-campo-radio {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .caixa-campo-radio .titulo-grupo {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: bold;
     color: #374151;
-    margin-bottom: 4px;
 }
 
 .caixa-campo-radio .opcao-radio {
@@ -291,10 +193,10 @@ header {
     cursor: pointer;
 }
 
-
 .caixa-campo-radio .opcao-radio label {
     font-size: 14px;
     color: #4b5563;
+    font-weight: normal;
     cursor: pointer;
     user-select: none; 
 }
@@ -307,38 +209,12 @@ header {
     accent-color: #3b82f6; 
 }
 
-/* ESTILIZAÇÃO DA LISTA DE CHAMADOS */
+/*  ESTILIZAÇÃO DA LISTA DE CHAMADOS (READ) */
 
 .lista-chamados {
     margin-top: 40px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 35px; 
-    box-sizing: border-box;
+    margin-bottom: 30px;
 }
-
-.painel-relatorio {
-    max-width: 1000px; 
-    margin: 0 auto 24px auto;
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    padding: 20px; 
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.conteudo-projeto form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 100%; 
-}
-
 
 .lista-chamados h2 {
     font-size: 20px;
@@ -370,6 +246,7 @@ header {
     line-height: 1.5;
 }
 
+/* ÁREA DE BOTÕES DO CARD */
 .card-chamado .acoes {
     display: flex;
     align-items: center;
@@ -384,7 +261,6 @@ header {
     gap: 6px;
     margin: 0;
 }
-
 
 .card-chamado .acoes select {
     padding: 6px 10px;
@@ -428,51 +304,63 @@ header {
     border-color: #ef4444 !important;
 }
 
-/* ESTILIZAÇÃO DA LISTA DE RELATÓRIOS */
+/* ESTILIZAÇÃO DO PAINEL DE RELATÓRIOS */
+
+.pagina-projeto h2 {
+    font-size: 20px;
+    color: #1f2937;
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
 
 .painel-relatorio {
-    max-width: 600px;
-    margin: 0 auto 24px auto;
+    width: 100%;
     background-color: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    padding: 16px;
+    padding: 20px; 
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 40px;
 }
 
 .painel-relatorio div {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    font-size: 13px;
+    gap: 6px;
+    font-size: 14px;
     font-weight: 500;
     color: #6b7280; 
 }
 
+/* Divisórias verticais internas do painel */
 .painel-relatorio div:not(:last-child) {
-    border-right: 1px solid #f3f4f6;
+    border-right: 1px solid #e5e7eb;
 }
 
 .painel-relatorio div strong {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     color: #1f2937; 
+    margin-top: 2px;
 }
 
+/* Definição de cores dos números do painel */
 .painel-relatorio div:nth-child(2) strong {
-    color: #ef4444;
+    color: #ef4444; /* Vermelho para Abertos */
 }
 
 .painel-relatorio div:nth-child(3) strong {
-    color: #f59e0b;
+    color: #f59e0b; /* Laranja para Em andamento */
 }
 
 .painel-relatorio div:nth-child(4) strong {
-    color: #10b981;
+    color: #10b981; /* Verde para Resolvidos */
 }
+
 
 
 /* ===========================================
