@@ -59,6 +59,14 @@
 
         <!-- Formulário de cadastro de chamada -->
         <section class="conteudo-projeto">
+        <section class="painel-relatorio">
+            <div>Total: <strong><?php echo $relatorio["total"]; ?></strong></div>
+            <div>Abertos: <strong><?php echo $relatorio["abertos"]; ?></strong></div>
+            <div>Em andamento: <strong><?php echo $relatorio["em_andamento"]; ?></strong></div>
+            <div>Resolvidos: <strong><?php echo $relatorio["resolvidos"]; ?></strong></div>
+        </section>
+
+
             <form method="POST" class="card">
                 <label for="nome">Funcionário:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do funcionário" required><br><br>

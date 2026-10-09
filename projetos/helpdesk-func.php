@@ -1,7 +1,9 @@
 <?php
 
+// Caminho do arquivo onde os chamados serão salvos
 define('caminho_json', __DIR__ . "/chamados.json");
 
+// Lê o arquivo JSON e o transforma em array PHP
 function lerChamados() {
     if (!file_exists(caminho_json)) {
         file_put_contents(caminho_json, json_encode([]));
@@ -11,12 +13,13 @@ function lerChamados() {
     return json_decode($json, true) ?? [];
 }
 
-
+// Pega o arrya do PHP, transforma em JSON e salva no arquivo
 function salvarChamados($chamados) {
     $json = json_encode($chamados, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     return file_put_contents(caminho_json, $json);
 }
 
+// Cria um novo chamado com status "Aberto" e adiciona ma lista
 function cadastrarChamado($nome, $setor, $equipamento, $descricao, $prioridade) {
     if (empty(trim($nome)) || empty(trim($descricao))) {
         return "Erro: O nome do solicitante e a descrição são obrigatórios.";
@@ -40,7 +43,7 @@ function cadastrarChamado($nome, $setor, $equipamento, $descricao, $prioridade) 
     return "Erro ao salvar o chamado no sistema.";
 }
 
-
+// Procura o chamado pelo ID e muda o status dele (Aberto, Em andamenro ou Resolvido)
 function atualizarStatusChamado($id, $novoStatus) {
     $statusPermitidos = ["Aberto", "Em andamento", "Resolvido"];
     
@@ -57,12 +60,12 @@ function atualizarStatusChamado($id, $novoStatus) {
     $chamados[$id]["status"] = $novoStatus;
 
     if (salvarChamados($chamados)) {
-        return "Status do chamado #$id atualizado para '$novoStatus'!";
+        return "Status do chamado #$id updated!";
     }
     return "Erro ao atualizar o status.";
 }
 
-
+// Apaga um chamado pelo ID e reorganiza a lista
 function excluirChamado($id) {
     $chamados = lerChamados();
 
@@ -80,6 +83,8 @@ function excluirChamado($id) {
     return "Erro ao excluir o chamado.";
 }
 
+
+// Conta a quatidade de chamados e quantos existem em cada status
 function gerarRelatorioChamados() {
     $chamados = lerChamados();
     

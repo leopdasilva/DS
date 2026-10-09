@@ -404,6 +404,52 @@ header {
     border-color: #ef4444 !important;
 }
 
+/* ESTILIZAÇÃO DA LISTA DE RELATÓRIOS */
+
+.painel-relatorio {
+    max-width: 600px;
+    margin: 0 auto 24px auto;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.painel-relatorio div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280; 
+}
+
+.painel-relatorio div:not(:last-child) {
+    border-right: 1px solid #f3f4f6;
+}
+
+.painel-relatorio div strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937; 
+}
+
+.painel-relatorio div:nth-child(2) strong {
+    color: #ef4444;
+}
+
+.painel-relatorio div:nth-child(3) strong {
+    color: #f59e0b;
+}
+
+.painel-relatorio div:nth-child(4) strong {
+    color: #10b981;
+}
+
 
 /* ===========================================
     VOLTAR PARA PROJETOS
