@@ -59,10 +59,9 @@
         </section>
 
         <!-- Formulário de cadastro de chamada -->
+        <h2>Formulário de ocorrência</h2>
         <section class="conteudo-projeto">
-
             <form method="POST" class="card">
-                <h2>Formulário de ocorrência</h2>
 
                 <label for="nome">Funcionário:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do funcionário" required><br><br>
@@ -110,8 +109,8 @@
         </section>
 
         <!-- Listagem dos chamados -->
+        <h2>Chamados Registrados</h2>
         <section class="lista-chamados">
-            <h2>Chamados Registrados</h2>
             
             <?php foreach ($listaChamados as $id => $chamado): ?>
                 <div class="card-chamado">
