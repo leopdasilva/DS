@@ -62,6 +62,8 @@
         <section class="conteudo-projeto">
 
             <form method="POST" class="card">
+                <h2>Formulário de ocorrência</h2>
+
                 <label for="nome">Funcionário:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do funcionário" required><br><br>
 
