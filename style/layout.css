@@ -139,7 +139,8 @@ header {
 
 .conteudo-projeto input[type="text"],
 .conteudo-projeto input[type="number"],
-.conteudo-projeto input[type="password"] {
+.conteudo-projeto input[type="password"]
+.conteudo-projeto select {
     width: 100%;
     padding: 10px 14px;
     border: 1px solid #d1d5db;

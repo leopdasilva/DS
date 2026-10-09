@@ -92,7 +92,7 @@
                 <label for="desc-prob">Descrição do problema:</label>
                 <input type="text" id="desc-prob" name="desc-prob" class="desc-prob" placeholder="Detalhe o qual foi o problema" required><br><br>
 
-                <p>Prioridade:</p>
+                <label for="prioridade">Prioridade:</label>
                 <input type="radio" id="prioridade" name="prioridade" value="Alta" checked>
                 <label for="alta">Alta</label><br>
 
