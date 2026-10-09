@@ -138,8 +138,8 @@
         </section>
 
         <!-- Relatório de chamadas -->
-        <section class="painel-relatorio">
-            <h2>Relatório de chamadas</h2><br>
+        <h2>Relatório de chamadas</h2>
+        <section class="painel-relatorio">   
             <div>Total: <strong><?php echo $relatorio["total"]; ?></div></p>
             <div>Abertos: <strong><?php echo $relatorio["abertos"]; ?></div></p>
             <div>Em andamento: <strong><?php echo $relatorio["em_andamento"]; ?></div></p>
