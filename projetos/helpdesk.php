@@ -92,47 +92,71 @@
                 <label for="desc-prob">Descrição do problema:</label>
                 <input type="text" id="desc-prob" name="desc-prob" class="desc-prob" placeholder="Detalhe o qual foi o problema" required><br><br>
 
-                <label for="prioridade">Prioridade:</label>
-                <input type="radio" id="prioridade" name="prioridade" value="Alta" checked>
-                <label for="alta">Alta</label><br>
+                <div class="caixa-campo-radio">
+                    <span class="titulo-grupo">Prioridade:</span>
+                    
+                    <div class="opcao-radio">
+                        <input type="radio" id="alta" name="prioridade" value="Alta">
+                        <label for="alta">Alta</label>
+                    </div>
 
-                <input type="radio" id="prioridade" name="prioridade" value="Média" checked>
-                <label for="media">Média</label><br>
+                    <div class="opcao-radio">
+                        <input type="radio" id="media" name="prioridade" value="Média">
+                        <label for="media">Média</label>
+                    </div>
 
-                <input type="radio" id="prioridade" name="prioridade" value="Baixa" checked>
-                <label for="baixa">Baixa</label><br>
+                    <div class="opcao-radio">
+                        <input type="radio" id="baixa" name="prioridade" value="Baixa" checked>
+                        <label for="baixa">Baixa</label>
+                    </div>
+                </div>
+
             
                 <button type="submit" name="acao" value="abrir-chamado">Enviar</button>
                 
             </form>
 
-            <h2>Chamado</h2>
+        </section>
 
-            <div class="table-container">
-                <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>Funcionário</th>
-                        <th>Setor</th>
-                        <th>Equip. Afetado</th>
-                        <th>Desc. do problema</th>
-                        <th>Prioridade</th>
-                        <th>Status atual</th>
-                    </tr>
-                
-                    <?php foreach($chamados as $chamado) {?>
-                        <tr>
-                            <td><?= $chamado["id"]?></td>
-                            <td><?= $chamado["nome"]?></td>
-                            <td><?= $chamado["setor"]?></td>
-                            <td><?= $chamado["equipamento"]?></td>
-                            <td><?= $chamado["desc-prob"]?></td>
-                            <td><?= $chamado["prioridade"]?></td>
-                        </tr>
-                    <?php } ?>
-                </table>
-            </div>
+        <section class="lista-chamados">
+            <h2>Chamados Registrados</h2>
+            
+            <?php if (empty($listaChamados)): ?>
 
+                <p>Nenhum chamado registrado no momento.</p>
+
+            <?php else: ?>
+
+                <?php foreach ($listaChamados as $id => $chamado): ?>
+                    <div class="card-chamado">
+                        <h4>#<?php echo $id; ?> - <?php echo htmlspecialchars($chamado["nome"]); ?> [<?php echo $chamado["setor"]; ?>]</h4>
+                        <p><strong><?php echo $chamado["equipamento"]; ?>:</strong> <?php echo htmlspecialchars($chamado["descricao"]); ?> (<?php echo $chamado["prioridade"]; ?> | <?php echo $chamado["status"]; ?>)</p>
+
+                        <div class="acoes">
+                            <!-- Atualizar -->
+                            <form method="POST">
+                                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                <select name="status">
+                                    <option value="Aberto" <?php echo $chamado["status"] === "Aberto" ? "selected" : ""; ?>>Aberto</option>
+                                    <option value="Em andamento" <?php echo $chamado["status"] === "Em andamento" ? "selected" : ""; ?>>Em andamento</option>
+                                    <option value="Resolvido" <?php echo $chamado["status"] === "Resolvido" ? "selected" : ""; ?>>Resolvido</option>
+                                </select>
+                                <button type="submit" name="acao" value="atualizar-status">Mudar</button>
+                            </form>
+
+                            <!-- Excluir -->
+                            <form method="POST" onsubmit="return confirm('Apagar?');">
+                                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                <button type="submit" name="acao" value="excluir-chamado" class="btn-excluir">Excluir</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                <?php endforeach; ?>
+
+            <?php endif; ?>
+            
         </section>
 
         <!-- FIM DA ATIVIDADE -->
