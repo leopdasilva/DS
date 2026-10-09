@@ -60,13 +60,6 @@
 
         <!-- Formulário de cadastro de chamada -->
         <section class="conteudo-projeto">
-        <section class="painel-relatorio">
-            <div>Total: <strong><?php echo $relatorio["total"]; ?></strong></div>
-            <div>Abertos: <strong><?php echo $relatorio["abertos"]; ?></strong></div>
-            <div>Em andamento: <strong><?php echo $relatorio["em_andamento"]; ?></strong></div>
-            <div>Resolvidos: <strong><?php echo $relatorio["resolvidos"]; ?></strong></div>
-        </section>
-
 
             <form method="POST" class="card">
                 <label for="nome">Funcionário:</label>
@@ -111,6 +104,7 @@
 
                 <button type="submit" name="acao" value="abrir-chamado">Enviar</button>
             </form>
+
         </section>
 
         <!-- Listagem dos chamados -->
@@ -141,6 +135,14 @@
                     </div>
                 </div>
             <?php endforeach; ?>
+        </section>
+
+        <!-- Relatório de chamadas -->
+        <section class="painel-relatorio">
+            <div>Total: <strong><?php echo $relatorio["total"]; ?></strong></div>
+            <div>Abertos: <strong><?php echo $relatorio["abertos"]; ?></strong></div>
+            <div>Em andamento: <strong><?php echo $relatorio["em_andamento"]; ?></strong></div>
+            <div>Resolvidos: <strong><?php echo $relatorio["resolvidos"]; ?></strong></div>
         </section>
 
         <!-- FIM DA ATIVIDADE -->
