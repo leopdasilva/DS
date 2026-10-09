@@ -97,13 +97,6 @@ header {
 
 =========================================== */ 
 
-.pagina-projeto {
-    max-width: 1000px;
-    margin: 40px auto 0 auto; 
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
 .conteudo-projeto {
     background-color: white;
     padding: 35px;
