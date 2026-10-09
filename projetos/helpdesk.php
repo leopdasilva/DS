@@ -27,6 +27,7 @@
 
     // 3. Atualiza a lista de chamados
     $listaChamados = lerChamados();
+    $relatorio = gerarRelatorioChamados();
 ?>
 
 <!DOCTYPE html>
