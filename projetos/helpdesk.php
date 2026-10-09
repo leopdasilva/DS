@@ -8,11 +8,11 @@
 
         if ($acao === "abrir-chamado") {
             $mensagemFeedback = cadastrarChamado(
-                $_POST["nome"],
-                $_POST["setor"],
-                $_POST["equipamento"],
-                $_POST["desc-prob"],
-                $_POST["prioridade"]
+                $_POST["nome"] ?? '',
+                $_POST["setor"] ?? '',
+                $_POST["equipamento"] ?? '',
+                $_POST["desc-prob"] ?? '',
+                $_POST["prioridade"] ?? 'Baixa'
             );
         }
 
@@ -38,7 +38,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help Desk | PHP</title>
-    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="../style/layout.css">
 </head>
 <body>
      <!-- CABEÇALHO -->
@@ -80,27 +80,33 @@
                     <option value="TI">TI</option>
                 </select><br><br>
 
-                <label for="equipamento">Equipamento afteado:</label>
-                <input type="text" id="equipamento" name="equipamento" placeholder="Digite qual foi o equipamento afetado" required><br><br>
+                <label for="equipamento">Equipamento Afetado:</label>
+                <select id="equipamento" name="equipamento" required>
+                    <option value="Computador">Computador</option>
+                    <option value="Impressora">Impressora</option>
+                    <option value="Rede">Rede</option>
+                    <option value="Sistema">Sistema</option>
+                    <option value="Outro">Outro</option>
+                </select><br><br>
 
                 <label for="desc-prob">Descrição do problema:</label>
                 <input type="text" id="desc-prob" name="desc-prob" class="desc-prob" placeholder="Detalhe o qual foi o problema" required><br><br>
 
                 <p>Prioridade:</p>
-                <input type="radio" id="prioridade" name="prioridade">
+                <input type="radio" id="prioridade" name="prioridade" value="Alta" checked>
                 <label for="alta">Alta</label><br>
 
-                <input type="radio" id="prioridade" name="prioridade">
+                <input type="radio" id="prioridade" name="prioridade" value="Média" checked>
                 <label for="media">Média</label><br>
 
-                <input type="radio" id="prioridade" name="prioridade">
+                <input type="radio" id="prioridade" name="prioridade" value="Baixa" checked>
                 <label for="baixa">Baixa</label><br>
             
                 <button type="submit" name="acao" value="abrir-chamado">Enviar</button>
                 
             </form>
 
-            <h2>Jogos cadastrados</h2>
+            <h2>Chamado</h2>
 
             <div class="table-container">
                 <table>
