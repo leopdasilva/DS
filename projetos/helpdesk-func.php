@@ -1,20 +1,20 @@
 <?php
 
-define('CAMINHO_JSON', __DIR__ . "/chamados.json");
+define('caminho_json', __DIR__ . "/chamados.json");
 
 function lerChamados() {
-    if (!file_exists(CAMINHO_JSON)) {
-        file_put_contents(CAMINHO_JSON, json_encode([]));
+    if (!file_exists(caminho_json)) {
+        file_put_contents(caminho_json, json_encode([]));
         return [];
     }
-    $json = file_get_contents(CAMINHO_JSON);
+    $json = file_get_contents(caminho_json);
     return json_decode($json, true) ?? [];
 }
 
 
 function salvarChamados($chamados) {
     $json = json_encode($chamados, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-    return file_put_contents(CAMINHO_JSON, $json);
+    return file_put_contents(caminho_json, $json);
 }
 
 function cadastrarChamado($nome, $setor, $equipamento, $descricao, $prioridade) {

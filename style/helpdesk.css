@@ -1,0 +1,443 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/* MENU / CABEÇALHO - Mesmo estilo utilizado no index.php*/
+
+header {
+    background-color: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: #dddddd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #60a5fa;
+}
+
+/* PÁGINA DO PROJETO */ 
+
+.pagina-projeto {
+    min-height: calc(100vh - 150px);
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px 80px;
+}
+
+/* CABEÇALHO DO PROJETO */ 
+
+.cabecalho-projeto {
+    margin-bottom: 40px;
+}
+
+.projeto-tipo {
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.cabecalho-projeto h1 {
+    font-size: 40px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.cabecalho-projeto >p:not(.projeto-tipo) {
+    color: #666666;
+    font-size: 18px;
+    max-width: 700px;
+}
+
+
+
+/* ===========================================
+    AREA DA ATIVIDADE
+
+    Aqui ficará o conteúdo específico 
+    desenvolvidos nas atividades
+=========================================== */ 
+
+.conteudo-projeto {
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+    margin-bottom: 30px;
+}
+
+/* ===========================================
+   ESTILIZAÇÃO DO FORMULÁRIO E RESULTADOS
+=========================================== */
+
+.conteudo-projeto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+
+/* FORMS */
+
+/* ESTILIZAÇÃO DO FORMULÁRIO DE NOTAS */
+
+.conteudo-projeto form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+}
+
+.conteudo-projeto label {
+    font-weight: bold;
+    color: #374151;
+    font-size: 14px;
+}
+
+.conteudo-projeto input[type="text"],
+.conteudo-projeto input[type="number"],
+.conteudo-projeto input[type="password"],
+.conteudo-projeto select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #f9fafb;
+    color: #1f2937; 
+    transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    box-sizing: border-box; 
+}
+
+.conteudo-projeto select:focus,
+.conteudo-projeto input[type="text"]:focus {
+    border-color: #3b82f6; 
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15); 
+}
+
+.conteudo-projeto button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.conteudo-projeto button[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+/* ESTILIZAÇÃO DO CARD DE RESULTADO */
+
+.conteudo-projeto div.card {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #2563eb;
+    border-radius: 8px;
+    color: #1e293b;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.conteudo-projeto div.card h1 {
+    font-size: 22px;
+    color: #111827;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.conteudo-projeto div.card ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.conteudo-projeto div.card ul li {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.conteudo-projeto div.card p {
+    margin-bottom: 8px;
+}
+
+/* ESTILIZAÇÃO DE TABELAS (LAYOUT MODERNO) */
+
+.conteudo-projeto .table-container {
+    width: 100%;
+    overflow-x: auto; 
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.conteudo-projeto table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-size: 15px;
+    text-align: left;
+}
+
+.conteudo-projeto th {
+    background-color: #111827; 
+    color: #ffffff;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.conteudo-projeto td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #374151;
+}
+
+.conteudo-projeto tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.conteudo-projeto tr:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+.conteudo-projeto tr:last-child td {
+    border-bottom: none;
+}
+
+/* ESTILIZAÇÃO DE CAMPO DE RADIO */
+
+.caixa-campo-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.caixa-campo-radio .titulo-grupo {
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.caixa-campo-radio .opcao-radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+.caixa-campo-radio .opcao-radio label {
+    font-size: 14px;
+    color: #4b5563;
+    cursor: pointer;
+    user-select: none; 
+}
+
+.caixa-campo-radio .opcao-radio input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #3b82f6; 
+}
+
+/* ESTILIZAÇÃO DA LISTA DE CHAMADOS */
+
+.lista-chamados {
+    margin-top: 40px;
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lista-chamados h2 {
+    font-size: 20px;
+    color: #1f2937;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+.card-chamado {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-chamado:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card-chamado p {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.5;
+}
+
+.card-chamado .acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px dashed #e5e7eb;
+    padding-top: 12px;
+}
+
+.card-chamado .acoes form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+}
+
+
+.card-chamado .acoes select {
+    padding: 6px 10px;
+    font-size: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: #f9fafb;
+    color: #374151;
+    cursor: pointer;
+}
+
+.card-chamado .acoes button {
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.card-chamado .acoes button[value="atualizar-status"] {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.card-chamado .acoes button[value="atualizar-status"]:hover {
+    background-color: #e5e7eb;
+}
+
+.card-chamado .btn-excluir {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fca5a5 !important;
+}
+
+.card-chamado .btn-excluir:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444 !important;
+}
+
+
+/* ===========================================
+    VOLTAR PARA PROJETOS
+=========================================== */ 
+
+.voltar-projetos {
+    margin-top: 30px;
+}
+
+.voltar-projetos a{
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voltar-projetos a:hover {
+    text-decoration: underline;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #111827;
+    color: #cccccc;
+    text-align: center;
+    padding: 30px;
+}
+
+footer a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+   
