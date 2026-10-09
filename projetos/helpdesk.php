@@ -114,31 +114,32 @@
             
             <?php foreach ($listaChamados as $id => $chamado): ?>
                 <div class="card-chamado">
-                <p>
-                    #<?= $id ?> <strong>[<?= $chamado["status"] ?>]</strong> 
-                    (<?= $chamado["prioridade"] ?>) - 
-                    <strong><?= $chamado["nome"] ?></strong> 
-                    [<?= $chamado["setor"] ?>/<?= $chamado["equipamento"] ?>]: 
-                    <?= $chamado["descricao"] ?>
-                </p>
+                    <p>
+                        #<?= $id ?> <strong>[<?= $chamado["status"] ?>]</strong> 
+                        (<?= $chamado["prioridade"] ?>) - 
+                        <strong><?= $chamado["nome"] ?></strong> 
+                        [<?= $chamado["setor"] ?>/<?= $chamado["equipamento"] ?>]: 
+                        <?= $chamado["descricao"] ?>
+                    </p>
 
-                <div class="acoes">
-                    <!-- Atualizar Status -->
-                    <form method="POST">
-                        <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        <select name="status">
-                            <option value="Aberto" <?php echo $chamado["status"] === "Aberto" ? "selected" : ""; ?>>Aberto</option>
-                            <option value="Em andamento" <?php echo $chamado["status"] === "Em andamento" ? "selected" : ""; ?>>Em andamento</option>
-                            <option value="Resolvido" <?php echo $chamado["status"] === "Resolvido" ? "selected" : ""; ?>>Resolvido</option>
-                        </select>
-                        <button type="submit" name="acao" value="atualizar-status">Mudar</button>
-                    </form>
+                    <div class="acoes">
+                        <!-- Atualizar Status -->
+                        <form method="POST">
+                            <input type="hidden" name="id" value="<?php echo $id; ?>">
+                            <select name="status">
+                                <option value="Aberto" <?php echo $chamado["status"] === "Aberto" ? "selected" : ""; ?>>Aberto</option>
+                                <option value="Em andamento" <?php echo $chamado["status"] === "Em andamento" ? "selected" : ""; ?>>Em andamento</option>
+                                <option value="Resolvido" <?php echo $chamado["status"] === "Resolvido" ? "selected" : ""; ?>>Resolvido</option>
+                            </select>
+                            <button type="submit" name="acao" value="atualizar-status">Mudar</button>
+                        </form>
 
-                    <!-- Excluir -->
-                    <form method="POST" onsubmit="return confirm('Apagar?');">
-                        <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        <button type="submit" name="acao" value="excluir-chamado" class="btn-excluir">Excluir</button>
-                    </form>
+                        <!-- Excluir -->
+                        <form method="POST" onsubmit="return confirm('Apagar?');">
+                            <input type="hidden" name="id" value="<?php echo $id; ?>">
+                            <button type="submit" name="acao" value="excluir-chamado" class="btn-excluir">Excluir</button>
+                        </form>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </section>
