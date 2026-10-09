@@ -59,7 +59,7 @@
             MENU DE NAVEGAÇÃO
         ========================== -->
         <section id="sobre" class="secao">
-            <div class="sobre_conteudo">
+            <div class="sobre-conteudo">
                 <div class="foto">
                     
                 </div>
