@@ -114,16 +114,22 @@
             
             <?php foreach ($listaChamados as $id => $chamado): ?>
                 <div class="card-chamado">
-                    <p>#<?php echo $id; ?> <strong>[<?php echo $chamado["status"]; ?>]</strong> - <?php echo htmlspecialchars($chamado["nome"]); ?>: <?php echo htmlspecialchars($chamado["descricao"]); ?></p>
+                    <p>#
+                        <?php echo $id; ?> <strong>[<?php echo $chamado["status"]; ?>]</strong> 
+                        <span class="badge-prioridade">(Prioridade: <?php echo $chamado["prioridade"]; ?>)</span>
+                        - <strong><?php echo htmlspecialchars($chamado["nome"]); ?></strong> 
+                        [<?php echo $chamado["setor"]; ?> / <?php echo $chamado["equipamento"]; ?>]: 
+                        <?php echo htmlspecialchars($chamado["descricao"]); ?>
+                    </p>
 
                     <div class="acoes">
                         <!-- Atualizar Status -->
                         <form method="POST">
                             <input type="hidden" name="id" value="<?php echo $id; ?>">
                             <select name="status">
-                                <option value="Aberto">Aberto</option>
-                                <option value="Em andamento">Em andamento</option>
-                                <option value="Resolvido">Resolvido</option>
+                                <option value="Aberto" <?php echo $chamado["status"] === "Aberto" ? "selected" : ""; ?>>Aberto</option>
+                                <option value="Em andamento" <?php echo $chamado["status"] === "Em andamento" ? "selected" : ""; ?>>Em andamento</option>
+                                <option value="Resolvido" <?php echo $chamado["status"] === "Resolvido" ? "selected" : ""; ?>>Resolvido</option>
                             </select>
                             <button type="submit" name="acao" value="atualizar-status">Mudar</button>
                         </form>
@@ -137,6 +143,7 @@
                 </div>
             <?php endforeach; ?>
         </section>
+
 
         <!-- Relatório de chamadas -->
         <h2>Relatório de chamadas</h2>
