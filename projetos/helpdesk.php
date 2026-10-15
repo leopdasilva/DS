@@ -2,22 +2,32 @@
     // 1. Impoortas as funções via modularização
     require_once "helpdesk-func.php";
 
+    $mensagem = "";
+
     // 2. Condicionais para as ações com o formulário
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $acao = $_POST["acao"];
+        $acao = $_POST["acao"] ?? "";
 
         if ($acao === "abrir-chamado") {
-            cadastrarChamado(
-                $_POST["nome"],
-                $_POST["setor"],
-                $_POST["equipamento"],
-                $_POST["desc-prob"],
-                $_POST["prioridade"]
+            $sucesso = cadastrarChamados(
+                $_POST["nome"] ?? "",
+                $_POST["setor"] ?? "",
+                $_POST["equipamento" ?? ""],
+                $_POST["desc-prob"] ?? "",
+                $_POST["prioridade" ?? ""]
             );
+
+            $mensagem =  $sucesso ? "Chamado cadastrado com sucesso!" : "Erro ao cadastrar. Verefique os dados,";
         }
 
         if ($acao === "atualizar-status") {
-            atualizarStatusChamado($_POST["id"], $_POST["status"]);
+            $sucesso = atualizarChamado(
+                (int) ($_POST["posicao"] ?? -1),
+                $_POST["status"] ?? ""
+            );
+            
+            $mensagem = $sucesso ? "Status atualizado!" : "Não foi possível atualizar.";
+
         }
 
         if ($acao === "excluir-chamado") {
