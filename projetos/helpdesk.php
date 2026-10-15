@@ -170,7 +170,7 @@
         <section class="painel-relatorio">   
             <div>Total: <strong><?php echo $relatorio["total"]; ?></strong></div>
             <div>Abertos: <strong><?php echo $relatorio["abertos"]; ?></strong></div>
-            <div>Em andamento: <strong><?php echo $relatorio["em_andamento"]; ?></strong></div>
+            <div>Em andamento: <strong><?php echo $relatorio["andamento"]; ?></strong></div>
             <div>Resolvidos: <strong><?php echo $relatorio["resolvidos"]; ?></strong></div>
         </section>
 
