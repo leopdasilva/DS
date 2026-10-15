@@ -1,6 +1,6 @@
 <?php 
     // 1. Impoortas as funções via modularização
-    require_once "helpdesk-func.php";
+    require_once "helpdesk-func_2.php";
 
     $mensagem = "";
 
@@ -31,13 +31,15 @@
         }
 
         if ($acao === "excluir-chamado") {
-            excluirChamado($_POST["id"]);
+            $sucesso = excluirChamado((int) ($_POST["posicao"] ?? -1));
+
+            $mensagem = $sucesso ? "Chamado excluído!" : "Não foi possível excluir.";
         }
     }
 
     // 3. Atualiza a lista de chamados
-    $listaChamados = lerChamados();
-    $relatorio = gerarRelatorioChamados();
+    $chamados = lerChamados();
+    $relatorio = gerarRelatorio();
 ?>
 
 <!DOCTYPE html>
@@ -122,7 +124,7 @@
         <h2>Chamados Registrados</h2>
         <section class="lista-chamados">
             
-            <?php foreach ($listaChamados as $id => $chamado): ?>
+            <?php foreach ($chamados as $id => $chamado): ?>
                 <div class="card-chamado">
                     <p>
                         #<?= $id ?> <strong>[<?= $chamado["status"] ?>]</strong> 
