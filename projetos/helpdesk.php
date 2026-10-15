@@ -1,5 +1,5 @@
 <?php 
-    // 1. Impoortas as funções via modularização
+    // 1. Importa as funções via modularização
     require_once "helpdesk-func_2.php";
 
     $mensagem = "";
@@ -12,26 +12,25 @@
             $sucesso = cadastrarChamados(
                 $_POST["nome"] ?? "",
                 $_POST["setor"] ?? "",
-                $_POST["equipamento" ?? ""],
+                $_POST["equipamento"] ?? "", 
                 $_POST["desc-prob"] ?? "",
-                $_POST["prioridade" ?? ""]
+                $_POST["prioridade"] ?? "" 
             );
 
-            $mensagem =  $sucesso ? "Chamado cadastrado com sucesso!" : "Erro ao cadastrar. Verefique os dados,";
+            $mensagem =  $sucesso ? "Chamado cadastrado com sucesso!" : "Erro ao cadastrar. Verifique os dados.";
         }
 
         if ($acao === "atualizar-status") {
             $sucesso = atualizarChamado(
-                (int) ($_POST["posicao"] ?? -1),
+                (int) ($_POST["posicao"] ?? -1), 
                 $_POST["status"] ?? ""
             );
             
             $mensagem = $sucesso ? "Status atualizado!" : "Não foi possível atualizar.";
-
         }
 
         if ($acao === "excluir-chamado") {
-            $sucesso = excluirChamado((int) ($_POST["posicao"] ?? -1));
+            $sucesso = excluirChamado((int) ($_POST["posicao"] ?? -1)); 
 
             $mensagem = $sucesso ? "Chamado excluído!" : "Não foi possível excluir.";
         }
@@ -58,9 +57,9 @@
      <!-- CABEÇALHO -->
     <header>
         <nav class="navbar">
-            <h2 class="logo">Meu portifólio</h2>
+            <h2 class="logo">Meu portfólio</h2>
             <ul class="menu">
-                <li><a href="../index.php">Inicio</a></li>
+                <li><a href="../index.php">Início</a></li>
                 <li><a href="../index.php#projetos-php">Atividades</a></li>
             </ul>
         </nav>
@@ -71,8 +70,15 @@
         <section class="cabecalho-projeto">
             <p class="projeto-tipo">atividade</p>
             <h1>Help Desk</h1>
-            <p>Atividade desenvolvida durantes as aulas de desenvolvimento de sistemas</p>
+            <p>Atividade desenvolvida durante as aulas de desenvolvimento de sistemas</p>
         </section>
+
+        <!-- Exibição de Mensagens do Sistema -->
+        <?php if (!empty($mensagem)): ?>
+            <div class="alerta-mensagem" style="padding: 10px; margin-bottom: 20px; background-color: #e0f7fa; border: 1px solid #00acc1; border-radius: 4px;">
+                <?= escapar($mensagem) ?>
+            </div>
+        <?php endif; ?>
 
         <!-- Formulário de cadastro de chamada -->
         <h2>Formulário de ocorrência</h2>
@@ -101,7 +107,7 @@
                 </select><br><br>
 
                 <label for="desc-prob">Descrição do problema:</label>
-                <input type="text" id="desc-prob" name="desc-prob" class="desc-prob" placeholder="Detalhe o qual foi o problema" required><br><br>
+                <input type="text" id="desc-prob" name="desc-prob" class="desc-prob" placeholder="Detalhe qual foi o problema" required><br><br>
 
                 <div class="caixa-campo-radio">
                     <span class="titulo-grupo">Prioridade:</span>
@@ -121,7 +127,6 @@
 
                 <button type="submit" name="acao" value="abrir-chamado">Enviar</button>
             </form>
-
         </section>
 
         <!-- Listagem dos chamados -->
@@ -131,17 +136,17 @@
             <?php foreach ($chamados as $id => $chamado): ?>
                 <div class="card-chamado">
                     <p>
-                        #<?= $id ?> <strong>[<?= $chamado["status"] ?>]</strong> 
-                        (<?= $chamado["prioridade"] ?>) - 
-                        <strong><?= $chamado["nome"] ?></strong> 
-                        [<?= $chamado["setor"] ?>/<?= $chamado["equipamento"] ?>]: 
-                        <?= $chamado["descricao"] ?>
+                        #<?= $id ?> <strong>[<?= escapar($chamado["status"]) ?>]</strong> 
+                        (<?= escapar($chamado["prioridade"]) ?>) - 
+                        <strong><?= escapar($chamado["nome"]) ?></strong> 
+                        [<?= escapar($chamado["setor"]) ?>/<?= escapar($chamado["equipamento"]) ?>]: 
+                        <?= escapar($chamado["descricao"]) ?>
                     </p>
 
                     <div class="acoes">
                         <!-- Atualizar Status -->
                         <form method="POST">
-                            <input type="hidden" name="id" value="<?php echo $id; ?>">
+                            <input type="hidden" name="posicao" value="<?php echo $id; ?>">
                             <select name="status">
                                 <option value="Aberto" <?php echo $chamado["status"] === "Aberto" ? "selected" : ""; ?>>Aberto</option>
                                 <option value="Em andamento" <?php echo $chamado["status"] === "Em andamento" ? "selected" : ""; ?>>Em andamento</option>
@@ -152,14 +157,13 @@
 
                         <!-- Excluir -->
                         <form method="POST" onsubmit="return confirm('Apagar?');">
-                            <input type="hidden" name="id" value="<?php echo $id; ?>">
+                            <input type="hidden" name="posicao" value="<?php echo $id; ?>">
                             <button type="submit" name="acao" value="excluir-chamado" class="btn-excluir">Excluir</button>
                         </form>
                     </div>
                 </div>
             <?php endforeach; ?>
         </section>
-
 
         <!-- Relatório de chamadas -->
         <h2>Relatório de chamadas</h2>
@@ -176,7 +180,7 @@
         </div>
     </main>
 
-    <!-- RODAPÈ -->
+    <!-- RODAPÉ -->
     <footer>
         <p>Desenvolvido por <a href="https://leonardo315.devlook.xyz">Leonardo P. da Silva </a> • 2026</p>
     </footer>
