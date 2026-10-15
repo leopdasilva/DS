@@ -40,6 +40,10 @@
     // 3. Atualiza a lista de chamados
     $chamados = lerChamados();
     $relatorio = gerarRelatorio();
+
+    function escapar($valor) {
+        return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
+    }
 ?>
 
 <!DOCTYPE html>
