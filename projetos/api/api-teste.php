@@ -66,9 +66,22 @@
         http_response_code(405);
 
         // COMANDOS NA VPS PARA TESTAR:
-        // curl -i GET https://leonardo315.devlook.xyz/projetos/api/api-teste.php
-        //
-        //
-        //
+        // curl -i -X GET https://leonardo315.devlook.xyz/projetos/api/api-teste.php
+        // curl -i -X POST https://leonardo315.devlook.xyz/projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"titulo":"Impressora com defeito"}'
+        // curl -i -X POST https://leonardo315.devlook.xyz/projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"titulo":""}'
+        // curl -i -X POST https://leonardo315.devlook.xyz/projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"descricao":"Computador não liga"}'
+        // curl -i -X POST https://leonardo315.devlook.xyz/projetos/api/api-teste.php \ -H "Content-Type: application/json" \ -d '{"titulo":}'
+        // curl -i -X DELETE https://leonardo315.devlook.xyz/projetos/api/api-teste.php
+        // curl -i -X GET https://leonardo315.devlook.xyz/projetos/api/arquivo-inexistente.php
+
+
+        //      Parâmetro     Significado
+        // -i   Mostra os headers e o status da resposta
+        // -X GET    Define o método GET
+        // -X POST   Define o método POST
+        // -X DELETE    Define o método DELETE
+        // -H   Adiciona um header HTTP
+        // -d   Envia dados no corpo da requisição
+
 
 ?>
