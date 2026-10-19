@@ -176,7 +176,7 @@
 
         <!-- FIM DA ATIVIDADE -->
         <div class="voltar-projetos">
-            <a href="../index.php#projetos-php"> ← Voltar para atividades</a>
+            <a href="../../index.php#projetos-php"> ← Voltar para atividades</a>
         </div>
     </main>
 
