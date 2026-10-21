@@ -1,6 +1,6 @@
 <?php 
 
-    require_once __DIR__ . '/..app/Http/Controller/PortfolioController.php';
+    require_once __DIR__ . '/../app/Http/Controller/PortfolioController.php';
     //require_once __DIR__ . '/../app/Http/Controller/HelpdeskController.php';
 
 
