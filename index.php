@@ -3,7 +3,7 @@
     $rotas = require __DIR__ .  "/routes/web.php";
 
     // Se a rota estiver vazia, vai direcionar automaticmanete para o portifólio.
-    $rota = $_GET['rota'] ?? 'portifolio';
+    $rota = $_GET['rota'] ?? 'portfolio';
 
     // Defininfo a varável de verificação de método HTTP requisitado
     $metodo = $_SERVER['REQUEST_METHOD'];
