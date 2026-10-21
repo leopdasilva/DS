@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio LPS</title>
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
+    <!-- ==========================  
+        MENU DE NAVEGAÇÃO
+    ========================== -->
     <header>
-        <!-- ==========================  
-            MENU DE NAVEGAÇÃO
-        ========================== -->
         <nav class="navbar">
             <h2 class="logo">Meu portifólio</h2>
 

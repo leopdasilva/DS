@@ -20,7 +20,7 @@
 
 
     //
-    $controller -> $acao
+    $controller -> $acao();
 
 
 
