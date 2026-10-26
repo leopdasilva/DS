@@ -83,7 +83,7 @@
         <!-- Formulário de cadastro de chamada -->
         <h2>Formulário de ocorrência</h2>
         <section class="conteudo-projeto">
-            <form method="POST" class="card">
+            <form action="index.php?rota=helpdesk" method="POST" class="card">
 
                 <label for="nome">Funcionário:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do funcionário" required><br><br>
