@@ -227,7 +227,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="projetos/notas.php" class="link-projeto">Ver atividade →</a>
+                    <a href="index.php?rota=notas" class="link-projeto">Ver atividade →</a>
                 </div>
                 <!-- PROJETO 3 -->
                 <div class="projeto-card">
@@ -248,7 +248,7 @@
                         <span>PHP</span>
                         <span>JavaScript</span>
                     </div>
-                    <a href="projetos/login-basico.php" class="link-projeto">Ver atividade →</a>
+                    <a href="index.php?rota=login" class="link-projeto">Ver atividade →</a>
                 </div>
                 <!-- PROJETO 4 -->
                 <div class="projeto-card">
@@ -268,7 +268,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="projetos/jogos.php" class="link-projeto">Ver atividade →</a>
+                    <a href="index.php?rota=jogos" class="link-projeto">Ver atividade →</a>
                 </div>
                 <!-- PROJETO 5 -->
                 <div class="projeto-card">
