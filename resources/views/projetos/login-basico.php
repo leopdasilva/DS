@@ -50,7 +50,7 @@
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
 
-            <form method="POST" class="card">
+            <form action="login-basico.php" method="POST" class="card">
                 <label for="nome">Usuário:</label>
                 <input type="text" id="usuario" name="usuario" placeholder="Digite o seu usuário" required><br><br>
 
