@@ -30,8 +30,8 @@
             <h2 class="logo">Meu portifólio</h2>
 
             <ul class="menu">
-                <li><a href="../index.php">Inicio</a></li>
-                <li><a href="../index.php#projetos-php">Atividades</a></li>
+                <li><a href="../portfolio">Inicio</a></li>
+                <li><a href="../portfolio#projetos-php">Atividades</a></li>
             </ul>
         </nav>
     </header>
@@ -50,7 +50,7 @@
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
 
-            <form action="/index.php?rota=login" method="POST" class="card">
+            <form action="/login-basico" method="POST" class="card">
                 <label for="nome">Usuário:</label>
                 <input type="text" id="usuario" name="usuario" placeholder="Digite o seu usuário" required><br><br>
 
