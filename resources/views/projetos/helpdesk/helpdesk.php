@@ -9,7 +9,7 @@
         $acao = $_POST["acao"] ?? "";
 
         if ($acao === "abrir-chamado") {
-            $sucesso = cadastrarChamados(
+            $sucesso = $model->cadastrarChamados(
                 $_POST["nome"] ?? "",
                 $_POST["setor"] ?? "",
                 $_POST["equipamento"] ?? "", 
@@ -21,7 +21,7 @@
         }
 
         if ($acao === "atualizar-status") {
-            $sucesso = atualizarChamado(
+            $sucesso = $model->atualizarChamado(
                 (int) ($_POST["posicao"] ?? -1), 
                 $_POST["status"] ?? ""
             );
@@ -30,15 +30,15 @@
         }
 
         if ($acao === "excluir-chamado") {
-            $sucesso = excluirChamado((int) ($_POST["posicao"] ?? -1)); 
+            $sucesso = $model->excluirChamado((int) ($_POST["posicao"] ?? -1)); 
 
             $mensagem = $sucesso ? "Chamado excluído!" : "Não foi possível excluir.";
         }
     }
 
     // 3. Atualiza a lista de chamados
-    $chamados = lerChamados();
-    $relatorio = gerarRelatorio();
+    $chamados = $model->lerChamados();
+    $relatorio = $model->gerarRelatorio();
 
     function escapar($valor) {
         return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
