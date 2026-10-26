@@ -248,7 +248,7 @@
                         <span>PHP</span>
                         <span>JavaScript</span>
                     </div>
-                    <a href="/index.php?rota=login-basico" class="link-projeto">Ver atividade →</a>
+                    <a href="/index.php?rota=login" class="link-projeto">Ver atividade →</a>
                 </div>
                 <!-- PROJETO 4 -->
                 <div class="projeto-card">

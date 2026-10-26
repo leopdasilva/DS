@@ -7,7 +7,7 @@
 
     $senha = "ladraodesenha";
 
-    require __DIR__ . "/../conexao.php";
+    require __DIR__ . "/../../../config/conexao.php";
 
     $sql = "CREATE TABLE IF NOT EXISTS lista_jogos (
         id INT AUTO_INCREMENT PRIMARY KEY,
