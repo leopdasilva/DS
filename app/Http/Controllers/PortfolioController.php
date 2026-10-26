@@ -22,9 +22,6 @@
             require __DIR__ . "/../../../resources/views/projetos/jogos.php";
         }
 
-        public function helpdesk() {
-            require __DIR__ . "/../../../resources/views/projetos/helpdesk/helpdesk.php";
-        }
     }
 
 
