@@ -12,11 +12,11 @@
             'notas' => [new PortfolioController(), 'notas'],
             'login' => [new PortfolioController(), 'login'],
             'jogos' => [new PortfolioController(), 'jogos'],
-            //'helpdesk' => [new HelpdeskController(), 'helpdesk'],
+            'helpdesk' => [new HelpdeskController(), 'helpdesk'],
         ],
         'POST' => [
-            'login' => [new PortfolioController(), 'login']
-            //'helpdesk' => [new HelpdeskController(), '']
+            'login' => [new PortfolioController(), 'login'],
+            'helpdesk' => [new HelpdeskController(), 'helpdesk']
         ]
     ];
 

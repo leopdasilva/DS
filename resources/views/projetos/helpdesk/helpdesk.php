@@ -1,6 +1,6 @@
 <?php 
     // 1. Importa as funções via modularização
-    require_once "helpdesk-func_2.php";
+    require_once __DIR__ . "/../../../../app/Models/Chamado.php";
 
     $mensagem = "";
 

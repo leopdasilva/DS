@@ -289,7 +289,7 @@
                         <span>PHP</span>
                         <span>JSON</span>
                     </div>
-                    <a href="projetos/helpdesk/helpdesk.php" class="link-projeto">Ver atividade →</a>
+                    <a href="/index.php?rota=helpdesk" class="link-projeto">Ver atividade →</a>
                 </div>
             </div>
         </section>
