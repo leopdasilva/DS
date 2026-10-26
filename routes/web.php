@@ -15,6 +15,7 @@
             'helpdesk' => [new HelpdeskController(), 'helpdesk'],
         ],
         'POST' => [
+            'idade' => [new PortfolioController(), 'idade'],
             'login' => [new PortfolioController(), 'login'],
             'jogos' => [new PortfolioController(), 'jogos'],
             'helpdesk' => [new HelpdeskController(), 'helpdesk']
