@@ -14,7 +14,7 @@ class HelpdeskController
  
         $mensagem = "";
  
-        require __DIR__ . "/../../../resources/Views/projetos/helpdesk/helpdesk.php";
+        require __DIR__ . "/../../../resources/views/projetos/helpdesk/helpdesk.php";
     }
  
     // POST - Receber os formulários do Helpdesk
@@ -57,6 +57,6 @@ class HelpdeskController
         $chamados = $model->lerChamados();
         $relatorio = $model->gerarRelatorio();
  
-        require __DIR__ . "/../../../resources/Views/projetos/helpdesk.php";
+        require __DIR__ . "/../../../resources/views/projetos/helpdesk.php";
     }
 }
