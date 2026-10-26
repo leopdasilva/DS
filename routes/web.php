@@ -16,6 +16,7 @@
         ],
         'POST' => [
             'idade' => [new PortfolioController(), 'idade'],
+            'notas' => [new PortfolioController(), 'notas'],
             'login' => [new PortfolioController(), 'login'],
             'jogos' => [new PortfolioController(), 'jogos'],
             'helpdesk' => [new HelpdeskController(), 'helpdesk']
