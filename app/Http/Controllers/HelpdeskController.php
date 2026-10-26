@@ -25,7 +25,7 @@ class HelpdeskController
         $acao = $_POST["acao"] ?? "";
         $sucesso = false;
  
-        if ($acao === "cadastrar") {
+        if ($acao === "abrir-chamado") {
             $sucesso = $model->cadastrarChamados(
                 $_POST["nome"] ?? "",
                 $_POST["setor"] ?? "",
@@ -35,14 +35,14 @@ class HelpdeskController
             );
         }
  
-        elseif ($acao === "atualizar") {
+        elseif ($acao === "atualizar-status") {
             $sucesso = $model->atualizarChamado(
                 (int) ($_POST["posicao"] ?? -1),
                 $_POST["status"] ?? ""
             );
         }
  
-        elseif ($acao === "excluir") {
+        elseif ($acao === "excluir-chamado") {
             $sucesso = $model->excluirChamado(
                 (int) ($_POST["posicao"] ?? -1)
             );
