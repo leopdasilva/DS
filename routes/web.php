@@ -14,9 +14,9 @@
             'jogos' => [new PortfolioController(), 'jogos'],
             //'helpdesk' => [new HelpdeskController(), 'helpdesk'],
         ],
-        'POST' => [
+        //'POST' => [
             //'helpdesk' => [new HelpdeskController(), '']
-        ]
+        //]
     ];
 
 
