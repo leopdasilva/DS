@@ -207,7 +207,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="projetos/idade.php" class="link-projeto">Ver atividade →</a>
+                    <a href="index.php?rota=idade" class="link-projeto">Ver atividade →</a>
                 </div>
                 <!-- PROJETO 2 -->
                 <div class="projeto-card">
