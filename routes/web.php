@@ -8,11 +8,11 @@
     return [
         'GET' => [
             'portfolio' => [new PortfolioController(), 'index'],
-            //'helpdesk' => [new HelpdeskController(), 'index'],
-            //'jogos' => [],
-            //'idade' => [],
-            //'notas' => [],
-            //'login-basico' => []
+            'idade' => [new PortfolioController(), 'idade'],
+            'notas' => [new PortfolioController(), 'notas'],
+            'login-basico' => [new PortfolioController(), 'login'],
+            'jogos' => [new PortfolioController(), 'jogos'],
+            //'helpdesk' => [new HelpdeskController(), 'helpdesk'],
         ],
         'POST' => [
             //'helpdesk' => [new HelpdeskController(), '']
