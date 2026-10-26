@@ -1,30 +1,27 @@
 <?php 
-    // Carregando o arquivo de rotas
+    // Carregando o arquivo de rotas e guardando o valor retornado por ele na variavel $rotas
     $rotas = require __DIR__ .  "/routes/web.php";
 
-    // Captura o caminho limpo da URL (ex: /login ou /login-basico)
-    $rota = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    $rota = trim($rota, '/'); // Remove as barras das pontas
+    // Se a rota estiver vazia, vai direcionar automaticmanete para o portifólio.
+    $rota = $_GET['rota'] ?? 'portfolio';
 
-    // Se o usuário acessar a raiz do site, vai direto para o portfólio
-    if ($rota === '') {
-        $rota = 'portfolio';
-    }
-
-    // Definindo a variável de verificação de método HTTP requisitado
+    // Defininfo a varável de verificação de método HTTP requisitado
     $metodo = $_SERVER['REQUEST_METHOD'];
 
-    // Verificando se a rota existe, se não existir, define status 404
+    // Vereficando se a rota existe, se não existir, define status 404
     if (!isset($rotas[$metodo][$rota])) {
         http_response_code(404);
-        echo "Página não encontrada! Rota [{$metodo}] '/{$rota}' não existe.";
+        echo "Página não encontrada!";
         exit;
     }
 
-    // Separa o Controller e a Ação
+    // 
     [$controller, $acao] = $rotas[$metodo][$rota];
 
-    // Executa o método
-    $controller->$acao();
-?>
 
+    //
+    $controller -> $acao();
+
+
+
+?>
