@@ -1,6 +1,5 @@
 <?php
-    $usuario = "leonardo25";
-    $senha = "bananada";
+   
     $mensagem = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,8 +29,8 @@
             <h2 class="logo">Meu portifólio</h2>
 
             <ul class="menu">
-                <li><a href="../portfolio">Inicio</a></li>
-                <li><a href="../portfolio#projetos-php">Atividades</a></li>
+                <li><a href="../index.php">Inicio</a></li>
+                <li><a href="../index.php#projetos-php">Atividades</a></li>
             </ul>
         </nav>
     </header>
