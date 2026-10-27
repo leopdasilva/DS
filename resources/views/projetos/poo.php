@@ -28,7 +28,7 @@
     //ABSTRAÇÃO
     //Mostrar o que é necessário e esconder detalhes complicados de funcionamento
 
-    class Personagem {
+    abstract class Personagem {
         public $nome;
         private $vida; // 'private' para encaplusamento
         public $dano;
@@ -54,10 +54,13 @@
             $this->vida = $vida;
         }
 
-        public function atacar() {
-            echo "$this->nome realizou um ataque!\n";
-        }
+        // public function atacar() {
+        //     echo "$this->nome realizou um ataque!\n";
+        // }
 
+        // Toda classe filha deverá implementar atacar()
+
+        abstract public function atacar();
     }
 
     // ------------------------------------------------
@@ -111,15 +114,38 @@
 
     // ------------------------------------------------
 
+    // ------------------------------------------------
+
+    class Curandeiro extends Personagem {
+        // Sobrescrevendo o método da clase pai
+
+        public function atacar()
+        {
+            echo "$this->nome atacou com uma faca!\n";
+        }
+
+        public function curar(Personagem $alvo, int $quantidade) {
+            $novaVida = $alvo->getVida() + $quantidade;
+            $alvo-> setVida($novaVida);
+            echo "$this->nome curou {$alvo->nome} em $quantidade HP!\n";
+        }
+    }
+
+    // ------------------------------------------------
+
     $guerreiro = new Guerreiro("Leonardo", 100, 10);
     $mago = new Mago("Alice", 50, 5);
-    $personagem = new Personagem("José", 30, 3);
+    $curandeiro = new Personagem("Sabrina", 30, 3);
 
     $personagens = [$guerreiro, $mago, $personagem];
 
     foreach($personagens as $p) {
         $p->atacar();
     }
+
+    $curandeiro->curar($guerreiro, 50);
+
+    $guerreiro->getVida();
 
     // ------------------------------------------------
 
