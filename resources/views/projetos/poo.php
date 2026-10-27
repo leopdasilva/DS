@@ -115,6 +115,16 @@
     $mago = new Mago("Alice", 50, 5);
     $personagem = new Personagem("José", 30, 3);
 
+    $personagens = [$guerreiro, $mago, $personagem];
+
+    foreach($personagens as $p) {
+        $p->atacar();
+    }
+
+    // ------------------------------------------------
+
+    //Rota: https://leonardo315.devlook.xyz/resources/views/poo.php
+
     // ------------------------------------------------
 
     //1. O que é uma classe?
