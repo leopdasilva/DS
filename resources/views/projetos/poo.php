@@ -60,41 +60,48 @@
 
     }
 
-    $leonardo = new Personagem("Leonardo", 100, 10);
+    // $leonardo = new Personagem("Leonardo", 100, 10);
 
-    // Define novo valor de vida
-    $leonardo->setVida(50);
+    // // Define novo valor de vida
+    // $leonardo->setVida(50);
 
-    $alice = new Personagem("Alice", 50, 5);
+    // $alice = new Personagem("Alice", 50, 5);
 
-    // Remove 15 de vida da Alice diretamente
-    $alice->setVida($alice->getVida() - 15);
+    // // Remove 15 de vida da Alice diretamente
+    // $alice->setVida($alice->getVida() - 15);
 
-    $jose = new Personagem("José", 30, 3);
+    // $jose = new Personagem("José", 30, 3);
 
-    $leonardo->atacar();
+    //$leonardo->atacar();
 
     class Guerreiro extends Personagem {
+        // Sobreescrevendo o método da classe pai
+        public function atacar(){
+            echo "$this->nome atacou com uma espada!\n";
+        }
+
         public function defender() {
             echo "$this->nome levantou o escudo!\n";
         }
     }
 
-    $guerreiro = new Guerreiro("Leonardo", 100, 10);
-
-    $guerreiro -> atacar(); // Método herdado
-    $guerreiro -> defender(); // Método próprio
+    //$guerreiro -> atacar(); // Método herdado
+    //$guerreiro -> defender(); // Método próprio
 
     class Mago extends Personagem {
-        public function lancarMagia() {
-            echo "$this->nome lançou uma bola!\n";
+        // Sobreescrevendo o método da classe pai
+        public function atacar() {
+            echo "$this->nome lançou uma bola de fogo!\n";
         }
     }
 
-        $mago = new Mago("Alice", 50, 5);
+    // $mago = new Mago("Alice", 50, 5);
+    // $mago->atacar();        // Herdado de Personagem
+    // $mago->lancarMagia();   // Próprio de Mago
 
-        $mago->atacar();        // Herdado de Personagem
-        $mago->lancarMagia();   // Próprio de Mago
+    $guerreiro = new Guerreiro("Leonardo", 100, 10);
+    $mago = new Mago("Alice", 50, 5);
+    $personagem = new Personagem("José", 30, 3);
 
     //1. O que é uma classe?
     //Um molde para criar objetos
