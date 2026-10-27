@@ -143,9 +143,11 @@
         $p->atacar();
     }
 
+    echo "Vida antes da cura: " . $guerreiro->getVida() . "\n";
+
     $curandeiro->curar($guerreiro,25);
 
-    $guerreiro->getVida();
+    echo "Vida depois da cura: " . $guerreiro->getVida() . "\n";
 
     // ------------------------------------------------
 
