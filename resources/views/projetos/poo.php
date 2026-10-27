@@ -126,7 +126,7 @@
 
         public function curar(Personagem $alvo, int $quantidade) {
             $novaVida = $alvo->getVida() + $quantidade;
-            $alvo-> setVida($novaVida);
+            $alvo->setVida($novaVida);
             echo "$this->nome curou {$alvo->nome} em $quantidade HP!\n";
         }
     }
@@ -135,15 +135,15 @@
 
     $guerreiro = new Guerreiro("Leonardo", 100, 10);
     $mago = new Mago("Alice", 50, 5);
-    $curandeiro = new Personagem("Sabrina", 30, 3);
+    $curandeiro = new Curandeiro("Sabrina", 30, 3);
 
-    $personagens = [$guerreiro, $mago, $personagem];
+    $personagens = [$guerreiro, $mago, $curandeiro];
 
     foreach($personagens as $p) {
         $p->atacar();
     }
 
-    $curandeiro->curar($guerreiro, 50);
+    $curandeiro->curar($guerreiro,25);
 
     $guerreiro->getVida();
 
