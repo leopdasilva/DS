@@ -60,6 +60,8 @@
 
     }
 
+    // ------------------------------------------------
+
     // $leonardo = new Personagem("Leonardo", 100, 10);
 
     // // Define novo valor de vida
@@ -74,6 +76,8 @@
 
     //$leonardo->atacar();
 
+    // ------------------------------------------------
+
     class Guerreiro extends Personagem {
         // Sobreescrevendo o método da classe pai
         public function atacar(){
@@ -85,8 +89,12 @@
         }
     }
 
+    // ------------------------------------------------
+
     //$guerreiro -> atacar(); // Método herdado
     //$guerreiro -> defender(); // Método próprio
+
+    // ------------------------------------------------
 
     class Mago extends Personagem {
         // Sobreescrevendo o método da classe pai
@@ -95,13 +103,19 @@
         }
     }
 
+    // ------------------------------------------------
+
     // $mago = new Mago("Alice", 50, 5);
     // $mago->atacar();        // Herdado de Personagem
     // $mago->lancarMagia();   // Próprio de Mago
 
+    // ------------------------------------------------
+
     $guerreiro = new Guerreiro("Leonardo", 100, 10);
     $mago = new Mago("Alice", 50, 5);
     $personagem = new Personagem("José", 30, 3);
+
+    // ------------------------------------------------
 
     //1. O que é uma classe?
     //Um molde para criar objetos
@@ -114,5 +128,7 @@
 
     //4. O que significa extends?
     //Herdar características e métodos de outra classe
+
+    // ------------------------------------------------
 
 ?>
