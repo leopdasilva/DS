@@ -26,17 +26,32 @@
     //POLIMORFISMO
     //Permitir que objetos diferentes respondam à mesma ação de maneiras diferentes.
     //ABSTRAÇÃO
-    //Mostrar o que é necessário e escontar detalhes complicados de funcionamento
+    //Mostrar o que é necessário e esconder detalhes complicados de funcionamento
 
     class Personagem {
         public $nome;
-        public $vida;
+        private $vida; // 'private' para encaplusamento
         public $dano;
 
         public function __construct($nome, $vida, $dano){
             $this->nome = $nome;
             $this->vida = $vida;
             $this->dano = $dano;
+        }
+
+        // GETTER
+        public function getVida() {
+            return $this->vida;
+        }
+
+        //SETTER
+        public function setVida($vida) {
+            if ($vida < 0) {
+                echo "A vida não pode ser negativa!";
+                return;
+            }
+
+            $this->vida = $vida;
         }
 
         public function atacar() {
@@ -46,8 +61,40 @@
     }
 
     $leonardo = new Personagem("Leonardo", 100, 10);
+
+    // Define novo valor de vida
+    $leonardo->setVida(50);
+
     $alice = new Personagem("Alice", 50, 5);
+
+    // Remove 15 de vida da Alice diretamente
+    $alice->setVida($alice->getVida() - 15);
+
     $jose = new Personagem("José", 30, 3);
 
+    $leonardo->atacar();
+
+    class Guerreiro extends Personagem {
+        public function defender() {
+            echo "$this->nome levantou o escudo!";
+        }
+    }
+
+    $guerreiro = new Guerreiro("Leonardo", 100, 10);
+
+    $guerreiro -> atacar(); // Método herdado
+    $guerreiro -> defender(); // Método próprio
+
+    //1. O que é uma classe?
+    //Um molde para criar objetos
+
+    //2. O que significa new Personagem()?
+    //Criar um objeto da classe Personagem
+
+    //3. Para que serve $this->nome?
+    //Acesar o nome do objeto atual
+
+    //4. O que significa extends?
+    //Herdar características e métodos de outra classe
 
 ?>
