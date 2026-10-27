@@ -47,7 +47,7 @@
         //SETTER
         public function setVida($vida) {
             if ($vida < 0) {
-                echo "A vida não pode ser negativa!";
+                echo "A vida não pode ser negativa!\n";
                 return;
             }
 
@@ -55,7 +55,7 @@
         }
 
         public function atacar() {
-            echo "$this->nome realizou um ataque!";
+            echo "$this->nome realizou um ataque!\n";
         }
 
     }
