@@ -167,13 +167,13 @@ function escapar($texto) {
 
 
                         <div>
-                            <p><?= $mensagem ?></p><br>
+                            <p><strong><?= $mensagem ?></strong></p><br>
 
                             <h2>Registro de Máquinas</h2>
-                            <p>Nome Máquina: <?= $nome ?></p>
-                            <p>Tipo Máquina: <?= $tipo ?></p>
-                            <p>Quant. Máquina:<?= $quantidade ?></p>
-                            <p>Status operação: <?php ?></p>
+                            <p><strong>Nome Máquina:</strong> <?= $nome ?></p>
+                            <p><strong>Tipo Máquina:</strong> <?= $tipo ?></p>
+                            <p><strong>Quant. Máquina:</strong> <?= $quantidade ?></p>
+                            <p><strong>Status operação:</strong> <?php $operacao?></p>
                         </div>
 
                         
