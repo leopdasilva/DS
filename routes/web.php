@@ -13,7 +13,7 @@
             'login' => [new PortfolioController(), 'login'],
             'jogos' => [new PortfolioController(), 'jogos'],
             'helpdesk' => [new HelpdeskController(), 'index'],
-            'poo2' => [new PortfolioController(), 'poo2']
+            'poo2' => [new PortfolioController(), 'poo']
         ],
         'POST' => [
             'idade' => [new PortfolioController(), 'idade'],
@@ -21,7 +21,7 @@
             'login' => [new PortfolioController(), 'login'],
             'jogos' => [new PortfolioController(), 'jogos'],
             'helpdesk' => [new HelpdeskController(), 'index'],
-            'poo2' => [new PortfolioController(), 'poo2']
+            'poo2' => [new PortfolioController(), 'poo']
         ]
     ];
 

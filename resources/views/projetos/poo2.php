@@ -142,7 +142,7 @@ function escapar($texto) {
 
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
-            <form method="post" class="card">
+            <form action="/index.php?rota=poo2" method="post" class="card">
                 <label for="nome">Nome da máquina:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome da máquina" required><br><br>
 
