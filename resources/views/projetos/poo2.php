@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } elseif ($tipo === "prensa") {
             $maquina = new Prensa($nome);
         } elseif ($tipo === "robosoldagem") {
-            $maquina === new RoboSoldagem($nome);
+            $maquina = new RoboSoldagem($nome);
         }
 
         // EXECUTANDO OS MÉTODOS DO OBJETO
