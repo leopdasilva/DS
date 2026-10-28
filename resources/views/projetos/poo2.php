@@ -141,7 +141,7 @@ function escapar($texto) {
 
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
-            <form action="/index.php?rota=poo" method="post" class="card">
+            <form action="/index.php?rota=poo2" method="post" class="card">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
 
