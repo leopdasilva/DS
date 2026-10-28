@@ -135,21 +135,27 @@ function escapar($texto) {
             <p class="projeto-tipo">
                 atividade
             </p>
-            <h1>Programação Orientada a Objetos</h1>
+            <h1>Programação Orientada a Objetos - Sistema de Controle de Produção Insdustrial</h1>
             <p>Atividade desenvolvida durantes as aulas de desenvolvimento de sistemas</p>
         </section>
 
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
             <form action="/index.php?rota=poo" method="post" class="card">
-            
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
 
+
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="esteira">Esteira</option>
+                    <option value="prensa">Prensa</option>
+                    <option value="robosoldagem">Robo Soldagem</option>
+                </select><br><br>
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade" required><br><br>
             </form>
-
-
-
-
-
 
 
 
@@ -159,6 +165,7 @@ function escapar($texto) {
         <div class="voltar-projetos">
             <a href="../index.php#projetos-php"> ← Voltar para atividades</a>
         </div>
+
     </main>
 
     <!-- RODAPÈ -->

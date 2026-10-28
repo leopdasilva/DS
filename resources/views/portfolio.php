@@ -296,7 +296,7 @@
                     <div class="projeto-numero">
                         05
                     </div>
-                    <h3>Programação Orientada a Objetos em PHP</h3>
+                    <h3>Programação Orientada a Objetos em PHP - Sistema de Controle de Produção Insdustrial</h3>
                     <p>
                         
                     </p>
