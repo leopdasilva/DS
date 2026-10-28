@@ -169,7 +169,7 @@ function escapar($texto) {
                             <p><strong>Nome Máquina:</strong> <?= escapar($nome)?></p>
                             <p><strong>Tipo Máquina:</strong> <?= escapar($tipo)?></p>
                             <p><strong>Quant. Máquina:</strong> <?= escapar($quantidade)?></p>
-                            <p><strong>Status operação:</strong> <?php escapar($maquina->operar())?></p>
+                            <p><strong>Status operação:</strong> <?= escapar($maquina->operar())?></p>
                         </div>
                         
                     <?php } ?>
