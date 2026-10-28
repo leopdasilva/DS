@@ -148,9 +148,9 @@ function escapar($texto) {
 
                 <label for="tipo">Tipo:</label>
                 <select id="tipo" name="tipo" required>
-                    <option value="esteira">Esteira</option>
-                    <option value="prensa">Prensa</option>
-                    <option value="robosoldagem">Robo Soldagem</option>
+                    <option value="Esteira">Esteira</option>
+                    <option value="Prensa">Prensa</option>
+                    <option value="Robo Soldagem">Robo Soldagem</option>
                 </select><br><br>
 
                 <label for="quantidade">Quantidade:</label>
@@ -168,7 +168,7 @@ function escapar($texto) {
                             <p><strong>Nome Máquina:</strong> <?= escapar($nome)?></p>
                             <p><strong>Tipo Máquina:</strong> <?= escapar($tipo)?></p>
                             <p><strong>Quant. Máquina:</strong> <?= escapar($quantidade)?></p>
-                            <p><strong>Status operação:</strong> <?php escapar($maquina->operar())?></p>
+                            <p><strong>Status operação:</strong> <?php escapar($maquina->operar($tipo))?></p>
                         </div>
                         
                     <?php } ?>
