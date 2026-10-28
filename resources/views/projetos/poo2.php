@@ -142,7 +142,7 @@ function escapar($texto) {
 
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
-            <form  method="post" class="card">
+            <form method="post" class="card">
                 <label for="nome">Nome da máquina:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome da máquina" required><br><br>
 
@@ -160,18 +160,20 @@ function escapar($texto) {
 
                 <!-- Registro das máquinas -->
                 <section class="registro-maquina">   
+
                     <?php if($mensagem != "") { ?>
                         <div>
-                            <p><strong><?= $mensagem ?></strong></p><br>
+                            <br><p><strong><?= $mensagem ?></strong></p><br>
 
                             <h2>Registro de Máquinas</h2>
-                            <p><strong>Nome Máquina:</strong> <?= $nome?></p>
-                            <p><strong>Tipo Máquina:</strong> <?= $tipo?></p>
-                            <p><strong>Quant. Máquina:</strong> <?= $quantidade?></p>
-                            <p><strong>Status operação:</strong> <?php escapar($operacao->operar())?></p>
+                            <p><strong>Nome Máquina:</strong> <?= escapar($nome)?></p>
+                            <p><strong>Tipo Máquina:</strong> <?= escapar($tipo)?></p>
+                            <p><strong>Quant. Máquina:</strong> <?= escapar($quantidade)?></p>
+                            <p><strong>Status operação:</strong> <?php escapar($maquina->operar())?></p>
                         </div>
                         
                     <?php } ?>
+
                 </section>
 
             </form>
