@@ -291,6 +291,22 @@
                     </div>
                     <a href="/index.php?rota=helpdesk" class="link-projeto">Ver atividade →</a>
                 </div>
+                <!-- PROJETO 6 -->
+                <div class="projeto-card">
+                    <div class="projeto-numero">
+                        05
+                    </div>
+                    <h3>Programação Orientada a Objetos em PHP</h3>
+                    <p>
+                        
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="/index.php?rota=poo" class="link-projeto">Ver atividade →</a>
+                </div>
             </div>
         </section>
          <!-- ==========================  
