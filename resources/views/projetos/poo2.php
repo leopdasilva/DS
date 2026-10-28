@@ -148,9 +148,9 @@ function escapar($texto) {
 
                 <label for="tipo">Tipo:</label>
                 <select id="tipo" name="tipo" required>
-                    <option value="Esteira">Esteira</option>
-                    <option value="Prensa">Prensa</option>
-                    <option value="Robo Soldagem">Robo Soldagem</option>
+                    <option value="esteira">Esteira</option>
+                    <option value="prensa">Prensa</option>
+                    <option value="robosoldagem">Robo Soldagem</option>
                 </select><br><br>
 
                 <label for="quantidade">Quantidade:</label>
