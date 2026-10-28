@@ -113,7 +113,7 @@ function escapar($texto) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout de atividades | PHP</title>
-    <link rel="stylesheet" href="/resources/css/helpdesk.css">
+    <link rel="stylesheet" href="/resources/css/poo.css">
 </head>
 <body>
      <!-- CABEÇALHO -->
@@ -161,21 +161,15 @@ function escapar($texto) {
                 <!-- Registro das máquinas -->
                 <section class="registro-maquina">   
                     <?php if($mensagem != "") { ?>
-                        <?php if($tipo == "esteira") {?>
-                            $operacao = new Esteira();
-                        <?php } ?>
-
-
                         <div>
                             <p><strong><?= $mensagem ?></strong></p><br>
 
                             <h2>Registro de Máquinas</h2>
-                            <p><strong>Nome Máquina:</strong> <?= $nome ?></p>
-                            <p><strong>Tipo Máquina:</strong> <?= $tipo ?></p>
-                            <p><strong>Quant. Máquina:</strong> <?= $quantidade ?></p>
-                            <p><strong>Status operação:</strong> <?php $operacao?></p>
+                            <p><strong>Nome Máquina:</strong> <?= escapar($nome)?></p>
+                            <p><strong>Tipo Máquina:</strong> <?= escapar($tipo)?></p>
+                            <p><strong>Quant. Máquina:</strong> <?= escapar($quantidade)?></p>
+                            <p><strong>Status operação:</strong> <?php escapar($maquina->operar())?></p>
                         </div>
-
                         
                     <?php } ?>
                 </section>
