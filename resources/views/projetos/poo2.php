@@ -130,6 +130,7 @@ function escapar($texto) {
 
     <!-- CONTEÚDO DA ATIVIDADE -->
     <main class="pagina-projeto">
+
         <!-- CABEÇALHO DA ATIVIDADE -->
         <section class="cabecalho-projeto">
             <p class="projeto-tipo">
@@ -142,8 +143,8 @@ function escapar($texto) {
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
             <form  method="post" class="card">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
+                <label for="nome">Nome da máquina:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome da máquina" required><br><br>
 
                 <label for="tipo">Tipo:</label>
                 <select id="tipo" name="tipo" required>
@@ -157,11 +158,20 @@ function escapar($texto) {
 
                 <button type="submit" name="acao" value="enviar">Enviar</button>
 
-                <?php if($mensagem != "") { ?>
-                    <div>
-                        <p><?= $mensagem ?></p>
-                    </div>
-                <?php } ?>
+                <!-- Registro das máquinas -->
+                <section class="registro-maquina">   
+                    <?php if($mensagem != "") { ?>
+                        <div>
+                            <p><?= $mensagem ?></p><br>
+
+                            <h2>Registro de Máquinas</h2>
+                            <p>Nome Máquina: <?= $nome ?></p>
+                            <p>Tipo Máquina: <?= $tipo ?></p>
+                            <p>Quant. Máquina:<?= $quantidade ?></p>
+                        </div>
+                    <?php } ?>
+                </section>
+
             </form>
 
 
