@@ -22,6 +22,10 @@
             require __DIR__ . "/../../../resources/views/projetos/jogos.php";
         }
 
+        public function poo() {
+            require __DIR__ . "/../../../resources/views/projetos/poo2.php";
+        }
+
     }
 
 

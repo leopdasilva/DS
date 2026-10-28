@@ -153,7 +153,7 @@ function escapar($texto) {
                 </select><br><br>
 
                 <label for="quantidade">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade" required><br><br>
+                <input type="number" id="quantidade" name="quantidade" placeholder="Digite a quantidade" required min=0 max=999><br><br>
             </form>
 
 
