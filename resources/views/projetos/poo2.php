@@ -113,7 +113,7 @@ function escapar($texto) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout de atividades | PHP</title>
-    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="/resources/css/helpdesk.css">
 </head>
 <body>
      <!-- CABEÇALHO -->
@@ -144,7 +144,6 @@ function escapar($texto) {
             <form action="/index.php?rota=poo" method="post" class="card">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
-
 
                 <label for="tipo">Tipo:</label>
                 <select id="tipo" name="tipo" required>
