@@ -294,11 +294,13 @@
                 <!-- PROJETO 6 -->
                 <div class="projeto-card">
                     <div class="projeto-numero">
-                        05
+                        06
                     </div>
                     <h3>Programação Orientada a Objetos em PHP - Sistema de Controle de Produção Insdustrial</h3>
                     <p>
-                        
+                        Sistema de gestão fabril desenvolvido em PHP nativo utilizando os pilares da Programação Orientada a Objetos (POO).
+                        A aplicação processa dados via formulário POST para instanciar classes de maquinários especializados através de herança e encapsulamento, 
+                        validando métricas de produtividade em tempo real e armazenando o histórico de registros na sessão do servidor.
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
