@@ -51,7 +51,7 @@ class Prensa extends Maquina {
 
 class RoboSoldagem extends Maquina {
     public function operar() {
-        return "Soldandoo peças...";
+        return "Soldando peças...";
     }
 }
 
@@ -168,10 +168,14 @@ function escapar($texto) {
                             <h2>Registro de Máquinas</h2>
                             <p><strong>Nome Máquina:</strong> <?= escapar($nome)?></p>
                             <p><strong>Tipo Máquina:</strong> <?= escapar($tipo)?></p>
-                            <p><strong>Quant. Máquina:</strong> <?= escapar($quantidade)?></p>
+                            <p><strong>Quant. Máquina:</strong> <?= escapar($maquina->getProducao())?></p>
                             <p><strong>Status operação:</strong> <?= escapar($maquina->operar())?></p>
                         </div>
                         
+                    <?php } elseif ($mensagem != "") { ?>
+                        <div>
+                            <br><p><strong><?= escapar($mensagem) ?></strong></p><br>
+                        </div>
                     <?php } ?>
 
                 </section>
