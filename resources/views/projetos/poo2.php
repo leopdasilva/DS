@@ -161,6 +161,11 @@ function escapar($texto) {
                 <!-- Registro das máquinas -->
                 <section class="registro-maquina">   
                     <?php if($mensagem != "") { ?>
+                        <?php if($tipo == "esteira") {?>
+                            $operacao = new Esteira();
+                        <?php } ?>
+
+
                         <div>
                             <p><?= $mensagem ?></p><br>
 
@@ -168,7 +173,10 @@ function escapar($texto) {
                             <p>Nome Máquina: <?= $nome ?></p>
                             <p>Tipo Máquina: <?= $tipo ?></p>
                             <p>Quant. Máquina:<?= $quantidade ?></p>
+                            <p>Status operação: <?php ?></p>
                         </div>
+
+                        
                     <?php } ?>
                 </section>
 
