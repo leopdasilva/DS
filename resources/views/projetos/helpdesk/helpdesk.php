@@ -1,0 +1,188 @@
+<?php 
+    // 1. Importa as funções via modularização
+    require_once __DIR__ . "/../../../../app/Models/Chamado.php";
+
+    $mensagem = "";
+
+    // 2. Condicionais para as ações com o formulário
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $acao = $_POST["acao"] ?? "";
+
+        if ($acao === "abrir-chamado") {
+            $sucesso = $model->cadastrarChamados(
+                $_POST["nome"] ?? "",
+                $_POST["setor"] ?? "",
+                $_POST["equipamento"] ?? "", 
+                $_POST["desc-prob"] ?? "",
+                $_POST["prioridade"] ?? "" 
+            );
+
+            $mensagem =  $sucesso ? "Chamado cadastrado com sucesso!" : "Erro ao cadastrar. Verifique os dados.";
+        }
+
+        if ($acao === "atualizar-status") {
+            $sucesso = $model->atualizarChamado(
+                (int) ($_POST["posicao"] ?? -1), 
+                $_POST["status"] ?? ""
+            );
+            
+            $mensagem = $sucesso ? "Status atualizado!" : "Não foi possível atualizar.";
+        }
+
+        if ($acao === "excluir-chamado") {
+            $sucesso = $model->excluirChamado((int) ($_POST["posicao"] ?? -1)); 
+
+            $mensagem = $sucesso ? "Chamado excluído!" : "Não foi possível excluir.";
+        }
+    }
+
+    // 3. Atualiza a lista de chamados
+    $chamados = $model->lerChamados();
+    $relatorio = $model->gerarRelatorio();
+
+    function escapar($valor) {
+        return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk | PHP</title>
+    <link rel="stylesheet" href="/resources/css/helpdesk.css">
+</head>
+<body>
+     <!-- CABEÇALHO -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Meu portfólio</h2>
+            <ul class="menu">
+                <li><a href="../index.php">Início</a></li>
+                <li><a href="../index.php#projetos-php">Atividades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO DA ATIVIDADE -->
+    <main class="pagina-projeto">
+        <section class="cabecalho-projeto">
+            <p class="projeto-tipo">atividade</p>
+            <h1>Help Desk</h1>
+            <p>Atividade desenvolvida durante as aulas de desenvolvimento de sistemas</p>
+        </section>
+
+        <!-- Exibição de Mensagens do Sistema -->
+        <?php if (!empty($mensagem)): ?>
+            <div class="alerta-mensagem" style="padding: 10px; margin-bottom: 20px; background-color: #e0f7fa; border: 1px solid #00acc1; border-radius: 4px;">
+                <?= escapar($mensagem) ?>
+            </div>
+        <?php endif; ?>
+
+        <!-- Formulário de cadastro de chamada -->
+        <h2>Formulário de ocorrência</h2>
+        <section class="conteudo-projeto">
+            <form action="index.php?rota=helpdesk" method="POST" class="card">
+
+                <label for="nome">Funcionário:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome do funcionário" required><br><br>
+
+                <label for="setor">Setor:</label>
+                <select id="setor" name="setor" required>
+                    <option value="Produção">Produção</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Logística">Logística</option>
+                    <option value="Financeiro">Financeiro</option>
+                    <option value="TI">TI</option>
+                </select><br><br>
+
+                <label for="equipamento">Equipamento Afetado:</label>
+                <select id="equipamento" name="equipamento" required>
+                    <option value="Computador">Computador</option>
+                    <option value="Impressora">Impressora</option>
+                    <option value="Rede">Rede</option>
+                    <option value="Sistema">Sistema</option>
+                    <option value="Outro">Outro</option>
+                </select><br><br>
+
+                <label for="desc-prob">Descrição do problema:</label>
+                <input type="text" id="desc-prob" name="desc-prob" class="desc-prob" placeholder="Detalhe qual foi o problema" required><br><br>
+
+                <div class="caixa-campo-radio">
+                    <span class="titulo-grupo">Prioridade:</span>
+                    <div class="opcao-radio">
+                        <input type="radio" id="alta" name="prioridade" value="Alta" checked>
+                        <label for="alta">Alta</label>
+                    </div>
+                    <div class="opcao-radio">
+                        <input type="radio" id="media" name="prioridade" value="Média">
+                        <label for="media">Média</label>
+                    </div>
+                    <div class="opcao-radio">
+                        <input type="radio" id="baixa" name="prioridade" value="Baixa">
+                        <label for="baixa">Baixa</label>
+                    </div>
+                </div>
+
+                <button type="submit" name="acao" value="abrir-chamado">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Listagem dos chamados -->
+        <h2>Chamados Registrados</h2>
+        <section class="lista-chamados">
+            
+            <?php foreach ($chamados as $id => $chamado): ?>
+                <div class="card-chamado">
+                    <p>
+                        #<?= $id ?> <strong>[<?= escapar($chamado["status"]) ?>]</strong> 
+                        (<?= escapar($chamado["prioridade"]) ?>) - 
+                        <strong><?= escapar($chamado["nome"]) ?></strong> 
+                        [<?= escapar($chamado["setor"]) ?>/<?= escapar($chamado["equipamento"]) ?>]: 
+                        <?= escapar($chamado["descricao"]) ?>
+                    </p>
+
+                    <div class="acoes">
+                        <!-- Atualizar Status -->
+                        <form method="POST">
+                            <input type="hidden" name="posicao" value="<?php echo $id; ?>">
+                            <select name="status">
+                                <option value="Aberto" <?php echo $chamado["status"] === "Aberto" ? "selected" : ""; ?>>Aberto</option>
+                                <option value="Em andamento" <?php echo $chamado["status"] === "Em andamento" ? "selected" : ""; ?>>Em andamento</option>
+                                <option value="Resolvido" <?php echo $chamado["status"] === "Resolvido" ? "selected" : ""; ?>>Resolvido</option>
+                            </select>
+                            <button type="submit" name="acao" value="atualizar-status">Mudar</button>
+                        </form>
+
+                        <!-- Excluir -->
+                        <form method="POST" onsubmit="return confirm('Apagar?');">
+                            <input type="hidden" name="posicao" value="<?php echo $id; ?>">
+                            <button type="submit" name="acao" value="excluir-chamado" class="btn-excluir">Excluir</button>
+                        </form>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </section>
+
+        <!-- Relatório de chamadas -->
+        <h2>Relatório de chamadas</h2>
+        <section class="painel-relatorio">   
+            <div>Total: <strong><?php echo $relatorio["total"]; ?></strong></div>
+            <div>Abertos: <strong><?php echo $relatorio["abertos"]; ?></strong></div>
+            <div>Em andamento: <strong><?php echo $relatorio["andamento"]; ?></strong></div>
+            <div>Resolvidos: <strong><?php echo $relatorio["resolvidos"]; ?></strong></div>
+        </section>
+
+        <!-- FIM DA ATIVIDADE -->
+        <div class="voltar-projetos">
+            <a href="../../index.php#projetos-php"> ← Voltar para atividades</a>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>Desenvolvido por <a href="https://leonardo315.devlook.xyz">Leonardo P. da Silva </a> • 2026</p>
+    </footer>
+</body>
+</html>
