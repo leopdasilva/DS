@@ -18,9 +18,7 @@ class HelpdeskController
  
         $mensagem = "";
 
-        return view();
- 
-        //require __DIR__ . "/../../../resources/views/projetos/helpdesk/helpdesk.php";
+        return view('projetos.helpdesk', compact('chamados', 'relatorio', 'mensagem'));
     }
  
     // POST - Receber os formulários do Helpdesk
@@ -63,6 +61,6 @@ class HelpdeskController
         $chamados = $model->lerChamados();
         $relatorio = $model->gerarRelatorio();
  
-        require __DIR__ . "/../../../resources/views/projetos/helpdesk.php";
+        return view('projetos.helpdesk', compact('chamados', 'relatorio', 'mensagem'));
     }
 }
