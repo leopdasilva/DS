@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio LPS</title>
-    <link rel="stylesheet" href="resources/css/index.css">
+    @vite(['resources/css/index.css'])
 </head>
 <body>
     <!-- ==========================  
@@ -207,7 +207,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="/index.php?rota=idade" class="link-projeto">Ver atividade →</a>
+                    <a href="" class="link-projeto">Ver atividade →</a>
                 </div>
                 <!-- PROJETO 2 -->
                 <div class="projeto-card">
@@ -289,7 +289,7 @@
                         <span>PHP</span>
                         <span>JSON</span>
                     </div>
-                    <a href="/index.php?rota=helpdesk" class="link-projeto">Ver atividade →</a>
+                    <a href="{{ route('helpdesk') }}" class="link-projeto">Ver atividade →</a>
                 </div>
                 <!-- PROJETO 6 -->
                 <div class="projeto-card">

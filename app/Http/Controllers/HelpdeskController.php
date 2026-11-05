@@ -1,6 +1,10 @@
 <?php
- 
-require_once __DIR__ . "/../../Models/Chamado.php";
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Models\Chamado;
+
  
 class HelpdeskController
 {
@@ -13,8 +17,10 @@ class HelpdeskController
         $relatorio = $model->gerarRelatorio();
  
         $mensagem = "";
+
+        return view();
  
-        require __DIR__ . "/../../../resources/views/projetos/helpdesk/helpdesk.php";
+        //require __DIR__ . "/../../../resources/views/projetos/helpdesk/helpdesk.php";
     }
  
     // POST - Receber os formulários do Helpdesk
