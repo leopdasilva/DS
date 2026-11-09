@@ -227,7 +227,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="/index.php?rota=notas" class="link-projeto">Ver atividade →</a>
+                    <a href="{{ route('notas') }}" class="link-projeto">Ver atividade →</a>
                 </div>
                 <!-- PROJETO 3 -->
                 <div class="projeto-card">

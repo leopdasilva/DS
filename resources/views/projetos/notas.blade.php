@@ -7,17 +7,17 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //Nome e Idade
-        $nome = $_POST["nome"];
-        $idade = $_POST["idade"];
-        $frequencia = $_POST["frequencia"];
-        $resto = 0;
+        $nome = $_POST["nome"] ?? '';
+        $idade = $_POST["idade"] ?? 0;
+        $frequencia = $_POST["frequencia"] ?? 0;
+        $resto = 0 ?? 0;
 
         //Notas
-        $nota1 = $_POST["nota1"];
-        $nota2 = $_POST["nota2"];
-        $nota3 = $_POST["nota3"];
-        $nota4 = $_POST["nota4"];
-        $nota5 = $_POST["nota5"];
+        $nota1 = $_POST["nota1"] ?? 0;
+        $nota2 = $_POST["nota2"] ?? 0;
+        $nota3 = $_POST["nota3"] ?? 0;
+        $nota4 = $_POST["nota4"] ?? 0;
+        $nota5 = $_POST["nota5"] ?? 0;
 
         //Calculo de média
         $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
@@ -43,7 +43,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas | PHP</title>
-    <link rel="stylesheet" href="/resources/css/layout.css">
+    @vite(['resources/css/layout.css'])
 </head>
 <body>
      <!-- CABEÇALHO -->
@@ -71,7 +71,8 @@
 
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
-            <form class="card" method="POST">
+            <form action="" class="card" method="POST">
+                @csrf
 
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
