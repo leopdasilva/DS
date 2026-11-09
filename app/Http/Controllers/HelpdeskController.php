@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Chamado;
 
  
-class HelpdeskController
+class HelpdeskController extends Controller
 {
     // GET - Exibir a página do Helpdesk
     public function index()
