@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Chamado;
 
- 
 class HelpdeskController extends Controller
 {
     // GET - Exibir a página do Helpdesk
