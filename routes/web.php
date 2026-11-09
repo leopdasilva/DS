@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('portfolio');
 });
 
-Route::get('/idade', [PortfolioController::class, 'index'])->name('idade');
+Route::get('/idade', [PortfolioController::class, 'idade'])->name('idade');
 
 Route::post('/idade', [PortfolioController::class, 'salvarIdade'])->name('idade.salvar');
 
