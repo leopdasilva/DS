@@ -3,10 +3,13 @@
 namespace App\Models;
 
 class Chamado{
+    private function getCaminho() {
+        return storage_path('app/chamado.json');
+    }
 
     //READ - Ler todos os chamados 
     public function lerChamados() {
-        $arquivo = storage_path('app/chamdado.json');
+        $arquivo = $this->getCaminho();
 
         //verificação se o arquivo .json já existe
         if (!file_exists($arquivo)) {
@@ -43,6 +46,7 @@ class Chamado{
             return false;
         }
 
+        $arquivo = $this->getCaminho();
         $chamados = $this -> lerChamados();
         
         $novoChamado = [
@@ -61,6 +65,7 @@ class Chamado{
 
     //UPDATE - Atualizar status do chamado
     public function atualizarChamado($posicao, $novoStatus) {
+        $arquivo = $this->getCaminho();
         $chamados = $this -> lerChamados();
 
         $statusPermitidos = [
@@ -96,6 +101,7 @@ class Chamado{
 
     //DELETE - Excluir chamados
     public function excluirChamado($posicao) {
+        $arquivo = $this->getCaminho();
         $chamados = $this -> lerChamados();
 
         if (!isset($chamados[$posicao])) {
