@@ -1,5 +1,3 @@
-</html>
-
 <?php 
     $nome = "";
     $idade = 0;
