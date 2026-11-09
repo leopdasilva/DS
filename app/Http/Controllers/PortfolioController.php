@@ -22,6 +22,11 @@
         public function notas() {
             return view('projetos.notas');
         }
+
+        public function salvarNotas(Request $request)
+        {
+            return view('projetos.notas');
+        }
     
         // Login
         public function login() {
