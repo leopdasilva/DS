@@ -83,7 +83,7 @@
         <!-- Formulário de cadastro de chamada -->
         <h2>Formulário de ocorrência</h2>
         <section class="conteudo-projeto">
-            <form action="index.php?rota=helpdesk" method="POST" class="card">
+            <form action="{{ route('helpdesk.salvar') }}" method="POST" class="card">
 
                 <label for="nome">Funcionário:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do funcionário" required><br><br>
@@ -145,7 +145,7 @@
 
                     <div class="acoes">
                         <!-- Atualizar Status -->
-                        <form method="POST">
+                        <form method="POST" action="">
                             <input type="hidden" name="posicao" value="<?php echo $id; ?>">
                             <select name="status">
                                 <option value="Aberto" <?php echo $chamado["status"] === "Aberto" ? "selected" : ""; ?>>Aberto</option>
@@ -156,7 +156,7 @@
                         </form>
 
                         <!-- Excluir -->
-                        <form method="POST" onsubmit="return confirm('Apagar?');">
+                        <form method="POST" onsubmit="return confirm('Apagar?');" action="">
                             <input type="hidden" name="posicao" value="<?php echo $id; ?>">
                             <button type="submit" name="acao" value="excluir-chamado" class="btn-excluir">Excluir</button>
                         </form>
