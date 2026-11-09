@@ -18,7 +18,7 @@ class HelpdeskController
  
         $mensagem = "";
 
-        return view('projetos.helpdesk', compact('chamados', 'relatorio', 'mensagem'));
+        return view('projetos.helpdesk.helpdesk', compact('chamados', 'relatorio', 'mensagem'));
     }
  
     // POST - Receber os formulários do Helpdesk
