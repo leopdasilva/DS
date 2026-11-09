@@ -33,7 +33,7 @@ class Chamado{
 
     //Salvar os chamados no JSON
     public function salvarChamados($chamados) {
-        $arquivo = __DIR__ . "/chamados.json";
+        $arquivo = $this->getCaminho();
 
         return file_put_contents(
             $arquivo, json_encode($chamados, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
