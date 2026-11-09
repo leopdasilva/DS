@@ -85,7 +85,9 @@
 
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
-            <form action="/index.php?rota=jogos" method="POST" class="card">
+            <form action="" method="POST" class="card">
+                @csrf
+                
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo" required><br><br>
 

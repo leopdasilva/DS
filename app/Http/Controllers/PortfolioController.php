@@ -43,6 +43,10 @@
             return view('projetos.jogos');
         }
 
+        public function salvarJogos(Request $request)
+        {
+            return view('projetos.jogos');
+        }
 
         // PoO
         public function poo2() {
