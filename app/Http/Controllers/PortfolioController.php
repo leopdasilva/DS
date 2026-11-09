@@ -1,29 +1,31 @@
 <?php 
+    namespace App\Http\Controllers;
 
+    use Illuminate\Http\Request;
     class PortfolioController
     {
         public function index(){
-            require __DIR__ . "/../../../resources/views/portfolio.php";
+            return view('portfolio');
         }
 
         public function idade() {
-            require __DIR__ . "/../../../resources/views/projetos/idade.php";
+            return view('projetos.idade');
         }
     
         public function notas() {
-            require __DIR__ . "/../../../resources/views/projetos/notas.php";
+            return view('projetos.notas');
         }
     
         public function login() {
-            require __DIR__ . "/../../../resources/views/projetos/login-basico.php";
+            return view('projetos.login-basico');
         }
     
         public function jogos() {
-            require __DIR__ . "/../../../resources/views/projetos/jogos.php";
+            return view('projetos.jogos');
         }
 
         public function poo2() {
-            require __DIR__ . "/../../../resources/views/projetos/poo2.php";
+            return view('projetos.poo2');
         }
 
     }
