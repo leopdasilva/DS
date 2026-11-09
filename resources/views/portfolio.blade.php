@@ -207,7 +207,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="{{ route('idade') }}" class="link-projeto">Ver atividade →</a>
+                    <a href="{{ route('idade.salvar') }}" class="link-projeto">Ver atividade →</a>
                 </div>
                 <!-- PROJETO 2 -->
                 <div class="projeto-card">
