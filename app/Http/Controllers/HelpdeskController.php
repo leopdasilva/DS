@@ -61,6 +61,6 @@ class HelpdeskController extends Controller
         $chamados = $model->lerChamados();
         $relatorio = $model->gerarRelatorio();
  
-        return view('projetos.helpdesk', compact('chamados', 'relatorio', 'mensagem'));
+        return view('projetos.helpdesk.helpdesk', compact('chamados', 'relatorio', 'mensagem'));
     }
 }
