@@ -1,3 +1,57 @@
+<?php 
+    // 1. Importa as funções via modularização
+    //require_once __DIR__ . "/../../../../app/Models/Chamado.php";
+
+    if (!function_exists('escapar')) {
+        function escapar($valor) {
+            return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
+        }
+    }
+
+    $model = new \App\Models\Chamado();
+    $mensagem = "";
+
+    // 2. Condicionais para as ações com o formulário
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $acao = $_POST["acao"] ?? "";
+
+        if ($acao === "abrir-chamado") {
+            $sucesso = $model->cadastrarChamados(
+                $_POST["nome"] ?? "",
+                $_POST["setor"] ?? "",
+                $_POST["equipamento"] ?? "", 
+                $_POST["desc-prob"] ?? "",
+                $_POST["prioridade"] ?? "" 
+            );
+
+            $mensagem =  $sucesso ? "Chamado cadastrado com sucesso!" : "Erro ao cadastrar. Verifique os dados.";
+        }
+
+        if ($acao === "atualizar-status") {
+            $sucesso = $model->atualizarChamado(
+                (int) ($_POST["posicao"] ?? -1), 
+                $_POST["status"] ?? ""
+            );
+            
+            $mensagem = $sucesso ? "Status atualizado!" : "Não foi possível atualizar.";
+        }
+
+        if ($acao === "excluir-chamado") {
+            $sucesso = $model->excluirChamado((int) ($_POST["posicao"] ?? -1)); 
+
+            $mensagem = $sucesso ? "Chamado excluído!" : "Não foi possível excluir.";
+        }
+    }
+
+    // 3. Atualiza a lista de chamados
+    $chamados = $model->lerChamados();
+    $relatorio = $model->gerarRelatorio();
+
+    function escapar($valor) {
+        return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
+    }
+?> 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
