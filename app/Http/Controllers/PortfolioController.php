@@ -11,6 +11,11 @@
         public function idade() {
             return view('projetos.idade');
         }
+
+        public function salvarIdade(Request $request)
+        {
+            return view('projetos.idade');
+        }
     
         public function notas() {
             return view('projetos.notas');
