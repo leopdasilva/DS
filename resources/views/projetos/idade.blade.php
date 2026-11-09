@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idade | PHP</title>
-    <link rel="stylesheet" href="@vite(['resources/css/layout.css'])">
+    @vite(['resources/css/layout.css'])
 </head>
 <body>
      <!-- CABEÇALHO -->
@@ -50,7 +50,7 @@
 
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
-            <form action="{{ route('idade.salvar') }}" class="card" method="POST">
+            <form action=" " class="card" method="POST">
                 @csrf
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
