@@ -53,6 +53,7 @@
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
             <form action="{{ route('idade.salvar') }}" class="card" method="POST">
+                @csrf
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
 
