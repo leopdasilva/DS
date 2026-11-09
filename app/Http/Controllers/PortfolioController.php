@@ -32,6 +32,11 @@
         public function login() {
             return view('projetos.login-basico');
         }
+
+        public function salvarLogin(Request $request)
+        {
+            return view('projetos.login-basico');
+        }
     
         // Jogos
         public function jogos() {
