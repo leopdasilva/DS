@@ -24,11 +24,12 @@ Route::post('/login-basico', [PortfolioController::class, 'salvarLogin'])->name(
 Route::get('/jogos', [PortfolioController::class, 'jogos'])->name('jogos');
 Route::post('/jogos', [PortfolioController::class, 'salvarJogos'])->name('jogos.salvar');
 
+// Atividade: Helpdesk
+Route::get('/helpdesk', [HelpdeskController::class, 'index'])->name('helpdesk');
+Route::post('/helpdesk', [HelpdeskController::class, 'salvar'])->name('helpdesk.salvar');
+
 // Atividade: POO 2
 Route::get('/poo2', [PortfolioController::class, 'poo2'])->name('poo2');
 Route::post('/poo2', [PortfolioController::class, 'salvarPoo2'])->name('poo2.salvar');
 
-// Atividade: Helpdesk
-Route::get('/helpdesk', [HelpdeskController::class, 'index'])->name('helpdesk');
-Route::post('/helpdesk', [HelpdeskController::class, 'salvar'])->name('helpdesk.salvar');
 

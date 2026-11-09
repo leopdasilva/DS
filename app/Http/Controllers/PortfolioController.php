@@ -53,6 +53,10 @@
             return view('projetos.poo2');
         }
 
+        public function salvarPoo2(Request $request)
+        {
+            return view('projetos.poo2');
+        }
     }
 
 

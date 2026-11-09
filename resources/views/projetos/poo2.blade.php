@@ -113,7 +113,7 @@ function escapar($texto) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout de atividades | PHP</title>
-    <link rel="stylesheet" href="/resources/css/poo.css">
+    @vite(['resources/css/poo.css'])
 </head>
 <body>
      <!-- CABEÇALHO -->
@@ -142,7 +142,9 @@ function escapar($texto) {
 
         <!-- ATIVIDADE: DESENVOLVA A ATIVIDADE A PARTIR DAQUI -->
         <section class="conteudo-projeto">
-            <form action="/index.php?rota=poo2" method="post" class="card">
+            <form action="" method="post" class="card">
+                @csrf
+                
                 <label for="nome">Nome da máquina:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o nome da máquina" required><br><br>
 
