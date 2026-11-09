@@ -50,6 +50,7 @@
         <section class="conteudo-projeto">
 
             <form action="" method="POST" class="card">
+                @csrf
                 <label for="nome">Usuário:</label>
                 <input type="text" id="usuario" name="usuario" placeholder="Digite o seu usuário" required><br><br>
 
